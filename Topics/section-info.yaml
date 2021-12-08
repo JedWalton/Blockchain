@@ -1,0 +1,13 @@
+content:
+- Static members
+- LocalDate
+- LocalTime
+- LocalDateTime
+- The keyword super
+- Hiding and overriding
+- Boxing and unboxing
+- Introduction to generic programming
+- What are collections
+- ArrayList
+- Interface
+- Inner classes

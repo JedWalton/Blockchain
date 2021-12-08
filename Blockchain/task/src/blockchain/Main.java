@@ -1,6 +1,8 @@
 package blockchain;
 
 import java.security.MessageDigest;
+import java.util.ArrayList;
+import java.util.Date;
 
 
 class StringUtil {
@@ -24,11 +26,68 @@ class StringUtil {
     }
 }
 
+final class Block {
+    public String hash;
+    public String hashOfPrevBlock;
+    public int blockId;
+    public long timestamp;
 
+    public Block(String hashOfPrevBlock, int blockId) {
+        this.hashOfPrevBlock = hashOfPrevBlock;
+        this.blockId = blockId;
+        this.timestamp = new Date().getTime();
+        this.hash = StringUtil.applySha256(hashOfPrevBlock);
+    }
+
+
+}
+
+class Blockchain {
+    ArrayList<Block> blockchain = new ArrayList();
+    public Blockchain() {
+
+    }
+
+    public void generateBlock() {
+        if (blockchain.size() > 0) {
+            Block newBlock = new Block(blockchain.get(blockchain.size() - 1).hash, blockchain.size());
+            this.blockchain.add(newBlock);
+        } else {
+            Block newBlock = new Block("0", 0);
+
+            this.blockchain.add(newBlock);
+        }
+    }
+
+    public void validateBlockchain() {
+        for (int i = 0; i < blockchain.size() - 1; i++) {
+            if (i > 0) {
+                if (this.blockchain.get(i).hashOfPrevBlock == StringUtil.applySha256(this.blockchain.get(i).hash)) {
+                    continue;
+                } else {
+                    System.out.println("Invalid block at " + i);
+                    break;
+                }
+            }
+        }
+    }
+}
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
-        StringUtil hash = new StringUtil();
+        Blockchain blockchain = new Blockchain();
+        for (int i = 0; i < 5; i++) {
+            blockchain.generateBlock();
+            System.out.println("Block:");
+            System.out.println("Id: " + blockchain.blockchain.get(i).blockId);
+            System.out.println("Timestamp: " + blockchain.blockchain.get(i).timestamp);
+            System.out.println("Hash of the previous block:");
+            System.out.println(blockchain.blockchain.get(i).hashOfPrevBlock);
+            System.out.println("Hash of the block:");
+            System.out.println(blockchain.blockchain.get(i).hash);
+            System.out.println();
+
+            blockchain.validateBlockchain();
+        }
     }
 }

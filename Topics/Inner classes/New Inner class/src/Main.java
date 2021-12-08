@@ -4,6 +4,12 @@ class Vehicle {
 
     // create constructor
 
+
+    public Vehicle(String name) {
+        this.name = name;
+
+    }
+
     class Engine {
 
         void start() {
@@ -13,6 +19,17 @@ class Vehicle {
     }
 
     // create class Body
+    class Body {
+        String color;
+
+        public Body(String color) {
+            this.color = color;
+        }
+
+        public void printColor() {
+            System.out.println("Vehicle " + Vehicle.this.name + " has " + this.color + " body.");
+        }
+    }
 }
 
 // this code should work

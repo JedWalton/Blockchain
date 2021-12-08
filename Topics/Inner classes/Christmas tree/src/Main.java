@@ -6,17 +6,25 @@ class ChristmasTree {
         this.color = color;
     }
 
+
     // create method putTreeTopper()
+    public void putTreeTopper(String color) {
+        ChristmasTree.TreeTopper tt = new ChristmasTree.TreeTopper(color);
+        tt.sparkle();
+    }
 
     class TreeTopper {
 
-        private String color;        
+        private String color;
 
         public TreeTopper(String color) {
             this.color = color;
         }
 
-        // create method sparkle()
+        public void sparkle() {
+            System.out.println("Sparkling " + this.color + " tree topper looks stunning with " + ChristmasTree.this.color
+                    + " Christmas tree!");
+        }
     }
 }
 
@@ -29,3 +37,14 @@ class CreateHoliday {
         christmasTree.putTreeTopper("silver");
     }
 }
+
+
+/*
+
+
+    Vehicle car = new Vehicle();
+    Vehicle.Engine motor = car.new Engine();
+        motor.start();
+
+
+ */

@@ -4,16 +4,29 @@ class Vehicle {
 
     // create constructor
 
+
+    public Vehicle(String name) {
+        this.name = name;
+    }
+
     class Engine {
 
         // add field horsePower
+        int horsePower;
         // create constructor
+
+        public Engine(int horsePower) {
+            this.horsePower = horsePower;
+        }
 
         void start() {
             System.out.println("RRRrrrrrrr....");
         }
 
         // create method printHorsePower()
+        public void printHorsePower() {
+            System.out.println("Vehicle " + Vehicle.this.name + " has " + this.horsePower + " horsepower.");
+        }
     }
 }
 
