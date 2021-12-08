@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="17">
+      <module name="Blockchain.Blockchain-task-build-classes-java.main" target="11" />
+      <module name="Blockchain.Blockchain-task-build-generated-sources-annotationProcessor-java.main" target="11" />
+      <module name="Blockchain.Blockchain-task-build-generated-sources-headers-java.main" target="11" />
+      <module name="Blockchain.Blockchain-task-build-reports-tests.main" target="11" />
+      <module name="Blockchain.Blockchain-task-build-test-results.main" target="11" />
+      <module name="Blockchain.Blockchain-task-build-tmp.main" target="11" />
+      <module name="Blockchain.Blockchain-task.main" target="11" />
+      <module name="Blockchain.Topics-ArrayList-Concat_positive_numbers.main" target="11" />
+      <module name="Blockchain.Topics-ArrayList-Creating_list.main" target="11" />
+      <module name="Blockchain.Topics-ArrayList-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Boxing_and_unboxing-Only_true_or_false.main" target="11" />
+      <module name="Blockchain.Topics-Boxing_and_unboxing-Safe_converting.main" target="11" />
+      <module name="Blockchain.Topics-Boxing_and_unboxing-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Hiding_and_overriding-Saying_animals.main" target="11" />
+      <module name="Blockchain.Topics-Hiding_and_overriding-Shapes_area.main" target="11" />
+      <module name="Blockchain.Topics-Hiding_and_overriding-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Inner_classes-Christmas_tree.main" target="11" />
+      <module name="Blockchain.Topics-Inner_classes-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Inner_classes-Your_vehicle.main" target="11" />
+      <module name="Blockchain.Topics-Interface-Account_Service.main" target="11" />
+      <module name="Blockchain.Topics-Interface-Area_of_a_circle.main" target="11" />
+      <module name="Blockchain.Topics-Interface-Compact_strings_with_AsciiCharSequence.main" target="11" />
+      <module name="Blockchain.Topics-Interface-Mutable_geometric_shapes.main" target="11" />
+      <module name="Blockchain.Topics-Interface-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Introduction_to_generic_programming-Correct_the_program.main" target="11" />
+      <module name="Blockchain.Topics-Introduction_to_generic_programming-Pastry_packing_optimization.main" target="11" />
+      <module name="Blockchain.Topics-Introduction_to_generic_programming-Theory.main" target="11" />
+      <module name="Blockchain.Topics-LocalDate-10_days_before.main" target="11" />
+      <module name="Blockchain.Topics-LocalDate-2_weeks_after.main" target="11" />
+      <module name="Blockchain.Topics-LocalDate-30_years_before_and_after.main" target="11" />
+      <module name="Blockchain.Topics-LocalDate-Convert_numbers_to_days.main" target="11" />
+      <module name="Blockchain.Topics-LocalDate-Getting_information_on_a_day.main" target="11" />
+      <module name="Blockchain.Topics-LocalDate-The_first_and_the_last_day_of_a_month.main" target="11" />
+      <module name="Blockchain.Topics-LocalDate-The_first_day_of_a_month_or_not.main" target="11" />
+      <module name="Blockchain.Topics-LocalDate-The_last_day_of_a_month.main" target="11" />
+      <module name="Blockchain.Topics-LocalDate-The_n-th_day_from_the_end_of_a_month.main" target="11" />
+      <module name="Blockchain.Topics-LocalDate-Theory.main" target="11" />
+      <module name="Blockchain.Topics-LocalDateTime-Add_11_hours_and_print_the_date.main" target="11" />
+      <module name="Blockchain.Topics-LocalDateTime-Add_days_and_subtract_hours.main" target="11" />
+      <module name="Blockchain.Topics-LocalDateTime-Adding_N_minutes.main" target="11" />
+      <module name="Blockchain.Topics-LocalDateTime-Merging_date-time_instances.main" target="11" />
+      <module name="Blockchain.Topics-LocalDateTime-Subtracting_hours_and_adding_minutes.main" target="11" />
+      <module name="Blockchain.Topics-LocalDateTime-The_passed_hours_since_the_beginning_of_year.main" target="11" />
+      <module name="Blockchain.Topics-LocalDateTime-Theory.main" target="11" />
+      <module name="Blockchain.Topics-LocalDateTime-Whole_hours_between_two_date-time_pairs.main" target="11" />
+      <module name="Blockchain.Topics-LocalTime-Return_time_without_seconds.main" target="11" />
+      <module name="Blockchain.Topics-LocalTime-Seconds_between_two_time_points.main" target="11" />
+      <module name="Blockchain.Topics-LocalTime-Seconds_since_start_of_a_day.main" target="11" />
+      <module name="Blockchain.Topics-LocalTime-Some_hours_and_minutes_ago.main" target="11" />
+      <module name="Blockchain.Topics-LocalTime-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Static_members-Detail_manufacturing.main" target="11" />
+      <module name="Blockchain.Topics-Static_members-Project_constants_and_methods.main" target="11" />
+      <module name="Blockchain.Topics-Static_members-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Static_members-Time_constants.main" target="11" />
+      <module name="Blockchain.Topics-Static_members-Too_many_cats.main" target="11" />
+      <module name="Blockchain.Topics-The_keyword_super-Bank_account.main" target="11" />
+      <module name="Blockchain.Topics-The_keyword_super-Employees.main" target="11" />
+      <module name="Blockchain.Topics-The_keyword_super-Fix_the_non-compiled_hierarchy.main" target="11" />
+      <module name="Blockchain.Topics-The_keyword_super-Theory.main" target="11" />
+      <module name="Blockchain.Topics-What_are_collections-Initialize_a_collection.main" target="11" />
+      <module name="Blockchain.Topics-What_are_collections-Theory.main" target="11" />
+      <module name="Blockchain.util.main" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

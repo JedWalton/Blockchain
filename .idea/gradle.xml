@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="delegatedBuild" value="false" />
+        <option name="testRunner" value="GRADLE" />
+        <option name="distributionType" value="WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="#JAVA_INTERNAL" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Blockchain/task" />
+            <option value="$PROJECT_DIR$/Blockchain/task/build/classes/java" />
+            <option value="$PROJECT_DIR$/Blockchain/task/build/generated/sources/annotationProcessor/java" />
+            <option value="$PROJECT_DIR$/Blockchain/task/build/generated/sources/headers/java" />
+            <option value="$PROJECT_DIR$/Blockchain/task/build/reports/tests" />
+            <option value="$PROJECT_DIR$/Blockchain/task/build/test-results" />
+            <option value="$PROJECT_DIR$/Blockchain/task/build/tmp" />
+            <option value="$PROJECT_DIR$/Topics/ArrayList/Concat positive numbers" />
+            <option value="$PROJECT_DIR$/Topics/ArrayList/Creating list" />
+            <option value="$PROJECT_DIR$/Topics/ArrayList/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Boxing and unboxing/Only true or false" />
+            <option value="$PROJECT_DIR$/Topics/Boxing and unboxing/Safe converting" />
+            <option value="$PROJECT_DIR$/Topics/Boxing and unboxing/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Hiding and overriding/Saying animals" />
+            <option value="$PROJECT_DIR$/Topics/Hiding and overriding/Shapes area" />
+            <option value="$PROJECT_DIR$/Topics/Hiding and overriding/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Inner classes/Christmas tree" />
+            <option value="$PROJECT_DIR$/Topics/Inner classes/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Inner classes/Your vehicle" />
+            <option value="$PROJECT_DIR$/Topics/Interface/Account Service" />
+            <option value="$PROJECT_DIR$/Topics/Interface/Area of a circle" />
+            <option value="$PROJECT_DIR$/Topics/Interface/Compact strings with AsciiCharSequence" />
+            <option value="$PROJECT_DIR$/Topics/Interface/Mutable geometric shapes" />
+            <option value="$PROJECT_DIR$/Topics/Interface/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Introduction to generic programming/Correct the program" />
+            <option value="$PROJECT_DIR$/Topics/Introduction to generic programming/Pastry packing optimization" />
+            <option value="$PROJECT_DIR$/Topics/Introduction to generic programming/Theory" />
+            <option value="$PROJECT_DIR$/Topics/LocalDate/10 days before" />
+            <option value="$PROJECT_DIR$/Topics/LocalDate/2 weeks after" />
+            <option value="$PROJECT_DIR$/Topics/LocalDate/30 years before and after" />
+            <option value="$PROJECT_DIR$/Topics/LocalDate/Convert numbers to days" />
+            <option value="$PROJECT_DIR$/Topics/LocalDate/Getting information on a day" />
+            <option value="$PROJECT_DIR$/Topics/LocalDate/The first and the last day of a month" />
+            <option value="$PROJECT_DIR$/Topics/LocalDate/The first day of a month or not" />
+            <option value="$PROJECT_DIR$/Topics/LocalDate/The last day of a month" />
+            <option value="$PROJECT_DIR$/Topics/LocalDate/The n-th day from the end of a month" />
+            <option value="$PROJECT_DIR$/Topics/LocalDate/Theory" />
+            <option value="$PROJECT_DIR$/Topics/LocalDateTime/Add 11 hours and print the date" />
+            <option value="$PROJECT_DIR$/Topics/LocalDateTime/Add days and subtract hours" />
+            <option value="$PROJECT_DIR$/Topics/LocalDateTime/Adding N minutes" />
+            <option value="$PROJECT_DIR$/Topics/LocalDateTime/Merging date-time instances" />
+            <option value="$PROJECT_DIR$/Topics/LocalDateTime/Subtracting hours and adding minutes" />
+            <option value="$PROJECT_DIR$/Topics/LocalDateTime/The passed hours since the beginning of year" />
+            <option value="$PROJECT_DIR$/Topics/LocalDateTime/Theory" />
+            <option value="$PROJECT_DIR$/Topics/LocalDateTime/Whole hours between two date-time pairs" />
+            <option value="$PROJECT_DIR$/Topics/LocalTime/Return time without seconds" />
+            <option value="$PROJECT_DIR$/Topics/LocalTime/Seconds between two time points" />
+            <option value="$PROJECT_DIR$/Topics/LocalTime/Seconds since start of a day" />
+            <option value="$PROJECT_DIR$/Topics/LocalTime/Some hours and minutes ago" />
+            <option value="$PROJECT_DIR$/Topics/LocalTime/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Static members/Detail manufacturing" />
+            <option value="$PROJECT_DIR$/Topics/Static members/Project constants and methods" />
+            <option value="$PROJECT_DIR$/Topics/Static members/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Static members/Time constants" />
+            <option value="$PROJECT_DIR$/Topics/Static members/Too many cats" />
+            <option value="$PROJECT_DIR$/Topics/The keyword super/Bank account" />
+            <option value="$PROJECT_DIR$/Topics/The keyword super/Employees" />
+            <option value="$PROJECT_DIR$/Topics/The keyword super/Fix the non-compiled hierarchy" />
+            <option value="$PROJECT_DIR$/Topics/The keyword super/Theory" />
+            <option value="$PROJECT_DIR$/Topics/What are collections/Initialize a collection" />
+            <option value="$PROJECT_DIR$/Topics/What are collections/Theory" />
+            <option value="$PROJECT_DIR$/util" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
