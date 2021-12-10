@@ -1,0 +1,41 @@
+<h2>Increment and decrement</h2>
+<html>
+ <head></head>
+ <body>
+  <p>In this topic, we will discuss one of the most famous operations in programming: <strong>increment</strong>. It is used in many programming languages including Java to increase a variable by one. Fun fact: this operation is used in the name of C++, and signifies the evolutionary nature of the changes from C.</p> 
+  <h5 style="text-align: center;">Using ++ and -- in Java</h5> 
+  <p>Java has two opposite operations called increment (<code class="language-java">++</code>) and decrement (<code class="language-java">--</code>) to increase/decrease the value of a variable by one.</p> 
+  <pre><code class="language-java">int n = 10;
+n++; // 11
+n--; // 10</code></pre> 
+  <p>The code above is actually the same as below.</p> 
+  <pre><code class="language-java">int n = 10;
+n += 1; // 11
+n -= 1; // 10</code></pre> 
+  <h5 style="text-align: center;">Prefix and postfix forms</h5> 
+  <p>Both <strong>increment</strong> and <strong>decrement </strong>operators have two forms which are very important when using the result in the current statement:</p> 
+  <ul> 
+   <li><strong>prefix</strong> (<code class="language-java">++n</code> or <code class="language-java">--n</code>) increases/decreases the value of a variable before it is used;</li> 
+   <li><strong>postfix </strong>(<code class="language-java">n++</code> or <code class="language-java">n--</code>) increases/decreases the value of a variable after it is used.</li> 
+  </ul> 
+  <p>The following examples demonstrate both forms of increment.</p> 
+  <p><strong>Prefix increment:</strong></p> 
+  <pre><code class="language-java">int a = 4;
+int b = ++a;
+
+System.out.println(a); // 5
+System.out.println(b); // 5</code></pre> 
+  <p>In this case, the value of <code class="language-java">a</code> has been incremented and then assigned to <code class="language-java">b</code>. So, <code class="language-java">b</code> is 5.</p> 
+  <p><strong>Postfix increment:</strong></p> 
+  <pre><code class="language-java">int a = 4;
+int b = a++;
+
+System.out.println(a); // 5
+System.out.println(b); // 4</code></pre> 
+  <p>In Java, the postfix operator has higher precedence than the assignment operator. However, it returns the original value of <code class="language-java">a</code>, not the incremented one. That's why when we assign <code class="language-java">a++</code> to <code class="language-java">b</code>, we actually assign 4, while <code class="language-java">a</code> itself has already been incremented. So, <code class="language-java">b</code> is 4 and <code class="language-java">a</code> is 5.</p> 
+  <p>If that's still not clear enough for you, take a look at the code:</p> 
+  <pre><code class="language-java">int a = 4;
+System.out.println(a++ + a); // this is 9</code></pre> 
+  <p>We hope that now you fully understand increment and decrement and their prefix and postfix forms.</p>
+ </body>
+</html>

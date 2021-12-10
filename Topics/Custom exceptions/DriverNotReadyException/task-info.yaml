@@ -1,0 +1,28 @@
+type: code
+files:
+- name: src/Main.java
+  visible: true
+  text: "import java.util.Scanner;\n\nclass Driver {\n    String name;\n    Boolean\
+    \ isDoorLocked;\n    Boolean isBeltFastened;\n\n    public Driver(String name,\
+    \ Boolean isDoorLocked, Boolean isBeltFastened) {\n        this.name = name;\n\
+    \        this.isDoorLocked = isDoorLocked;\n        this.isBeltFastened = isBeltFastened;\n\
+    \n    }\n\n    public void closeDoor() {\n        this.isDoorLocked = true;\n\
+    \    }\n\n    public void fastenBelt() {\n        this.isBeltFastened = true;\n\
+    \    }\n\n    public void drive(boolean isBeltFastened, boolean isDoorLocked)\
+    \ throws DriverNotReadyException {\n        //put your code\n    }\n\n    public\
+    \ static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n\
+    \        String name = scanner.next();\n        Boolean isDoorLocked = scanner.nextBoolean();\n\
+    \        Boolean isBeltFastened = scanner.nextBoolean();\n        Driver driver\
+    \ = new Driver(name, isDoorLocked, isBeltFastened);\n        try {\n         \
+    \   driver.drive(isBeltFastened, isDoorLocked);\n        } catch (DriverNotReadyException\
+    \ e) {\n            System.out.println(e.getMessage());\n        }\n\n    }\n\
+    }\n\n// please skip a code style report about serialVersionUID \nclass DriverNotReadyException\
+    \ extends Exception {\n    public DriverNotReadyException(String message) {\n\
+    \        super(message);\n    }\n}"
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/15643#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Sun, 31 Oct 2021 11:05:16 UTC
+record: -1

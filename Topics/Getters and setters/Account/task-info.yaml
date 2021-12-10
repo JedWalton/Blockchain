@@ -1,0 +1,18 @@
+type: code
+files:
+- name: src/Main.java
+  visible: true
+  text: |-
+    class Account {
+
+        private long balance;
+        private String ownerName;
+        private boolean locked;
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/3023#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Tue, 19 Oct 2021 05:57:30 UTC
+record: -1

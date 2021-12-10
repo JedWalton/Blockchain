@@ -1,4 +1,31 @@
 content:
+- Scanning the input
+- Integer types and operations
+- Increment and decrement
+- Branching statements
+- Declaring a method
+- The main method
+- Functional decomposition
+- Array
+- Iterating over arrays
+- Multidimensional array
+- Arrays as parameters
+- Errors in programs
+- Defining classes
+- Constructor
+- Instance methods
+- Objects
+- Package
+- Getters and setters
+- Inheritance
+- What is an exception
+- Hierarchy of exceptions
+- Exception handling
+- Throwing exceptions
+- NPE
+- Array exceptions
+- Files (1)
+- Input streams
 - Static members
 - LocalDate
 - LocalTime
@@ -11,3 +38,7 @@ content:
 - ArrayList
 - Interface
 - Inner classes
+- Nested classes
+- Calling a method
+- Encapsulating object creation
+- Polymorphism

@@ -1,0 +1,18 @@
+type: code
+files:
+- name: src/Main.java
+  visible: true
+  text: |-
+    class ArrayOperations {
+        public static int[][][] createCube() {
+            // write your code here
+
+        }
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/12442#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Tue, 28 Sep 2021 20:46:58 UTC
+record: -1
