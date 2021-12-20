@@ -9,6 +9,13 @@
       <module name="Blockchain.Blockchain-task-build-test-results.main" target="11" />
       <module name="Blockchain.Blockchain-task-build-tmp.main" target="11" />
       <module name="Blockchain.Blockchain-task.main" target="11" />
+      <module name="Blockchain.Topics-Abstract_class-IntBinaryOperation.main" target="11" />
+      <module name="Blockchain.Topics-Abstract_class-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Abstract_class-Users_and_WebSites.main" target="11" />
+      <module name="Blockchain.Topics-Abstract_factory-Burgers.main" target="11" />
+      <module name="Blockchain.Topics-Abstract_factory-Laptop_factory.main" target="11" />
+      <module name="Blockchain.Topics-Abstract_factory-Phone_factory.main" target="11" />
+      <module name="Blockchain.Topics-Abstract_factory-Theory.main" target="11" />
       <module name="Blockchain.Topics-Array-Initializing_an_array_of_longs.main" target="11" />
       <module name="Blockchain.Topics-Array-Theory.main" target="11" />
       <module name="Blockchain.Topics-Array_exceptions-Out_of_bounds_.main" target="11" />
@@ -58,6 +65,13 @@
       <module name="Blockchain.Topics-Errors_in_programs-What's_wrong.main" target="11" />
       <module name="Blockchain.Topics-Exception_handling-String_to_double_conversion.main" target="11" />
       <module name="Blockchain.Topics-Exception_handling-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Factory_method-Burger_store.main" target="11" />
+      <module name="Blockchain.Topics-Factory_method-Clocks.main" target="11" />
+      <module name="Blockchain.Topics-Factory_method-Laptop_store.main" target="11" />
+      <module name="Blockchain.Topics-Factory_method-Motors.main" target="11" />
+      <module name="Blockchain.Topics-Factory_method-Robot.main" target="11" />
+      <module name="Blockchain.Topics-Factory_method-Robot_factory.main" target="11" />
+      <module name="Blockchain.Topics-Factory_method-Theory.main" target="11" />
       <module name="Blockchain.Topics-Files-Are_siblings.main" target="11" />
       <module name="Blockchain.Topics-Files-Theory.main" target="11" />
       <module name="Blockchain.Topics-Files__1_-Are_siblings.main" target="11" />
@@ -66,6 +80,12 @@
       <module name="Blockchain.Topics-Functional_decomposition-Create_a_full_name.main" target="11" />
       <module name="Blockchain.Topics-Functional_decomposition-Decompose_a_math_function.main" target="11" />
       <module name="Blockchain.Topics-Functional_decomposition-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Generic_methods-The_first_element.main" target="11" />
+      <module name="Blockchain.Topics-Generic_methods-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Generics_and_Object-Boxes_are_not_just_objects_.main" target="11" />
+      <module name="Blockchain.Topics-Generics_and_Object-Correct_the_usage_of_non-generic_class.main" target="11" />
+      <module name="Blockchain.Topics-Generics_and_Object-Initialize_an_object_of_a_generic_class.main" target="11" />
+      <module name="Blockchain.Topics-Generics_and_Object-Theory.main" target="11" />
       <module name="Blockchain.Topics-Getters_and_setters-Account.main" target="11" />
       <module name="Blockchain.Topics-Getters_and_setters-Book.main" target="11" />
       <module name="Blockchain.Topics-Getters_and_setters-Complex.main" target="11" />
@@ -163,6 +183,13 @@
       <module name="Blockchain.Topics-Polymorphism-Find_mistake.main" target="11" />
       <module name="Blockchain.Topics-Polymorphism-Publication_and_its_subclasses.main" target="11" />
       <module name="Blockchain.Topics-Polymorphism-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Printing_data-Digits_from_0_to_9_backwards.main" target="11" />
+      <module name="Blockchain.Topics-Printing_data-First,_second,_third.main" target="11" />
+      <module name="Blockchain.Topics-Printing_data-From_0_to_4.main" target="11" />
+      <module name="Blockchain.Topics-Printing_data-Printing_a_magic_letter.main" target="11" />
+      <module name="Blockchain.Topics-Printing_data-The_result_of_a_Tic-Tac-Toe_game.main" target="11" />
+      <module name="Blockchain.Topics-Printing_data-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Printing_data-We_need_to_learn_Java.main" target="11" />
       <module name="Blockchain.Topics-Scanning_the_input-Guest_list_of_a_hotel.main" target="11" />
       <module name="Blockchain.Topics-Scanning_the_input-Hiring_a_chef.main" target="11" />
       <module name="Blockchain.Topics-Scanning_the_input-Print_strings_in_the_reverse_order.main" target="11" />
@@ -173,6 +200,9 @@
       <module name="Blockchain.Topics-Static_members-Theory.main" target="11" />
       <module name="Blockchain.Topics-Static_members-Time_constants.main" target="11" />
       <module name="Blockchain.Topics-Static_members-Too_many_cats.main" target="11" />
+      <module name="Blockchain.Topics-Template_method-Template_Method.main" target="11" />
+      <module name="Blockchain.Topics-Template_method-Template_Method__1_.main" target="11" />
+      <module name="Blockchain.Topics-Template_method-Theory.main" target="11" />
       <module name="Blockchain.Topics-The_keyword_super-Bank_account.main" target="11" />
       <module name="Blockchain.Topics-The_keyword_super-Employees.main" target="11" />
       <module name="Blockchain.Topics-The_keyword_super-Fix_the_non-compiled_hierarchy.main" target="11" />
