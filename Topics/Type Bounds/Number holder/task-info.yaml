@@ -1,0 +1,23 @@
+type: code
+files:
+- name: src/Main.java
+  visible: true
+  text: |-
+    class Holder<T> {
+        private T value;
+
+        public void setValue(T value) {
+            this.value = value;
+        }
+
+        public T getValue() {
+            return value;
+        }
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/11026#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Mon, 03 Jan 2022 18:40:30 UTC
+record: -1

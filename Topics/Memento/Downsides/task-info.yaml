@@ -1,0 +1,24 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: A program that implements it might be considered malware.
+- text: It is an anti-pattern that should be avoided.
+- text: It may lead to high memory consumption.
+- text: It is very complicated and hard to implement.
+message_correct: Congratulations!
+message_incorrect: Incorrect solution
+files:
+- name: src/Task.java
+  visible: true
+  text: |
+    // You can experiment here, it won’t be checked
+
+    public class Task {
+      public static void main(String[] args) {
+        // put your code here
+      }
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/16534#comment
+status: Solved
+record: -1

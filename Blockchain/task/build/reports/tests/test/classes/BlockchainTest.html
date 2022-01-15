@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">1</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.104s</div>
+<div class="counter">0.317s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,13 +61,126 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Tests</a>
+<a href="#tab0">Failed tests</a>
 </li>
 <li>
-<a href="#tab1">Standard output</a>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="start"></a>
+<h3 class="failures">start</h3>
+<span class="code">
+<pre>java.lang.AssertionError: Wrong answer in test #1
+
+Every block should contain 9 lines of data
+
+Please find below the output of your program during this failed test.
+
+---
+
+Block:
+Id: 0
+Timestamp: 1641526608204
+Hash of the previous block:
+0
+Hash of the block:
+5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9
+
+Block:
+Id: 1
+Timestamp: 1641526608271
+Hash of the previous block:
+5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9
+Hash of the block:
+5122a1d1bc9d87662dcf5fb870adf8c55faf2ce12fad1bacac2fe7df88172466
+
+Block:
+Id: 2
+Timestamp: 1641526608324
+Hash of the previous block:
+5122a1d1bc9d87662dcf5fb870adf8c55faf2ce12fad1bacac2fe7df88172466
+Hash of the block:
+3c857ab8e3936f0f125a97a86262fd3d1cd906f4b7acf1df385f1756f7f692b2
+
+Invalid block at 1
+Block:
+Id: 3
+Timestamp: 1641526608337
+Hash of the previous block:
+3c857ab8e3936f0f125a97a86262fd3d1cd906f4b7acf1df385f1756f7f692b2
+Hash of the block:
+3806743a62ad600a453105090db2884c747600ad27576f4e6ba18f2f56cc445b
+
+Invalid block at 1
+Block:
+Id: 4
+Timestamp: 1641526608360
+Hash of the previous block:
+3806743a62ad600a453105090db2884c747600ad27576f4e6ba18f2f56cc445b
+Hash of the block:
+19870586ed9e6d23573bd38b361f090ec70a0260fbf5b6e9d667f239912ccf94
+
+Invalid block at 1
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.hyperskill.hstest.stage.StageTest.start(StageTest.java:155)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:121)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:414)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -78,20 +191,20 @@
 </tr>
 </thead>
 <tr>
-<td class="success">start</td>
-<td class="success">0.104s</td>
-<td class="success">passed</td>
+<td class="failures">start</td>
+<td class="failures">0.317s</td>
+<td class="failures">failed</td>
 </tr>
 </table>
 </div>
-<div id="tab1" class="tab">
+<div id="tab2" class="tab">
 <h2>Standard output</h2>
 <span class="code">
 <pre>?[1;31m
 Start test 1?[0m
 Block:
 Id: 0
-Timestamp: 1638695578750
+Timestamp: 1641526608204
 Hash of the previous block:
 0
 Hash of the block:
@@ -99,7 +212,7 @@ Hash of the block:
 
 Block:
 Id: 1
-Timestamp: 1638695578764
+Timestamp: 1641526608271
 Hash of the previous block:
 5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9
 Hash of the block:
@@ -107,70 +220,31 @@ Hash of the block:
 
 Block:
 Id: 2
-Timestamp: 1638695578770
+Timestamp: 1641526608324
 Hash of the previous block:
 5122a1d1bc9d87662dcf5fb870adf8c55faf2ce12fad1bacac2fe7df88172466
 Hash of the block:
 3c857ab8e3936f0f125a97a86262fd3d1cd906f4b7acf1df385f1756f7f692b2
 
+Invalid block at 1
 Block:
 Id: 3
-Timestamp: 1638695578776
+Timestamp: 1641526608337
 Hash of the previous block:
 3c857ab8e3936f0f125a97a86262fd3d1cd906f4b7acf1df385f1756f7f692b2
 Hash of the block:
 3806743a62ad600a453105090db2884c747600ad27576f4e6ba18f2f56cc445b
 
+Invalid block at 1
 Block:
 Id: 4
-Timestamp: 1638695578780
+Timestamp: 1641526608360
 Hash of the previous block:
 3806743a62ad600a453105090db2884c747600ad27576f4e6ba18f2f56cc445b
 Hash of the block:
 19870586ed9e6d23573bd38b361f090ec70a0260fbf5b6e9d667f239912ccf94
 
-?[1;31m
-Start test 2?[0m
-Block:
-Id: 0
-Timestamp: 1638695578791
-Hash of the previous block:
-0
-Hash of the block:
-5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9
-
-Block:
-Id: 1
-Timestamp: 1638695578795
-Hash of the previous block:
-5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9
-Hash of the block:
-5122a1d1bc9d87662dcf5fb870adf8c55faf2ce12fad1bacac2fe7df88172466
-
-Block:
-Id: 2
-Timestamp: 1638695578798
-Hash of the previous block:
-5122a1d1bc9d87662dcf5fb870adf8c55faf2ce12fad1bacac2fe7df88172466
-Hash of the block:
-3c857ab8e3936f0f125a97a86262fd3d1cd906f4b7acf1df385f1756f7f692b2
-
-Block:
-Id: 3
-Timestamp: 1638695578802
-Hash of the previous block:
-3c857ab8e3936f0f125a97a86262fd3d1cd906f4b7acf1df385f1756f7f692b2
-Hash of the block:
-3806743a62ad600a453105090db2884c747600ad27576f4e6ba18f2f56cc445b
-
-Block:
-Id: 4
-Timestamp: 1638695578806
-Hash of the previous block:
-3806743a62ad600a453105090db2884c747600ad27576f4e6ba18f2f56cc445b
-Hash of the block:
-19870586ed9e6d23573bd38b361f090ec70a0260fbf5b6e9d667f239912ccf94
-
+Invalid block at 1
 </pre>
 </span>
 </div>
@@ -182,7 +256,7 @@ Hash of the block:
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.1.1</a> at 5 Dec 2021, 09:12:58</p>
+<a href="http://www.gradle.org">Gradle 7.1.1</a> at 7 Jan 2022, 03:36:48</p>
 </div>
 </div>
 </body>

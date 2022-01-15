@@ -15,7 +15,7 @@ int five = ten / two;   // 5
 int zero = ten % two;   // 0, no remainder
 
 int minusTwo = -two; // -2</code></pre> 
-  <p>This code demonstrates how to assign values to int variables as well as how to perform arithmetic operations with them. We hope that you already understand all operations well.</p> 
+  <p>This code demonstrates how to assign values to int variables as well as how to perform arithmetic operations with them. </p> 
   <p>To improve the readability of your code, the special underscore character <code class="language-java">_</code> can be used to separate groups of digits within a number.</p> 
   <pre><code class="language-java">int million = 1_000_000;</code></pre> 
   <p>You may also print a value of an <strong>int</strong> variable:</p> 
@@ -31,18 +31,18 @@ System.out.println(result); // 100000000021</code></pre>
   <p>If a number ends with the letter <code class="language-java">L</code> or <code class="language-java">l</code>, it is considered as <code class="language-java">long</code>, otherwise, it is <code class="language-java">int</code>. We recommend that you use the uppercase letter <code class="language-java">L</code> because the lower case letter <code class="language-java">l</code> is very similar to the digit <code class="language-java">1</code>.</p> 
   <p></p>
   <div class="alert alert-primary">
-   <strong>Note, </strong>use 
+   Use 
    <code class="language-java">long</code>'s numbers only if it is really necessary (to process big values).
   </div>
   <p></p> 
   <h5 style="text-align: center;">The forms of the assignment operator</h5> 
-  <p>Suppose, you want to add some value to a variable. You may write something like this:</p> 
+  <p>Suppose you want to add some value to a variable. You may write something like this:</p> 
   <pre><code class="language-java">int n = 10;
 n = n + 4; // 14</code></pre> 
   <p>The assignment operator <code class="language-java">=</code> has several forms which combine it with an operation to avoid repeating the variable twice:</p> 
   <pre><code class="language-java">int n = 10;
 n += 4; // 14</code></pre> 
-  <p>As you may see, this form looks more concise. There are a few other possible forms <code class="language-java">*=</code>, <code class="language-java">/=</code>, <code class="language-java">%=</code> and some others.</p> 
+  <p>As you may see, this form looks more concise. There are a few other possible forms such as <code class="language-java">*=</code>, <code class="language-java">/=</code>, <code class="language-java">%=</code>.</p> 
   <h5 style="text-align: center;">Reading numbers from the standard input</h5> 
   <p>As a rule, to solve a problem you need to read some data from the outside world, process it, and output the result. The following program reads two numbers from the standard input, adds them, and prints the sum.</p> 
   <pre><code class="language-java">import java.util.Scanner;

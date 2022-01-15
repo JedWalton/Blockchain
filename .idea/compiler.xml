@@ -35,6 +35,9 @@
       <module name="Blockchain.Topics-Branching_statements-Theory.main" target="11" />
       <module name="Blockchain.Topics-Calling_a_method-Area_of_parallelogram.main" target="11" />
       <module name="Blockchain.Topics-Calling_a_method-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Comparable-Implement_compareTo_method.main" target="11" />
+      <module name="Blockchain.Topics-Comparable-Implement_comparing_by_additional_fields.main" target="11" />
+      <module name="Blockchain.Topics-Comparable-Theory.main" target="11" />
       <module name="Blockchain.Topics-Constructor-Account.main" target="11" />
       <module name="Blockchain.Topics-Constructor-Account_and_its_owner.main" target="11" />
       <module name="Blockchain.Topics-Constructor-Book.main" target="11" />
@@ -80,6 +83,9 @@
       <module name="Blockchain.Topics-Functional_decomposition-Create_a_full_name.main" target="11" />
       <module name="Blockchain.Topics-Functional_decomposition-Decompose_a_math_function.main" target="11" />
       <module name="Blockchain.Topics-Functional_decomposition-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Generic_methods-Check_for_null.main" target="11" />
+      <module name="Blockchain.Topics-Generic_methods-Invert_an_array.main" target="11" />
+      <module name="Blockchain.Topics-Generic_methods-Print_content.main" target="11" />
       <module name="Blockchain.Topics-Generic_methods-The_first_element.main" target="11" />
       <module name="Blockchain.Topics-Generic_methods-Theory.main" target="11" />
       <module name="Blockchain.Topics-Generics_and_Object-Boxes_are_not_just_objects_.main" target="11" />
@@ -155,6 +161,15 @@
       <module name="Blockchain.Topics-LocalTime-Seconds_since_start_of_a_day.main" target="11" />
       <module name="Blockchain.Topics-LocalTime-Some_hours_and_minutes_ago.main" target="11" />
       <module name="Blockchain.Topics-LocalTime-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Memento-Classification.main" target="11" />
+      <module name="Blockchain.Topics-Memento-Components.main" target="11" />
+      <module name="Blockchain.Topics-Memento-Downsides.main" target="11" />
+      <module name="Blockchain.Topics-Memento-Mutations.main" target="11" />
+      <module name="Blockchain.Topics-Memento-Roll_back.main" target="11" />
+      <module name="Blockchain.Topics-Memento-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Memento-Undo_and_redo.main" target="11" />
+      <module name="Blockchain.Topics-Memento-Use_cases.main" target="11" />
+      <module name="Blockchain.Topics-Memento-Visualization_of_state.main" target="11" />
       <module name="Blockchain.Topics-Multidimensional_array-Cinema.main" target="11" />
       <module name="Blockchain.Topics-Multidimensional_array-Create_cube.main" target="11" />
       <module name="Blockchain.Topics-Multidimensional_array-Fill_the_matrix_by_numbers.main" target="11" />
@@ -190,6 +205,24 @@
       <module name="Blockchain.Topics-Printing_data-The_result_of_a_Tic-Tac-Toe_game.main" target="11" />
       <module name="Blockchain.Topics-Printing_data-Theory.main" target="11" />
       <module name="Blockchain.Topics-Printing_data-We_need_to_learn_Java.main" target="11" />
+      <module name="Blockchain.Topics-Processing_strings-Compression_algorithm.main" target="11" />
+      <module name="Blockchain.Topics-Processing_strings-Convert_a_date.main" target="11" />
+      <module name="Blockchain.Topics-Processing_strings-Create_an_euphonious_word.main" target="11" />
+      <module name="Blockchain.Topics-Processing_strings-Cutting_out_the_middle_of_a_string.main" target="11" />
+      <module name="Blockchain.Topics-Processing_strings-Determine_the_output.main" target="11" />
+      <module name="Blockchain.Topics-Processing_strings-Determine_the_value.main" target="11" />
+      <module name="Blockchain.Topics-Processing_strings-Determine_the_value__1_.main" target="11" />
+      <module name="Blockchain.Topics-Processing_strings-Double_characters.main" target="11" />
+      <module name="Blockchain.Topics-Processing_strings-Move_the_first_N_characters.main" target="11" />
+      <module name="Blockchain.Topics-Processing_strings-Number_of_occurrences.main" target="11" />
+      <module name="Blockchain.Topics-Processing_strings-Palindrome.main" target="11" />
+      <module name="Blockchain.Topics-Processing_strings-Piece_of_alphabet.main" target="11" />
+      <module name="Blockchain.Topics-Processing_strings-The_longest_word.main" target="11" />
+      <module name="Blockchain.Topics-Processing_strings-The_lucky_ticket.main" target="11" />
+      <module name="Blockchain.Topics-Processing_strings-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Queue_and_Stack-The_LIFO_principle_in_action.main" target="11" />
+      <module name="Blockchain.Topics-Queue_and_Stack-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Queue_and_Stack-Working_with_queue.main" target="11" />
       <module name="Blockchain.Topics-Scanning_the_input-Guest_list_of_a_hotel.main" target="11" />
       <module name="Blockchain.Topics-Scanning_the_input-Hiring_a_chef.main" target="11" />
       <module name="Blockchain.Topics-Scanning_the_input-Print_strings_in_the_reverse_order.main" target="11" />
@@ -203,20 +236,37 @@
       <module name="Blockchain.Topics-Template_method-Template_Method.main" target="11" />
       <module name="Blockchain.Topics-Template_method-Template_Method__1_.main" target="11" />
       <module name="Blockchain.Topics-Template_method-Theory.main" target="11" />
+      <module name="Blockchain.Topics-The_Collections_Framework_overview-Squares_list.main" target="11" />
+      <module name="Blockchain.Topics-The_Collections_Framework_overview-Theory.main" target="11" />
       <module name="Blockchain.Topics-The_keyword_super-Bank_account.main" target="11" />
       <module name="Blockchain.Topics-The_keyword_super-Employees.main" target="11" />
       <module name="Blockchain.Topics-The_keyword_super-Fix_the_non-compiled_hierarchy.main" target="11" />
       <module name="Blockchain.Topics-The_keyword_super-Theory.main" target="11" />
+      <module name="Blockchain.Topics-The_List_interface-Companies.main" target="11" />
+      <module name="Blockchain.Topics-The_List_interface-Theory.main" target="11" />
       <module name="Blockchain.Topics-The_main_method-Print__We_are_robots_.main" target="11" />
       <module name="Blockchain.Topics-The_main_method-Theory.main" target="11" />
       <module name="Blockchain.Topics-Throwing_exceptions-Theory.main" target="11" />
       <module name="Blockchain.Topics-Throwing_exceptions-Throw_an_IOException.main" target="11" />
       <module name="Blockchain.Topics-Throwing_exceptions-Throw_an_unchecked_exception.main" target="11" />
+      <module name="Blockchain.Topics-Type_Bounds-Number_holder.main" target="11" />
+      <module name="Blockchain.Topics-Type_Bounds-Theory.main" target="11" />
       <module name="Blockchain.Topics-What_are_collections-Initialize_a_collection.main" target="11" />
       <module name="Blockchain.Topics-What_are_collections-Theory.main" target="11" />
       <module name="Blockchain.Topics-What_is_an_exception-Avoid_division_by_zero.main" target="11" />
       <module name="Blockchain.Topics-What_is_an_exception-Theory.main" target="11" />
       <module name="Blockchain.util.main" target="11" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Blockchain.Topics-Comparable-Implement_comparing_by_additional_fields.main" options="--add-modules java.base" />
+      <module name="Blockchain.Topics-Generic_methods-Invert_an_array.main" options="--add-modules java.base" />
+      <module name="Blockchain.Topics-Queue_and_Stack-The_LIFO_principle_in_action.main" options="--add-modules java.base" />
+      <module name="Blockchain.Topics-Queue_and_Stack-Working_with_queue.main" options="--add-modules java.base" />
+      <module name="Blockchain.Topics-The_Collections_Framework_overview-Squares_list.main" options="--add-modules java.base" />
+      <module name="Blockchain.Topics-The_List_interface-Companies.main" options="--add-modules java.base" />
+      <module name="Blockchain.Topics-Type_Bounds-Number_holder.main" options="--add-modules java.base" />
+    </option>
   </component>
 </project>
