@@ -240,60 +240,47 @@ files:
         }
     }
   learner_created: false
+- name: src/blockchain/Blockchain.java
+  visible: true
+  learner_created: true
+- name: src/blockchain/Block.java
+  visible: true
+  text: |
+    package blockchain;
+
+    import java.util.Date;
+
+    final class Block {
+        public String hash;
+        public String hashOfPrevBlock;
+        public int blockId;
+        public long timestamp;
+
+        public Block(String hashOfPrevBlock, int blockId) {
+            this.hashOfPrevBlock = hashOfPrevBlock;
+            this.blockId = blockId;
+            this.timestamp = new Date().getTime();
+            this.hash = StringUtil.applySha256(hashOfPrevBlock);
+        }
+
+
+    }
+  learner_created: true
+- name: src/blockchain/BlockChainFactory.java
+  visible: true
+  learner_created: true
+- name: src/blockchain/util/SerializationUtil.java
+  visible: true
+  learner_created: true
+- name: src/blockchain/util/StringUtil.java
+  visible: true
+  learner_created: true
+- name: Database.txt
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/5414#comment
-status: Failed
+status: Solved
 feedback:
-  message: |-
-    Wrong answer in test #1
-
-    Every block should contain 9 lines of data
-
-    Please find below the output of your program during this failed test.
-
-    ---
-
-    Block:
-    Id: 0
-    Timestamp: 1641526608204
-    Hash of the previous block:
-    0
-    Hash of the block:
-    5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9
-
-    Block:
-    Id: 1
-    Timestamp: 1641526608271
-    Hash of the previous block:
-    5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9
-    Hash of the block:
-    5122a1d1bc9d87662dcf5fb870adf8c55faf2ce12fad1bacac2fe7df88172466
-
-    Block:
-    Id: 2
-    Timestamp: 1641526608324
-    Hash of the previous block:
-    5122a1d1bc9d87662dcf5fb870adf8c55faf2ce12fad1bacac2fe7df88172466
-    Hash of the block:
-    3c857ab8e3936f0f125a97a86262fd3d1cd906f4b7acf1df385f1756f7f692b2
-
-    Invalid block at 1
-    Block:
-    Id: 3
-    Timestamp: 1641526608337
-    Hash of the previous block:
-    3c857ab8e3936f0f125a97a86262fd3d1cd906f4b7acf1df385f1756f7f692b2
-    Hash of the block:
-    3806743a62ad600a453105090db2884c747600ad27576f4e6ba18f2f56cc445b
-
-    Invalid block at 1
-    Block:
-    Id: 4
-    Timestamp: 1641526608360
-    Hash of the previous block:
-    3806743a62ad600a453105090db2884c747600ad27576f4e6ba18f2f56cc445b
-    Hash of the block:
-    19870586ed9e6d23573bd38b361f090ec70a0260fbf5b6e9d667f239912ccf94
-
-    Invalid block at 1
-  time: Fri, 07 Jan 2022 03:36:49 UTC
+  message: Congratulations!
+  time: Sun, 23 Jan 2022 12:42:31 UTC
 record: 2

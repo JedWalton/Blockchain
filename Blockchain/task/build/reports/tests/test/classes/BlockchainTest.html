@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">1</div>
+<div class="counter">0</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.317s</div>
+<div class="counter">0.262s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox failures" id="successRate">
-<div class="percent">0%</div>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,126 +61,13 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Failed tests</a>
+<a href="#tab0">Tests</a>
 </li>
 <li>
-<a href="#tab1">Tests</a>
-</li>
-<li>
-<a href="#tab2">Standard output</a>
+<a href="#tab1">Standard output</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
-<h2>Failed tests</h2>
-<div class="test">
-<a name="start"></a>
-<h3 class="failures">start</h3>
-<span class="code">
-<pre>java.lang.AssertionError: Wrong answer in test #1
-
-Every block should contain 9 lines of data
-
-Please find below the output of your program during this failed test.
-
----
-
-Block:
-Id: 0
-Timestamp: 1641526608204
-Hash of the previous block:
-0
-Hash of the block:
-5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9
-
-Block:
-Id: 1
-Timestamp: 1641526608271
-Hash of the previous block:
-5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9
-Hash of the block:
-5122a1d1bc9d87662dcf5fb870adf8c55faf2ce12fad1bacac2fe7df88172466
-
-Block:
-Id: 2
-Timestamp: 1641526608324
-Hash of the previous block:
-5122a1d1bc9d87662dcf5fb870adf8c55faf2ce12fad1bacac2fe7df88172466
-Hash of the block:
-3c857ab8e3936f0f125a97a86262fd3d1cd906f4b7acf1df385f1756f7f692b2
-
-Invalid block at 1
-Block:
-Id: 3
-Timestamp: 1641526608337
-Hash of the previous block:
-3c857ab8e3936f0f125a97a86262fd3d1cd906f4b7acf1df385f1756f7f692b2
-Hash of the block:
-3806743a62ad600a453105090db2884c747600ad27576f4e6ba18f2f56cc445b
-
-Invalid block at 1
-Block:
-Id: 4
-Timestamp: 1641526608360
-Hash of the previous block:
-3806743a62ad600a453105090db2884c747600ad27576f4e6ba18f2f56cc445b
-Hash of the block:
-19870586ed9e6d23573bd38b361f090ec70a0260fbf5b6e9d667f239912ccf94
-
-Invalid block at 1
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.hyperskill.hstest.stage.StageTest.start(StageTest.java:155)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
-	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-	at jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:121)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
-	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:414)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
-	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-</pre>
-</span>
-</div>
-</div>
-<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -191,60 +78,345 @@ Invalid block at 1
 </tr>
 </thead>
 <tr>
-<td class="failures">start</td>
-<td class="failures">0.317s</td>
-<td class="failures">failed</td>
+<td class="success">start</td>
+<td class="success">0.262s</td>
+<td class="success">passed</td>
 </tr>
 </table>
 </div>
-<div id="tab2" class="tab">
+<div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
 <pre>?[1;31m
 Start test 1?[0m
-Block:
-Id: 0
-Timestamp: 1641526608204
-Hash of the previous block:
-0
-Hash of the block:
-5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9
+Enter how many zeros the hash must start with: &gt; 0
 
-Block:
-Id: 1
-Timestamp: 1641526608271
-Hash of the previous block:
-5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9
-Hash of the block:
-5122a1d1bc9d87662dcf5fb870adf8c55faf2ce12fad1bacac2fe7df88172466
+Block: 
+Id: 0 
+Timestamp: 1642941751620 
+Magic number: 3722914125972130010 
+Hash of the previous block: 
+0 
+Hash of the block: 
+7b8f8e4e8aca74df0629f166e793efe1d723db65e51de46014fad726cbd78b8e 
+Block was generating for 0 seconds
 
-Block:
-Id: 2
-Timestamp: 1641526608324
-Hash of the previous block:
-5122a1d1bc9d87662dcf5fb870adf8c55faf2ce12fad1bacac2fe7df88172466
-Hash of the block:
-3c857ab8e3936f0f125a97a86262fd3d1cd906f4b7acf1df385f1756f7f692b2
+Block: 
+Id: 1 
+Timestamp: 1642941751633 
+Magic number: 8054277338935936187 
+Hash of the previous block: 
+7b8f8e4e8aca74df0629f166e793efe1d723db65e51de46014fad726cbd78b8e 
+Hash of the block: 
+a5c7b89567d89df955de5f012f0e543245c7bad64879e14f656d03864d86a646 
+Block was generating for 0 seconds
 
-Invalid block at 1
-Block:
-Id: 3
-Timestamp: 1641526608337
-Hash of the previous block:
-3c857ab8e3936f0f125a97a86262fd3d1cd906f4b7acf1df385f1756f7f692b2
-Hash of the block:
-3806743a62ad600a453105090db2884c747600ad27576f4e6ba18f2f56cc445b
+Block: 
+Id: 2 
+Timestamp: 1642941751633 
+Magic number: -623188353641422944 
+Hash of the previous block: 
+a5c7b89567d89df955de5f012f0e543245c7bad64879e14f656d03864d86a646 
+Hash of the block: 
+5affefa01288ff2ae2660e8949ee524075b2bf121336604f3bd9de75c5b26789 
+Block was generating for 0 seconds
 
-Invalid block at 1
-Block:
-Id: 4
-Timestamp: 1641526608360
-Hash of the previous block:
-3806743a62ad600a453105090db2884c747600ad27576f4e6ba18f2f56cc445b
-Hash of the block:
-19870586ed9e6d23573bd38b361f090ec70a0260fbf5b6e9d667f239912ccf94
+Block: 
+Id: 3 
+Timestamp: 1642941751636 
+Magic number: -825792264477505174 
+Hash of the previous block: 
+5affefa01288ff2ae2660e8949ee524075b2bf121336604f3bd9de75c5b26789 
+Hash of the block: 
+b4e10514563f67c15dc8311d59f9e671c8fcfa703a276ae56881eb1b78c98d6e 
+Block was generating for 0 seconds
 
-Invalid block at 1
+Block: 
+Id: 4 
+Timestamp: 1642941751636 
+Magic number: -9164119776818776970 
+Hash of the previous block: 
+b4e10514563f67c15dc8311d59f9e671c8fcfa703a276ae56881eb1b78c98d6e 
+Hash of the block: 
+d31444a5430a463d5ca1fa7f21157afaa60a8b34e76368d1b251030dfed45df3 
+Block was generating for 0 seconds
+
+
+?[1;31m
+Start test 2?[0m
+Enter how many zeros the hash must start with: &gt; 1
+
+Block: 
+Id: 0 
+Timestamp: 1642941751674 
+Magic number: -4670459180217882367 
+Hash of the previous block: 
+0 
+Hash of the block: 
+062ebd1d874e4a90e51986b957a931a7d5e0c88b17c5d0909b0f0db66deb9807 
+Block was generating for 0 seconds
+
+Block: 
+Id: 1 
+Timestamp: 1642941751676 
+Magic number: 1850511855158216516 
+Hash of the previous block: 
+062ebd1d874e4a90e51986b957a931a7d5e0c88b17c5d0909b0f0db66deb9807 
+Hash of the block: 
+0910eb8a83fd4185c4a8a198dead22c3fdcee1549555ffd2f3f5fe106370699e 
+Block was generating for 0 seconds
+
+Block: 
+Id: 2 
+Timestamp: 1642941751677 
+Magic number: -8892870266737855587 
+Hash of the previous block: 
+0910eb8a83fd4185c4a8a198dead22c3fdcee1549555ffd2f3f5fe106370699e 
+Hash of the block: 
+054ebd0c161725f4d6fdc3c5167bb72da0352a912e23d3bf6098348bb5e565a8 
+Block was generating for 0 seconds
+
+Block: 
+Id: 3 
+Timestamp: 1642941751679 
+Magic number: 7247137048652033681 
+Hash of the previous block: 
+054ebd0c161725f4d6fdc3c5167bb72da0352a912e23d3bf6098348bb5e565a8 
+Hash of the block: 
+0ffe1a5a98536e7f390a02d116a489ef1159d33272dd562725a47e6b1be3dd4f 
+Block was generating for 0 seconds
+
+Block: 
+Id: 4 
+Timestamp: 1642941751681 
+Magic number: 4440142606595975708 
+Hash of the previous block: 
+0ffe1a5a98536e7f390a02d116a489ef1159d33272dd562725a47e6b1be3dd4f 
+Hash of the block: 
+0ac321227112ad8a70719f72027b1268c64081123dcaab6c8b30a4ccf8aef58d 
+Block was generating for 0 seconds
+
+
+?[1;31m
+Start test 3?[0m
+Enter how many zeros the hash must start with: &gt; 2
+
+Block: 
+Id: 0 
+Timestamp: 1642941751709 
+Magic number: 863034810504697230 
+Hash of the previous block: 
+0 
+Hash of the block: 
+0089778cc2f19f432daded800773bd3fdf7a0e80ce6a076e56aaba51c12861fc 
+Block was generating for 0 seconds
+
+Block: 
+Id: 1 
+Timestamp: 1642941751715 
+Magic number: 2361739633241392924 
+Hash of the previous block: 
+0089778cc2f19f432daded800773bd3fdf7a0e80ce6a076e56aaba51c12861fc 
+Hash of the block: 
+00961ed3ffac02e367c2517920d02e9d2fdef763f283443e20829c50029e6c14 
+Block was generating for 0 seconds
+
+Block: 
+Id: 2 
+Timestamp: 1642941751719 
+Magic number: 6918987192865385105 
+Hash of the previous block: 
+00961ed3ffac02e367c2517920d02e9d2fdef763f283443e20829c50029e6c14 
+Hash of the block: 
+005e4c8f4fac58a8e6d84a61f892e2e1d9aa6e8d77a5d317c338162188fe22c7 
+Block was generating for 0 seconds
+
+Block: 
+Id: 3 
+Timestamp: 1642941751723 
+Magic number: 3360729382085437864 
+Hash of the previous block: 
+005e4c8f4fac58a8e6d84a61f892e2e1d9aa6e8d77a5d317c338162188fe22c7 
+Hash of the block: 
+00417c2d43cd19c5b6777e77ed78acd0cc0512d6e4ae795e6e2e1c5ed38ca981 
+Block was generating for 0 seconds
+
+Block: 
+Id: 4 
+Timestamp: 1642941751723 
+Magic number: -3189038509717733975 
+Hash of the previous block: 
+00417c2d43cd19c5b6777e77ed78acd0cc0512d6e4ae795e6e2e1c5ed38ca981 
+Hash of the block: 
+002dbeff06122de1575f87f54f5a44befe0e21a42e27651b3492fbc4c55e8cd8 
+Block was generating for 0 seconds
+
+
+?[1;31m
+Start test 4?[0m
+Enter how many zeros the hash must start with: &gt; 0
+
+Block: 
+Id: 0 
+Timestamp: 1642941751752 
+Magic number: 7732035682232316233 
+Hash of the previous block: 
+0 
+Hash of the block: 
+e3c5bd86d0226470854fda4ec58ec02bf1ecee3ba5c125d44c637aa9d673f6a2 
+Block was generating for 0 seconds
+
+Block: 
+Id: 1 
+Timestamp: 1642941751755 
+Magic number: -1120586193558912168 
+Hash of the previous block: 
+e3c5bd86d0226470854fda4ec58ec02bf1ecee3ba5c125d44c637aa9d673f6a2 
+Hash of the block: 
+d65e802bea1ff0e8ca60dae14e6686d95c32178c871bc4c662f38bb5d6fdddec 
+Block was generating for 0 seconds
+
+Block: 
+Id: 2 
+Timestamp: 1642941751756 
+Magic number: -451427537000902352 
+Hash of the previous block: 
+d65e802bea1ff0e8ca60dae14e6686d95c32178c871bc4c662f38bb5d6fdddec 
+Hash of the block: 
+1d6d2f464f2408f38d85bf33a5d06e0ee16c0dd2522ed52ce1d4091f9954ff94 
+Block was generating for 0 seconds
+
+Block: 
+Id: 3 
+Timestamp: 1642941751756 
+Magic number: 4152758577653196086 
+Hash of the previous block: 
+1d6d2f464f2408f38d85bf33a5d06e0ee16c0dd2522ed52ce1d4091f9954ff94 
+Hash of the block: 
+ecc046f3850e84c256e555f83122dd3aae4b7f8a534a3825155f57ed9d9d33dd 
+Block was generating for 0 seconds
+
+Block: 
+Id: 4 
+Timestamp: 1642941751756 
+Magic number: -2077798910926775911 
+Hash of the previous block: 
+ecc046f3850e84c256e555f83122dd3aae4b7f8a534a3825155f57ed9d9d33dd 
+Hash of the block: 
+cfceef018b8ca2a9a3c386289860210afa1567f46040efdc5c329884a063d3e9 
+Block was generating for 0 seconds
+
+
+?[1;31m
+Start test 5?[0m
+Enter how many zeros the hash must start with: &gt; 1
+
+Block: 
+Id: 0 
+Timestamp: 1642941751782 
+Magic number: 603854187541280854 
+Hash of the previous block: 
+0 
+Hash of the block: 
+04f04ee4546eed39be3ecbe749a75c411953553747e5b280eec3a748a97e1ab3 
+Block was generating for 0 seconds
+
+Block: 
+Id: 1 
+Timestamp: 1642941751784 
+Magic number: 7222420240101811392 
+Hash of the previous block: 
+04f04ee4546eed39be3ecbe749a75c411953553747e5b280eec3a748a97e1ab3 
+Hash of the block: 
+0860ddb65a11ccc22c7d96aa4a461c47e3de1a98766b21931123d59280c91d2e 
+Block was generating for 0 seconds
+
+Block: 
+Id: 2 
+Timestamp: 1642941751784 
+Magic number: 685518818282959583 
+Hash of the previous block: 
+0860ddb65a11ccc22c7d96aa4a461c47e3de1a98766b21931123d59280c91d2e 
+Hash of the block: 
+07abd5928aa4c63f1cebfc2d9e5cdcd993a15181db899a7cb195a5257fd0b5c6 
+Block was generating for 0 seconds
+
+Block: 
+Id: 3 
+Timestamp: 1642941751784 
+Magic number: -4258939235125102776 
+Hash of the previous block: 
+07abd5928aa4c63f1cebfc2d9e5cdcd993a15181db899a7cb195a5257fd0b5c6 
+Hash of the block: 
+089823df8875048f9dacf459f3c61a835bcb40915010947f34ccd253cfd8fe05 
+Block was generating for 0 seconds
+
+Block: 
+Id: 4 
+Timestamp: 1642941751784 
+Magic number: -6577745733351945147 
+Hash of the previous block: 
+089823df8875048f9dacf459f3c61a835bcb40915010947f34ccd253cfd8fe05 
+Hash of the block: 
+0e3e29ab482b3e3f033cde9a0e61c2e94862cde76eb29f7c30f4f69af4c4ecfd 
+Block was generating for 0 seconds
+
+
+?[1;31m
+Start test 6?[0m
+Enter how many zeros the hash must start with: &gt; 2
+
+Block: 
+Id: 0 
+Timestamp: 1642941751808 
+Magic number: -3520759333066876449 
+Hash of the previous block: 
+0 
+Hash of the block: 
+008c253efae727b907550a0fb492ddf4e7cbb2edf5d5da940ae3ac73c3838d75 
+Block was generating for 0 seconds
+
+Block: 
+Id: 1 
+Timestamp: 1642941751812 
+Magic number: 748213731741074422 
+Hash of the previous block: 
+008c253efae727b907550a0fb492ddf4e7cbb2edf5d5da940ae3ac73c3838d75 
+Hash of the block: 
+00f89bacdd1f291776e6445d522e3b94884b3c80b52093921b2282e0606ae0ae 
+Block was generating for 0 seconds
+
+Block: 
+Id: 2 
+Timestamp: 1642941751813 
+Magic number: 2625483599252293471 
+Hash of the previous block: 
+00f89bacdd1f291776e6445d522e3b94884b3c80b52093921b2282e0606ae0ae 
+Hash of the block: 
+00978548c030cc8e2cd0a0b4b5f53a9eb71b9592e4c76a8441d2679ead42a285 
+Block was generating for 0 seconds
+
+Block: 
+Id: 3 
+Timestamp: 1642941751814 
+Magic number: 7468978726371278690 
+Hash of the previous block: 
+00978548c030cc8e2cd0a0b4b5f53a9eb71b9592e4c76a8441d2679ead42a285 
+Hash of the block: 
+0010956cd10d5c80aba32a01cbb7b6c5b7959be68fbc26f9d2d25acd74e1e941 
+Block was generating for 0 seconds
+
+Block: 
+Id: 4 
+Timestamp: 1642941751814 
+Magic number: 4580908619981390516 
+Hash of the previous block: 
+0010956cd10d5c80aba32a01cbb7b6c5b7959be68fbc26f9d2d25acd74e1e941 
+Hash of the block: 
+006dbdd9cf846589814160455a7161427e6b070e2f1c914cdff300662c20aeb4 
+Block was generating for 0 seconds
+
+
 </pre>
 </span>
 </div>
@@ -256,7 +428,7 @@ Invalid block at 1
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.1.1</a> at 7 Jan 2022, 03:36:48</p>
+<a href="http://www.gradle.org">Gradle 7.3.3</a> at 23 Jan 2022, 12:42:31</p>
 </div>
 </div>
 </body>

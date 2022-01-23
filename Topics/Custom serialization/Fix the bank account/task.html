@@ -1,0 +1,18 @@
+<h2>Fix the bank account</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Here's a class:</p> 
+  <pre><code class="java">public class BankAccount implements Serializable {
+    String name;
+    transient String accountNumber;
+
+    private void writeObject(ObjectOutputStream oos) throws Exception {
+        ________________
+        String encryptAccNumber= encrypt(accountNumber);
+        oos.writeObject(encryptAccNumber);
+    }
+}</code></pre> 
+  <p>Which of the following lines should be instead of the blank one?</p>
+ </body>
+</html>

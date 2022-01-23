@@ -48,6 +48,15 @@
       <module name="Blockchain.Topics-Custom_exceptions-DriverNotReadyException.main" target="11" />
       <module name="Blockchain.Topics-Custom_exceptions-Square_class.main" target="11" />
       <module name="Blockchain.Topics-Custom_exceptions-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Custom_serialization-Custom_serialization_behavior.main" target="11" />
+      <module name="Blockchain.Topics-Custom_serialization-Fix_the_bank_account.main" target="11" />
+      <module name="Blockchain.Topics-Custom_serialization-Included_fields.main" target="11" />
+      <module name="Blockchain.Topics-Custom_serialization-Initialize_transient_fields.main" target="11" />
+      <module name="Blockchain.Topics-Custom_serialization-Password_processing.main" target="11" />
+      <module name="Blockchain.Topics-Custom_serialization-Serialization_mystery.main" target="11" />
+      <module name="Blockchain.Topics-Custom_serialization-Serializing_integers.main" target="11" />
+      <module name="Blockchain.Topics-Custom_serialization-The_Range_class.main" target="11" />
+      <module name="Blockchain.Topics-Custom_serialization-Theory.main" target="11" />
       <module name="Blockchain.Topics-Declaring_a_method-Calculating_factorials.main" target="11" />
       <module name="Blockchain.Topics-Declaring_a_method-Sum_of_numbers_in_the_range.main" target="11" />
       <module name="Blockchain.Topics-Declaring_a_method-The_sign_of_a_number.main" target="11" />
@@ -112,7 +121,11 @@
       <module name="Blockchain.Topics-Inner_classes-Pumpkin_and_candle.main" target="11" />
       <module name="Blockchain.Topics-Inner_classes-Theory.main" target="11" />
       <module name="Blockchain.Topics-Inner_classes-Your_vehicle.main" target="11" />
+      <module name="Blockchain.Topics-Input_streams-Byte_vs_character_input_streams.main" target="11" />
       <module name="Blockchain.Topics-Input_streams-Convert_to_bytes.main" target="11" />
+      <module name="Blockchain.Topics-Input_streams-Count_words.main" target="11" />
+      <module name="Blockchain.Topics-Input_streams-FileInputStream_class.main" target="11" />
+      <module name="Blockchain.Topics-Input_streams-Read_into_an_array.main" target="11" />
       <module name="Blockchain.Topics-Input_streams-Reverse_input_text.main" target="11" />
       <module name="Blockchain.Topics-Input_streams-Theory.main" target="11" />
       <module name="Blockchain.Topics-Instance_methods-Complex_numbers.main" target="11" />
@@ -193,6 +206,8 @@
       <module name="Blockchain.Topics-Objects-Change_identities.main" target="11" />
       <module name="Blockchain.Topics-Objects-Preparing_full_name.main" target="11" />
       <module name="Blockchain.Topics-Objects-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Output_streams-Convert_to_char_array.main" target="11" />
+      <module name="Blockchain.Topics-Output_streams-Theory.main" target="11" />
       <module name="Blockchain.Topics-Package-Binary_search.main" target="11" />
       <module name="Blockchain.Topics-Package-Theory.main" target="11" />
       <module name="Blockchain.Topics-Polymorphism-Find_mistake.main" target="11" />
@@ -228,6 +243,8 @@
       <module name="Blockchain.Topics-Scanning_the_input-Print_strings_in_the_reverse_order.main" target="11" />
       <module name="Blockchain.Topics-Scanning_the_input-Printing_strings_in_the_same_order.main" target="11" />
       <module name="Blockchain.Topics-Scanning_the_input-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Serialization_basics-Serializable_user.main" target="11" />
+      <module name="Blockchain.Topics-Serialization_basics-Theory.main" target="11" />
       <module name="Blockchain.Topics-Static_members-Detail_manufacturing.main" target="11" />
       <module name="Blockchain.Topics-Static_members-Project_constants_and_methods.main" target="11" />
       <module name="Blockchain.Topics-Static_members-Theory.main" target="11" />

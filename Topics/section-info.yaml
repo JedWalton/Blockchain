@@ -56,3 +56,6 @@ content:
 - Comparable
 - Memento
 - Processing strings
+- Output streams
+- Serialization basics
+- Custom serialization

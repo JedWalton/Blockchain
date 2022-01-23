@@ -235,6 +235,22 @@ files:
         }
     }
   learner_created: false
+- name: test/blockchain/BlockchainTest.java
+  visible: true
+  text: "package blockchain;\n\nimport junit.framework.TestCase;\n\npublic class BlockchainTest\
+    \ extends TestCase {\n\n    \n\n}"
+  learner_created: false
+- name: test/blockchain/MainTest.java
+  visible: true
+  text: |-
+    package blockchain;
+
+    import junit.framework.TestCase;
+
+    public class MainTest extends TestCase {
+
+    }
+  learner_created: false
 feedback_link: https://hyperskill.org/learn/step/5415#comment
 status: Unchecked
 record: -1

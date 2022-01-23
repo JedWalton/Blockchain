@@ -9,13 +9,12 @@ class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));
         String line = br.readLine();
 
-//get all the characters in the String
+        //get all the characters in the String
         char[] chars = line.toCharArray();
 
-        for (int i =0; i<chars.length; i++){
+        for (char aChar : chars) {
             //use Integer.valueOf to get character's ACII value
-            System.out.print(Integer.valueOf(chars[i]));
+            System.out.print(Integer.valueOf(aChar));
         }
-        
     }
 }

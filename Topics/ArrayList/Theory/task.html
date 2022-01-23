@@ -3,7 +3,7 @@
  <head></head>
  <body>
   <h5 style="text-align: center;">Resizable arrays</h5> 
-  <p>One of the most widely used classes of Java Class Library is a class named <code class="language-java">ArrayList</code> that represents a resizable array of objects of a specified type. Unlike the standard array denoted as <code class="language-java">[]</code>, it can dynamically grow after the addition and shrink after the removal of its elements. This behavior is very useful if you do not know the size of the array in advance or you need one that can change sizes over the lifetime of a program.</p> 
+  <p>One of the most widely used classes of Java Class Library is a class named <code class="language-java">ArrayList</code> that represents a resizable array of objects of a specified type. Unlike the standard array denoted as <code class="language-java">[]</code>, it can dynamically grow after the addition and shrink after the removal of its elements. This behavior is very useful if you do not know the size of the array in advance or you need one that can change size over the lifetime of a program.</p> 
   <p>In fact, this class is built on top of a standard Java array, extending it with a set of convenient operations. Like a standard array, it allows getting the current number of elements (its size) as well as accessing its elements by their indexes.</p> 
   <p>There is only one restriction: <code class="language-java">ArrayList</code>: being a generic class, it cannot store primitive types. However, it can store any reference types, including <code class="language-java">String</code>'s, wrapper classes (like <code class="language-java">Integer</code>'s), other <code class="language-java">ArrayList</code>'s, and custom classes.</p> 
   <h5 style="text-align: center;">Creating an instance of ArrayList</h5> 
@@ -30,9 +30,9 @@
   <h5 style="text-align: center;">Basic methods</h5> 
   <p>The collection has a set of convenient methods that emulate and extend the functionality of standard arrays. Let's discuss what they are. First, let's initialize some collection:</p> 
   <pre><code class="language-java">ArrayList&lt;String&gt; names = new ArrayList&lt;&gt;(); // empty collection of strings</code></pre> 
-  <p>First of all, there's a method to determine the size of the collection <code class="language-java">size</code> that return the number of elements of the list. Let's try learning the size of ours:</p> 
+  <p>First of all, there's a method to determine the size of the collection <code class="language-java">size</code> that returns the number of elements of the list. Let's try learning the size of ours:</p> 
   <pre><code class="language-java">System.out.println(names.size()); // 0</code></pre> 
-  <p>As expected, it is empty and the result is zero. We also might want to learn the value of the specified position of the object. For that, collections have <code class="language-java">get(int index)</code> method that returns the object of the list which is present at the specified index.</p> 
+  <p>As expected, it is empty and the result is zero. We also might want to learn the value of the specified position of the object. For that, collections have a <code class="language-java">get(int index)</code> method that returns the object of the list which is present at the specified index.</p> 
   <p>Next, there are a bunch of methods to add elements and set values of a collection:</p> 
   <ul> 
    <li><code class="language-java">add(Object o)</code> adds a passed element to the last position of the collection;</li> 
@@ -76,7 +76,7 @@ numbers.add(1);
 numbers.add(2);
 numbers.add(3);
 numbers.add(1);</code></pre> 
-  <p>There's also <code class="language-java">addAll(Collection c)</code> method for adding the whole collection to an <code class="language-java">ArrayList</code>. It appends elements of the provided collection to the end of the list:</p> 
+  <p>There's also an <code class="language-java">addAll(Collection c)</code> method for adding the whole collection to an <code class="language-java">ArrayList</code>. It appends elements of the provided collection to the end of the list:</p> 
   <pre><code class="language-java">ArrayList&lt;Integer&gt; numbers2 = new ArrayList&lt;&gt;();    // creating another list of Integers
 numbers2.add(100);
 numbers2.addAll(numbers); // [100, 1, 2, 3, 1]</code></pre> 
@@ -105,6 +105,6 @@ for (Long value : powersOfTen) {
   <pre><code class="language-java">1 10 100 1000 10000</code></pre> 
   <p>It is not harder than using a standard array.</p> 
   <h5 style="text-align: center;">Conclusion</h5> 
-  <p>We've considered the <code class="language-java">ArrayList</code> class from the <code class="language-java">java.util</code> package. This class is similar to standard Java arrays but has the possibility to dynamically change its size. It has methods to get the size, add, remove and access elements by their indexes. In addition, <code class="language-java">ArrayList</code> provides a set of useful methods that check whether an element is presented in the array and find it. A regular array does not have such methods built-in.</p>
+  <p>We've considered the <code class="language-java">ArrayList</code> class from the <code class="language-java">java.util</code> package. This class is similar to standard Java arrays but has the possibility to dynamically change its size. It has methods to get the size, add, remove and access elements by their indexes. In addition, <code class="language-java">ArrayList</code> provides a set of useful methods that check whether an element is present in the array and find it. A regular array does not have such methods built-in.</p>
  </body>
 </html>

@@ -8,7 +8,7 @@
         <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleJvm" value="16" />
+        <option name="gradleJvm" value="#JAVA_INTERNAL" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
@@ -58,6 +58,15 @@
             <option value="$PROJECT_DIR$/Topics/Custom exceptions/DriverNotReadyException" />
             <option value="$PROJECT_DIR$/Topics/Custom exceptions/Square class" />
             <option value="$PROJECT_DIR$/Topics/Custom exceptions/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Custom serialization/Custom serialization behavior" />
+            <option value="$PROJECT_DIR$/Topics/Custom serialization/Fix the bank account" />
+            <option value="$PROJECT_DIR$/Topics/Custom serialization/Included fields" />
+            <option value="$PROJECT_DIR$/Topics/Custom serialization/Initialize transient fields" />
+            <option value="$PROJECT_DIR$/Topics/Custom serialization/Password processing" />
+            <option value="$PROJECT_DIR$/Topics/Custom serialization/Serialization mystery" />
+            <option value="$PROJECT_DIR$/Topics/Custom serialization/Serializing integers" />
+            <option value="$PROJECT_DIR$/Topics/Custom serialization/The Range class" />
+            <option value="$PROJECT_DIR$/Topics/Custom serialization/Theory" />
             <option value="$PROJECT_DIR$/Topics/Declaring a method/Calculating factorials" />
             <option value="$PROJECT_DIR$/Topics/Declaring a method/Sum of numbers in the range" />
             <option value="$PROJECT_DIR$/Topics/Declaring a method/The sign of a number" />
@@ -122,7 +131,11 @@
             <option value="$PROJECT_DIR$/Topics/Inner classes/Pumpkin and candle" />
             <option value="$PROJECT_DIR$/Topics/Inner classes/Theory" />
             <option value="$PROJECT_DIR$/Topics/Inner classes/Your vehicle" />
+            <option value="$PROJECT_DIR$/Topics/Input streams/Byte vs character input streams" />
             <option value="$PROJECT_DIR$/Topics/Input streams/Convert to bytes" />
+            <option value="$PROJECT_DIR$/Topics/Input streams/Count words" />
+            <option value="$PROJECT_DIR$/Topics/Input streams/FileInputStream class" />
+            <option value="$PROJECT_DIR$/Topics/Input streams/Read into an array" />
             <option value="$PROJECT_DIR$/Topics/Input streams/Reverse input text" />
             <option value="$PROJECT_DIR$/Topics/Input streams/Theory" />
             <option value="$PROJECT_DIR$/Topics/Instance methods/Complex numbers" />
@@ -203,6 +216,8 @@
             <option value="$PROJECT_DIR$/Topics/Objects/Change identities" />
             <option value="$PROJECT_DIR$/Topics/Objects/Preparing full name" />
             <option value="$PROJECT_DIR$/Topics/Objects/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Output streams/Convert to char array" />
+            <option value="$PROJECT_DIR$/Topics/Output streams/Theory" />
             <option value="$PROJECT_DIR$/Topics/Package/Binary search" />
             <option value="$PROJECT_DIR$/Topics/Package/Theory" />
             <option value="$PROJECT_DIR$/Topics/Polymorphism/Find mistake" />
@@ -238,6 +253,8 @@
             <option value="$PROJECT_DIR$/Topics/Scanning the input/Print strings in the reverse order" />
             <option value="$PROJECT_DIR$/Topics/Scanning the input/Printing strings in the same order" />
             <option value="$PROJECT_DIR$/Topics/Scanning the input/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Serialization basics/Serializable user" />
+            <option value="$PROJECT_DIR$/Topics/Serialization basics/Theory" />
             <option value="$PROJECT_DIR$/Topics/Static members/Detail manufacturing" />
             <option value="$PROJECT_DIR$/Topics/Static members/Project constants and methods" />
             <option value="$PROJECT_DIR$/Topics/Static members/Theory" />
