@@ -235,11 +235,270 @@ files:
         }
     }
   learner_created: false
-- name: test/blockchain/BlockchainTest.java
+- name: src/blockchain/BlockChainFactory.java
   visible: true
-  text: "package blockchain;\n\nimport junit.framework.TestCase;\n\npublic class BlockchainTest\
-    \ extends TestCase {\n\n    \n\n}"
-  learner_created: false
+  text: |
+    package blockchain;
+
+    public class BlockChainFactory {
+
+    }
+  learner_created: true
+- name: src/blockchain/Blockchain.java
+  visible: true
+  text: |-
+    package blockchain;
+
+    import blockchain.util.SerializationUtil;
+
+    import java.io.IOException;
+    import java.io.Serializable;
+    import java.util.*;
+
+    public class Blockchain implements Serializable {
+        private static final long serialVersionUID = 3705442926703754261L;
+        private final List<Block> blocks;
+        private final int zeroes;   // TODO: 27/12/2020
+
+        public static Blockchain getInstance(int zeroes) {
+    //        try {
+    //            final var blockchain = (Blockchain) SerializationUtil.deserialize("./Database.txt");
+    //            return blockchain.isValid() ? blockchain : new Blockchain(zeroes);
+            return new Blockchain(zeroes);
+    //        } catch (ClassNotFoundException e) {
+    //            e.getMessage();
+    //            System.out.println("Nothing found on the database. Generating a new blockchain...");
+    //            return new Blockchain(zeroes);
+    //        } catch (IOException e) {
+    //            e.printStackTrace();
+    //            System.out.println("Something went wrong on restoring the object. Generating a new blockchain...");
+    //            return new Blockchain(zeroes);
+    //        }
+        }
+
+        private Blockchain(int zeroes) {
+            this.blocks = new ArrayList<>();
+            this.zeroes = zeroes;
+        }
+
+        @Override
+        public String toString() {
+            final var stringBuilder = new StringBuilder();
+            for (var block : blocks) {
+                stringBuilder.append(block).append("\n\n");
+            }
+            return String.valueOf(stringBuilder);
+        }
+
+        public void generateBlocks(int blocksNumber) {
+            for (var i = 0; i < blocksNumber; i++) {
+                generateBlock();
+            }
+        }
+
+        private void generateBlock() {
+            blocks.add(Block.getProved(
+                    blocks.size(),
+                    blocks.isEmpty() ? "0" : blocks.get(blocks.size() - 1).getBlockHash(),
+                    zeroes));
+            try {
+                SerializationUtil.serialize(this, "./Database.txt");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        }
+
+        public boolean isValid() {
+            for (var i = 0; i < blocks.size(); i++) {
+                if (i == 0) {
+                    if (!blocks.get(i).getPrevBlockHash().equals("0")) return false;
+                } else {
+                    if (!blocks.get(i).getPrevBlockHash().equals(blocks.get(i - 1).getBlockHash())) return false;
+                }
+                if (!blocks.get(i).isProved(zeroes)) return false;
+            }
+            return true;
+        }
+    }
+  learner_created: true
+- name: Database.txt
+  visible: true
+  text: "��\0\x05sr\0\x15blockchain.Blockchain3l`���<\x15\x02\0\x02I\0\x06zeroesL\0\
+    \x06blockst\0\x10Ljava/util/List;xp\0\0\0\x02sr\0\x13java.util.ArrayListx��\x1d\
+    ��a�\x03\0\x01I\0\x04sizexp\0\0\0\x05w\x04\0\0\0\x05sr\0\x10blockchain.Block\x18\
+    \ �\x11��zB\x02\0\x06I\0\x02idJ\0\vmagicNumberI\0\x0etimeToGenerateJ\0\ttimestampL\0\
+    \tblockHasht\0\x12Ljava/lang/String;L\0\nprevBlockHashq\0~\0\x06xp\0\0\0\0�#�\n\
+    T�Y�\0\0\0\0\0\0\x01~���\0t\0@008c253efae727b907550a0fb492ddf4e7cbb2edf5d5da940ae3ac73c3838d75t\0\
+    \x010sq\0~\0\x05\0\0\0\x01\nb0l�\x7f\x03�\0\0\0\0\0\0\x01~���\x04t\0@00f89bacdd1f291776e6445d522e3b94884b3c80b52093921b2282e0606ae0aeq\0\
+    ~\0\bsq\0~\0\x05\0\0\0\x02$o�lQ\f\a_\0\0\0\0\0\0\x01~���\x05t\0@00978548c030cc8e2cd0a0b4b5f53a9eb71b9592e4c76a8441d2679ead42a285q\0\
+    ~\0\vsq\0~\0\x05\0\0\0\x03g�$�LO?b\0\0\0\0\0\0\x01~���\x06t\0@0010956cd10d5c80aba32a01cbb7b6c5b7959be68fbc26f9d2d25acd74e1e941q\0\
+    ~\0\nsq\0~\0\x05\0\0\0\x04?��\x1e��\x02�\0\0\0\0\0\0\x01~���\x06t\0@006dbdd9cf846589814160455a7161427e6b070e2f1c914cdff300662c20aeb4q\0\
+    ~\0\x0fx"
+  learner_created: true
+- name: src/blockchain/util/StringUtil.java
+  visible: true
+  text: |-
+    package blockchain.util;
+
+    import java.nio.charset.StandardCharsets;
+    import java.security.MessageDigest;
+    import java.security.NoSuchAlgorithmException;
+
+    public class StringUtil {
+        private StringUtil() {}
+
+        /* Applies Sha256 to a string and returns a hash. */
+        public static String applySha256(String input){
+            try {
+                MessageDigest digest = MessageDigest.getInstance("SHA-256");
+                /* Applies sha256 to our input */
+                byte[] hash = digest.digest(input.getBytes(StandardCharsets.UTF_8));
+                StringBuilder hexString = new StringBuilder();
+                for (byte elem: hash) {
+                    String hex = Integer.toHexString(0xff & elem);
+                    if(hex.length() == 1) hexString.append('0');
+                    hexString.append(hex);
+                }
+                return hexString.toString();
+            }
+            catch(NoSuchAlgorithmException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
+  learner_created: true
+- name: src/blockchain/util/SerializationUtil.java
+  visible: true
+  text: |-
+    package blockchain.util;
+
+    import java.io.*;
+
+    public class SerializationUtil {
+        private SerializationUtil() {}
+
+        /**
+         * Serialize the given object to the file
+         */
+        public static void serialize(Object obj, String fileName) throws IOException {
+            try (var fos = new FileOutputStream(fileName);
+                 var bos = new BufferedOutputStream(fos);
+                 var oos = new ObjectOutputStream(bos)) {
+                oos.writeObject(obj);
+            }
+        }
+
+        /**
+         * Deserialize to an object from the file
+         */
+        public static Object deserialize(String fileName) throws IOException, ClassNotFoundException {
+            Object obj;
+            try (var fis = new FileInputStream(fileName);
+                 var bis = new BufferedInputStream(fis);
+                 var ois = new ObjectInputStream(bis)) {
+                obj = ois.readObject();
+            }
+            return obj;
+        }
+    }
+  learner_created: true
+- name: src/blockchain/Block.java
+  visible: true
+  text: |-
+    package blockchain;
+
+    import java.io.Serializable;
+    import java.time.Duration;
+    import java.time.Instant;
+    import java.util.Date;
+    import java.util.Random;
+
+    import static blockchain.util.StringUtil.applySha256;
+
+    public class Block implements Serializable {
+        private static final long serialVersionUID = 1738588544404978242L;
+        private final int id;
+        private final long timestamp;
+        private final String prevBlockHash;
+        private long magicNumber;
+        private String blockHash;
+        private int timeToGenerate;
+
+        public static Block getProved(int id, String prevBlockHash, int zeroes) {
+            final var startTime = Instant.now();
+            final var block = new Block(id, new Date().getTime(), prevBlockHash);
+            block.findMagicNumber(zeroes);
+            block.timeToGenerate = Math.toIntExact(Duration.between(startTime, Instant.now()).toSeconds());
+            return block;
+        }
+
+        private Block(int id, long timestamp, String prevBlockHash) {
+            this.id = id;
+            this.timestamp = timestamp;
+            this.prevBlockHash = prevBlockHash;
+        }
+
+        public String getPrevBlockHash() {
+            return prevBlockHash;
+        }
+
+        public String getBlockHash() {
+            return blockHash;
+        }
+
+        @Override
+        public String toString() {
+            return String.format("Block: \n" +
+                            "Id: %d \n" +
+                            "Timestamp: %d \n" +
+                            "Magic number: %d \n" +
+                            "Hash of the previous block: \n" +
+                            "%s \n" +
+                            "Hash of the block: \n" +
+                            "%s \n" +
+                            "Block was generating for %d seconds",
+                    id,
+                    timestamp,
+                    magicNumber,
+                    prevBlockHash,
+                    blockHash,
+                    timeToGenerate);
+        }
+
+        private void findMagicNumber(int zeroes) {
+            final var random = new Random();
+            var hash = "";
+            // TODO: 27/12/2020 WARNING not safe for multithreading
+            do {
+                magicNumber = random.nextLong();
+                hash = applySha256(stringify());
+            } while (!isProved(zeroes, hash));
+            blockHash = hash;
+        }
+
+        public boolean isProved(int zeroes) {
+            return isProved(zeroes, applySha256(stringify()));
+        }
+
+        private boolean isProved(int zeroes, String blockHash) {
+            for (int i = 0; i < zeroes; i++) {
+                if (blockHash.charAt(i) != '0') {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        private String stringify() {
+            return "" +
+                    id +
+                    timestamp +
+                    prevBlockHash +
+                    magicNumber;
+        }
+    }
+  learner_created: true
 - name: test/blockchain/MainTest.java
   visible: true
   text: |-
@@ -251,6 +510,11 @@ files:
 
     }
   learner_created: false
+- name: test/blockchain/BlockchainTest.java
+  visible: true
+  text: "package blockchain;\n\nimport junit.framework.TestCase;\n\npublic class BlockchainTest\
+    \ extends TestCase {\n\n    \n\n}"
+  learner_created: false
 feedback_link: https://hyperskill.org/learn/step/5415#comment
 status: Unchecked
-record: -1
+record: 3

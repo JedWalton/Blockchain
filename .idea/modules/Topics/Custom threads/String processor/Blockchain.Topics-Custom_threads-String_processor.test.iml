@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":Topics-Custom_threads-String_processor:test" external.linked.project.path="$MODULE_DIR$/../../../../../Topics/Custom threads/String processor" external.root.project.path="$MODULE_DIR$/../../../../.." external.system.id="GRADLE" external.system.module.group="Blockchain" external.system.module.type="sourceSet" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <output-test url="file://$MODULE_DIR$/../../../../../Topics/Custom threads/String processor/out/test/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../../../Topics/Custom threads/String processor/src/test" />
+    <content url="file://$MODULE_DIR$/../../../../../Topics/Custom threads/String processor/test" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="Blockchain.Topics-Custom_threads-String_processor.main" />
+    <orderEntry type="module" module-name="Blockchain.util.main" />
+    <orderEntry type="module" module-name="Blockchain.util.test" production-on-test="" />
+  </component>
+  <component name="TestModuleProperties" production-module="Blockchain.Topics-Custom_threads-String_processor.main" />
+</module>

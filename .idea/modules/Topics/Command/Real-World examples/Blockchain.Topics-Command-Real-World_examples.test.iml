@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":Topics-Command-Real-World_examples:test" external.linked.project.path="$MODULE_DIR$/../../../../../Topics/Command/Real-World examples" external.root.project.path="$MODULE_DIR$/../../../../.." external.system.id="GRADLE" external.system.module.group="Blockchain" external.system.module.type="sourceSet" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <output-test url="file://$MODULE_DIR$/../../../../../Topics/Command/Real-World examples/out/test/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../../../Topics/Command/Real-World examples/src/test" />
+    <content url="file://$MODULE_DIR$/../../../../../Topics/Command/Real-World examples/test" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="Blockchain.Topics-Command-Real-World_examples.main" />
+    <orderEntry type="module" module-name="Blockchain.util.main" />
+    <orderEntry type="module" module-name="Blockchain.util.test" production-on-test="" />
+  </component>
+  <component name="TestModuleProperties" production-module="Blockchain.Topics-Command-Real-World_examples.main" />
+</module>

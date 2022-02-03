@@ -1,0 +1,27 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: A class implements two or more interfaces with default methods, but none of
+    them have the same signature
+- text: A class implements two or more interfaces with an abstract method having the
+    same signature
+- text: A class implements two or more interfaces with a default method having the
+    same signature
+- text: Class has no implementation of its interface default method
+message_correct: Congratulations!
+message_incorrect: Incorrect solution
+files:
+- name: src/Task.java
+  visible: true
+  text: |
+    // You can experiment here, it won’t be checked
+
+    public class Task {
+      public static void main(String[] args) {
+        // put your code here
+      }
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/11357#comment
+status: Solved
+record: -1

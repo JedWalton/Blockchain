@@ -59,3 +59,9 @@ content:
 - Output streams
 - Serialization basics
 - Custom serialization
+- Default methods
+- Anonymous classes
+- Command
+- Threads as objects
+- Custom threads
+- Singleton

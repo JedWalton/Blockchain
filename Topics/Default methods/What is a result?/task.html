@@ -1,0 +1,28 @@
+<h2>What is a result?</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Look at the code below. What is the result of invoking the <code class="language-java">main</code> method?</p> 
+  <pre><code class="language-java">class Main {
+    private static void main(String... args) {
+        Speaker speaker = new Speaker();
+        speaker.notify();
+    }
+}
+
+class Speaker implements Notification, Alarm {
+}
+
+interface Notification {
+    default void notify() {
+        System.out.println("Hello World!");
+    }
+}
+
+interface Alarm {
+    default void notify() {
+        System.out.println("Attention");
+    }
+}</code></pre>
+ </body>
+</html>

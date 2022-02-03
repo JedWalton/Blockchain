@@ -1,0 +1,21 @@
+type: code
+files:
+- name: src/Main.java
+  visible: true
+  text: |-
+    interface Flying {
+        // returns height of flying in meters
+        int getHeight();
+
+        // implements a default method getHeightInKm that returns height of flying in km as int type
+    }
+  learner_created: false
+- name: src/FlyingImpl.java
+  visible: true
+  learner_created: true
+feedback_link: https://hyperskill.org/learn/step/11360#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Wed, 26 Jan 2022 13:03:57 UTC
+record: -1
