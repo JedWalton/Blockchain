@@ -1,0 +1,24 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: The current thread stops for 10 clock signals of the processor
+- text: The current thread stops for 10 milliseconds
+- text: The <b>main</b> thread of an application always stops
+- text: The whole application stops for 10 seconds
+message_correct: Congratulations!
+message_incorrect: Incorrect solution
+files:
+- name: src/Task.java
+  visible: true
+  text: |
+    // You can experiment here, it won’t be checked
+
+    public class Task {
+      public static void main(String[] args) {
+        // put your code here
+      }
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/2531#comment
+status: Solved
+record: -1

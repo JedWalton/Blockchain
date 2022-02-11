@@ -1,0 +1,17 @@
+type: code
+files:
+- name: src/Main.java
+  visible: true
+  text: |-
+    class Predicate {
+        public static final TernaryIntPredicate ALL_DIFFERENT = // Write a lambda expression here
+
+        @FunctionalInterface
+        public interface TernaryIntPredicate {
+            // Write a method here
+        }
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/2370#comment
+status: Unchecked
+record: -1

@@ -1,0 +1,25 @@
+<h2>Bad singleton</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Look at this unfortunate singleton implementation:</p> 
+  <p> </p> 
+  <pre><code class="language-java">class BadSingleton {
+    
+    private static BadSingleton instance;
+    
+    public static BadSingleton getInstance1() {
+        if (instance == null) {
+            instance = new BadSingleton();
+        }
+        return instance;
+    }
+    
+    public static BadSingleton getInstance2() {
+        return new BadSingleton();
+    }
+}</code></pre> 
+  <p> </p> 
+  <p>What are the problems (excluding thread-safety)?</p>
+ </body>
+</html>

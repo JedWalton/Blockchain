@@ -1,0 +1,19 @@
+<h2>Initialize fields only once</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Here's a class named<strong> </strong><code class="language-java">SimpleClass</code><strong>.</strong> It<strong> </strong>has a single field of the String type and an instance method to initialize the field. The method writes a given value to the field if it's null or empty. Otherwise, the method does nothing.</p> 
+  <pre><code class="language-java">public class SimpleClass {
+
+    private String str;
+
+    public void initWithString(String str) {
+
+        if (this.str == null || this.str.length() == 0) { // 1
+            this.str = str;                               // 2
+        }                                                 // 3
+    }
+}</code></pre> 
+  <p>Multiple threads are trying to invoke the method <code class="language-java">initWithString</code> on the same instance. How to synchronize this code so that the field of an instance was initialized only once? Select all correct cases:</p>
+ </body>
+</html>

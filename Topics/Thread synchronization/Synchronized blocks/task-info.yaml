@@ -1,0 +1,27 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: If a thread executes <b>method3</b>, no other thread can execute the same
+    method
+- text: If a thread executes code in <b>synchronized block 1</b>, no other thread
+    can execute code in this block
+- text: If a thread executes code in <b>synchronized block 2</b>, no other thread
+    can execute code in <b>synchronized block 1</b>
+- text: If a thread executes <b>method2</b>, no other thread can execute <b>method3</b>
+message_correct: Congratulations!
+message_incorrect: Incorrect solution
+files:
+- name: src/Task.java
+  visible: true
+  text: |
+    // You can experiment here, it won’t be checked
+
+    public class Task {
+      public static void main(String[] args) {
+        // put your code here
+      }
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/2650#comment
+status: Solved
+record: -1

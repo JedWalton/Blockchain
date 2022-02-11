@@ -1,0 +1,27 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: ' To put the line 2 in a synchronized block, the monitor being the class (<b>SimpleClass.class</b>)'
+- text: ' To declare the method with the <b>synchronized</b> keyword'
+- text: ' Nothing needs to be done, everything works correctly'
+- text: ' To put lines 1-2 in a synchronized block, the monitor being the class (<b>SimpleClass.class</b>)'
+- text: ' To declare the class with the <b>synchronized</b> keyword'
+- text: ' To put lines 1-2 in a synchronized block, the monitor being an additional
+    field: <b>private final Object lock = new Object();</b>'
+message_correct: Congratulations!
+message_incorrect: Incorrect solution
+files:
+- name: src/Task.java
+  visible: true
+  text: |
+    // You can experiment here, it won’t be checked
+
+    public class Task {
+      public static void main(String[] args) {
+        // put your code here
+      }
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/2652#comment
+status: Solved
+record: -1

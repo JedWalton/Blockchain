@@ -1,0 +1,28 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: It is possible to specify an object for locking threads in a synchronized
+    block
+- text: Instance methods are synchronized on an instance of the class
+- text: A thread that has already acquired a monitor can perform any synchronized
+    methods and blocks protected by this monitor
+- text: If a class has several static synchronized methods and a thread executes one
+    of them, another thread can execute other synchronized methods from the same class
+    without blocking
+message_correct: Congratulations!
+message_incorrect: Incorrect solution
+files:
+- name: src/Task.java
+  visible: true
+  text: |
+    // You can experiment here, it won’t be checked
+
+    public class Task {
+      public static void main(String[] args) {
+        // put your code here
+      }
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/2657#comment
+status: Solved
+record: -1

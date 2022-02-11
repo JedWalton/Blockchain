@@ -1,0 +1,19 @@
+<h2>Synchronize the code</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Here's a class named<strong> </strong><code class="language-java">SimpleClass</code><strong>.</strong> It has two static fields of different types and a method to initialize these fields.</p> 
+  <pre><code class="language-java">public class SimpleClass {
+
+    private static String strField;
+    private static Integer numField;
+
+    public static void initStaticFields(String str, Integer number) {
+        strField = str;    // 1
+        numField = number; // 2
+    }
+}</code></pre> 
+  <p>Multiple threads are trying to invoke <code class="language-java">initStaticFields</code> method of the class. You need to synchronize this code so that a thread would not be able to set new values until another thread has not set both of them (in a way atomic operation does).</p> 
+  <p>How can one do it? Select all correct cases.</p>
+ </body>
+</html>

@@ -1,0 +1,34 @@
+<h2>Synchronized blocks</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Here is a class named <code class="language-java">SomeClass</code>:</p> 
+  <pre><code class="language-java">class SomeClass {
+
+    final static Object LOCK_1 = new Object();
+    final static Object LOCK_2 = new Object();
+
+    public static void method1() {
+        synchronized (LOCK_1) {
+            //synchronized block 1
+            method3();
+        }
+    }
+
+    public static void method2() {
+
+        // do something useful
+
+        synchronized (LOCK_2) {
+            //synchronized block 2
+            method3();
+        }
+    }
+
+    public static synchronized void method3() {
+        // do something useful
+    }
+}</code></pre> 
+  <p>Select all correct statements:</p>
+ </body>
+</html>

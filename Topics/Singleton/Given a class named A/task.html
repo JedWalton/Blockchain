@@ -1,0 +1,42 @@
+<h2>Given a class named A</h2>
+<html>
+ <head></head>
+ <body>
+  <p>There's a class named <code class="language-java">A</code>:</p> 
+  <p> </p> 
+  <pre><code class="language-java">class A {
+    
+    private static A instance;
+    
+    private String s;
+    
+    private A (String s) {
+        this.s = s;
+    }
+
+    public static A getInstance(String s) {
+        if (instance == null) {
+            instance = new A(s);
+        }
+        return instance;
+    }
+    
+    public static A getNewInstance(String s) {
+        return new A(s);
+    }
+    
+    public String getS() {
+        return s;
+    }
+}</code></pre> 
+  <p> </p> 
+  <p>How many times does the following code output <strong>"foo</strong><strong>"</strong>?</p> 
+  <p> </p> 
+  <pre><code class="language-java">System.out.println(A.getInstance("foo").getS());
+System.out.println(A.getInstance("bar").getS());
+System.out.println(A.getNewInstance("foo").getS());
+System.out.println(A.getNewInstance("bar").getS()); 
+A instance = A.getInstance("thx");
+System.out.println(instance.getS());</code></pre>
+ </body>
+</html>

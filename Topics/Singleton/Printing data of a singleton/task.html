@@ -1,0 +1,40 @@
+<h2>Printing data of a singleton</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Consider this singleton-class:</p> 
+  <pre><code class="language-java">class Singleton {
+    
+    private static Singleton instance;
+    
+    public String data;
+    
+    private Singleton (String data) { 
+        this.data = data;
+    }
+
+    public static Singleton getInstance(String data) {
+        if (instance == null) {
+            instance = new Singleton(data);
+        }
+        return instance;
+    }
+    
+    public void printData() {
+        System.out.print(data + " ");
+    }
+}</code></pre> 
+  <p> </p> 
+  <p>What does the following code print?</p> 
+  <pre><code class="language-java">Singleton instance1 = Singleton.getInstance("data1");
+Singleton instance2 = Singleton.getInstance("data2");
+        
+instance1.printData();
+instance2.printData();
+        
+Singleton instance3 = Singleton.getInstance("data3");
+instance3.data = "data4";
+        
+instance3.printData();</code></pre>
+ </body>
+</html>

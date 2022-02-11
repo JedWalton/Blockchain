@@ -1,0 +1,29 @@
+<h2>Method inside the synchronized block</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Here is a class named <code class="language-java">SomeClass</code><strong>:</strong></p> 
+  <pre><code class="language-java">class SomeClass {
+    
+    private final static Object LOCK = new Object();
+
+    public static synchronized void method1() {
+
+        // some statements
+
+        method2();
+    }
+
+    public static void method2() {
+
+        // some statements
+
+        synchronized (LOCK) {
+
+            // do something useful
+        }
+    }
+}</code></pre> 
+  <p>Select <strong>two</strong> correct statements.</p>
+ </body>
+</html>

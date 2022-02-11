@@ -1,0 +1,27 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: <b>method1</b> is synchronized on <b>SomeClass</b>
+- text: If a thread executes statements in <b>method1</b>, other threads cannot executed
+    statements in <b>method2</b> inside the synchronized block
+- text: If a thread invokes <b>method2</b> from <b>method1</b> it will never be locked
+    by the synchronized block inside <b>method2</b>
+- text: A thread can always invoke <b>method2</b> and execute a code before the synchronized
+    block
+message_correct: Congratulations!
+message_incorrect: Incorrect solution
+files:
+- name: src/Task.java
+  visible: true
+  text: |
+    // You can experiment here, it won’t be checked
+
+    public class Task {
+      public static void main(String[] args) {
+        // put your code here
+      }
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/2659#comment
+status: Solved
+record: -1

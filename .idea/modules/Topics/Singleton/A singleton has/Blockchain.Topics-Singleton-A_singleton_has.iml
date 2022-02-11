@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":Topics-Singleton-A_singleton_has" external.linked.project.path="$MODULE_DIR$/../../../../../Topics/Singleton/A singleton has" external.root.project.path="$MODULE_DIR$/../../../../.." external.system.id="GRADLE" external.system.module.group="Blockchain" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../../../Topics/Singleton/A singleton has">
+      <excludeFolder url="file://$MODULE_DIR$/../../../../../Topics/Singleton/A singleton has/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../../Topics/Singleton/A singleton has/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../../Topics/Singleton/A singleton has/out" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
