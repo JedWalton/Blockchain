@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/209941/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: Thu, 03 Feb 2022 08:57:15 UTC
+update_date: Sat, 12 Feb 2022 14:40:53 UTC
 stages:
 - id: 271
   step: 5413
@@ -13,7 +13,7 @@ stages:
   is_completed: true
 - id: 273
   step: 5415
-  is_completed: false
+  is_completed: true
 - id: 274
   step: 5416
   is_completed: false
@@ -139,8 +139,6 @@ topics:
     theory_id: 3552
   - title: NPE
     theory_id: 1945
-  - title: Running programs on your computer
-    theory_id: 3746
   - title: 'Hashing: overview'
     theory_id: 9831
   - title: Hash function
@@ -153,6 +151,8 @@ topics:
     theory_id: 3593
   - title: LocalDateTime
     theory_id: 3617
+  - title: Running programs on your computer
+    theory_id: 3746
   - title: Introduction to generic programming
     theory_id: 3492
   - title: What are collections

@@ -105,6 +105,10 @@
       <module name="Blockchain.Topics-Errors_in_programs-What's_wrong.main" target="11" />
       <module name="Blockchain.Topics-Exception_handling-String_to_double_conversion.main" target="11" />
       <module name="Blockchain.Topics-Exception_handling-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Executors-Asynchronous_email_sending.main" target="11" />
+      <module name="Blockchain.Topics-Executors-Check_whether_a_number_is_prime.main" target="11" />
+      <module name="Blockchain.Topics-Executors-Messaging.main" target="11" />
+      <module name="Blockchain.Topics-Executors-Theory.main" target="11" />
       <module name="Blockchain.Topics-Factory_method-Burger_store.main" target="11" />
       <module name="Blockchain.Topics-Factory_method-Clocks.main" target="11" />
       <module name="Blockchain.Topics-Factory_method-Laptop_store.main" target="11" />
@@ -120,6 +124,13 @@
       <module name="Blockchain.Topics-Functional_decomposition-Create_a_full_name.main" target="11" />
       <module name="Blockchain.Topics-Functional_decomposition-Decompose_a_math_function.main" target="11" />
       <module name="Blockchain.Topics-Functional_decomposition-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Functional_interfaces-A_lambda_expression_with_seven_arguments.main" target="11" />
+      <module name="Blockchain.Topics-Functional_interfaces-An_invalid_way_to_create_a_functional_interface.main" target="11" />
+      <module name="Blockchain.Topics-Functional_interfaces-Built-in_classes.main" target="11" />
+      <module name="Blockchain.Topics-Functional_interfaces-Statements.main" target="11" />
+      <module name="Blockchain.Topics-Functional_interfaces-Ternary_predicate.main" target="11" />
+      <module name="Blockchain.Topics-Functional_interfaces-The_requirement.main" target="11" />
+      <module name="Blockchain.Topics-Functional_interfaces-Theory.main" target="11" />
       <module name="Blockchain.Topics-Generic_methods-Check_for_null.main" target="11" />
       <module name="Blockchain.Topics-Generic_methods-Invert_an_array.main" target="11" />
       <module name="Blockchain.Topics-Generic_methods-Print_content.main" target="11" />
@@ -179,6 +190,14 @@
       <module name="Blockchain.Topics-Iterating_over_arrays-Sum_array_elements_greater_than_a_value.main" target="11" />
       <module name="Blockchain.Topics-Iterating_over_arrays-The_sum_of_array_elements.main" target="11" />
       <module name="Blockchain.Topics-Iterating_over_arrays-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Lambda_expressions-Apply_function_to_all_elements.main" target="11" />
+      <module name="Blockchain.Topics-Lambda_expressions-Creating_a_closure.main" target="11" />
+      <module name="Blockchain.Topics-Lambda_expressions-Expression_closure.main" target="11" />
+      <module name="Blockchain.Topics-Lambda_expressions-Expressions.main" target="11" />
+      <module name="Blockchain.Topics-Lambda_expressions-Max_of_two_integers.main" target="11" />
+      <module name="Blockchain.Topics-Lambda_expressions-Parts_of code.main" target="11" />
+      <module name="Blockchain.Topics-Lambda_expressions-Production_of_all_numbers_in_the_range.main" target="11" />
+      <module name="Blockchain.Topics-Lambda_expressions-Theory.main" target="11" />
       <module name="Blockchain.Topics-LocalDate-10_days_before.main" target="11" />
       <module name="Blockchain.Topics-LocalDate-2_weeks_after.main" target="11" />
       <module name="Blockchain.Topics-LocalDate-30_years_before_and_after.main" target="11" />
@@ -211,6 +230,9 @@
       <module name="Blockchain.Topics-Memento-Undo_and_redo.main" target="11" />
       <module name="Blockchain.Topics-Memento-Use_cases.main" target="11" />
       <module name="Blockchain.Topics-Memento-Visualization_of_state.main" target="11" />
+      <module name="Blockchain.Topics-Method_references-A_method_reference.main" target="11" />
+      <module name="Blockchain.Topics-Method_references-Ascending_and_descending_sorting.main" target="11" />
+      <module name="Blockchain.Topics-Method_references-Theory.main" target="11" />
       <module name="Blockchain.Topics-Multidimensional_array-Cinema.main" target="11" />
       <module name="Blockchain.Topics-Multidimensional_array-Create_cube.main" target="11" />
       <module name="Blockchain.Topics-Multidimensional_array-Fill_the_matrix_by_numbers.main" target="11" />
@@ -273,7 +295,14 @@
       <module name="Blockchain.Topics-Scanning_the_input-Theory.main" target="11" />
       <module name="Blockchain.Topics-Serialization_basics-Serializable_user.main" target="11" />
       <module name="Blockchain.Topics-Serialization_basics-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Singleton-A_singleton_has.main" target="11" />
+      <module name="Blockchain.Topics-Singleton-Bad_singleton.main" target="11" />
+      <module name="Blockchain.Topics-Singleton-Complete_a_class.main" target="11" />
       <module name="Blockchain.Topics-Singleton-Complete_the_eager_singleton.main" target="11" />
+      <module name="Blockchain.Topics-Singleton-Criticism.main" target="11" />
+      <module name="Blockchain.Topics-Singleton-Given_a_class_named_A.main" target="11" />
+      <module name="Blockchain.Topics-Singleton-Printing_data_of_a_singleton.main" target="11" />
+      <module name="Blockchain.Topics-Singleton-Select_statements.main" target="11" />
       <module name="Blockchain.Topics-Singleton-Theory.main" target="11" />
       <module name="Blockchain.Topics-Static_members-Detail_manufacturing.main" target="11" />
       <module name="Blockchain.Topics-Static_members-Project_constants_and_methods.main" target="11" />
@@ -293,6 +322,30 @@
       <module name="Blockchain.Topics-The_List_interface-Theory.main" target="11" />
       <module name="Blockchain.Topics-The_main_method-Print__We_are_robots_.main" target="11" />
       <module name="Blockchain.Topics-The_main_method-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Thread_management-Calculate_the_number_of_distinct_characters.main" target="11" />
+      <module name="Blockchain.Topics-Thread_management-Join.main" target="11" />
+      <module name="Blockchain.Topics-Thread_management-Ordering_the_execution_of_threads.main" target="11" />
+      <module name="Blockchain.Topics-Thread_management-Sleep.main" target="11" />
+      <module name="Blockchain.Topics-Thread_management-Summing_with_threads.main" target="11" />
+      <module name="Blockchain.Topics-Thread_management-The_order_of_lines.main" target="11" />
+      <module name="Blockchain.Topics-Thread_management-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Thread_management-VeganPizza.main" target="11" />
+      <module name="Blockchain.Topics-Thread_management-Waiting_for_a_thread.main" target="11" />
+      <module name="Blockchain.Topics-Thread_synchronization-Countdown_counter.main" target="11" />
+      <module name="Blockchain.Topics-Thread_synchronization-Initialize_fields_only_once.main" target="11" />
+      <module name="Blockchain.Topics-Thread_synchronization-Method_inside_the_synchronized_block.main" target="11" />
+      <module name="Blockchain.Topics-Thread_synchronization-Methods.main" target="11" />
+      <module name="Blockchain.Topics-Thread_synchronization-Multithreaded_counter.main" target="11" />
+      <module name="Blockchain.Topics-Thread_synchronization-Synchronize_the_code.main" target="11" />
+      <module name="Blockchain.Topics-Thread_synchronization-Synchronized_blocks.main" target="11" />
+      <module name="Blockchain.Topics-Thread_synchronization-Synchronized_keyword.main" target="11" />
+      <module name="Blockchain.Topics-Thread_synchronization-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Thread_synchronization-Thread-safe_account.main" target="11" />
+      <module name="Blockchain.Topics-Thread_synchronization-Thread_synchronization_in_Java.main" target="11" />
+      <module name="Blockchain.Topics-Thread_synchronization-Two_methods,_two_statements.main" target="11" />
+      <module name="Blockchain.Topics-Thread_synchronization-What_is_incorrect_about_monitors.main" target="11" />
+      <module name="Blockchain.Topics-Thread_synchronization-What_is_wrong.main" target="11" />
+      <module name="Blockchain.Topics-Thread_synchronization-Where_it_is_possible_to_write_synchronized.main" target="11" />
       <module name="Blockchain.Topics-Threads_as_objects-Getting_current_thread_info.main" target="11" />
       <module name="Blockchain.Topics-Threads_as_objects-Is_thread_daemon.main" target="11" />
       <module name="Blockchain.Topics-Threads_as_objects-Theory.main" target="11" />

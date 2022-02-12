@@ -44,7 +44,7 @@ if (Objects.equals(s1, s2)) { // no NPE here
 }</code></pre> 
   <p>This approach is recommended in modern Java programming since it is easy for reading and does not throw an <strong>NPE</strong>.</p> 
   <h5 style="text-align: center;">Rules for avoiding NPE</h5> 
-  <p>We've considered a few cases when an <strong>NPE</strong> may occur. Actually, there are more of such situations, and we will consider them in the next topics.</p> 
+  <p>We've considered a few cases in which an <strong>NPE</strong> may occur. Actually, there are more of such situations, and we will consider them in the next topics.</p> 
   <p>Here are several general rules on how to avoid an <strong>NPE</strong> in your programs:</p> 
   <ul> 
    <li>for reference types, use a conditional statement to check whether the given variable is <code class="language-java">null</code> before using it;</li> 
@@ -54,7 +54,7 @@ if (Objects.equals(s1, s2)) { // no NPE here
   <p>These simple rules will help to reduce the number of places in your code that could throw this exception.</p> 
   <p> </p> 
   <h5>Conclusion</h5> 
-  <p>You may face NPE if you are trying to invoke a method or apply an operation to a variable with the null value. For example, if you use uninitialized variables of String type or other reference types.</p> 
+  <p>You may face an NPE if you are trying to invoke a method or apply an operation to a variable with the null value. For example, if you use uninitialized variables of String type or other reference types.</p> 
   <p>Besides, this exception may occur when we compare a String variable and a string literal. In this case, we should call the <code class="language-java">equals</code> method on the literal. There is also a special auxiliary class <code class="language-java">java.util.Objects</code> that we use to compare two variables of the String type.</p> 
   <p>Follow simple rules: don't assign null to a variable or make sure that the given one is not null, use NPE-safe features.</p>
  </body>

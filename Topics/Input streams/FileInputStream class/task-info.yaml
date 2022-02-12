@@ -1,10 +1,10 @@
 type: choice
 is_multiple_choice: true
 options:
+- text: It is intended for reading files
+- text: It can read an input byte by byte
 - text: It is a character input stream
 - text: You can directly read characters using <b>FileInputStream</b> class
-- text: It can read an input byte by byte
-- text: It is intended for reading files
 message_correct: Congratulations!
 message_incorrect: Incorrect solution
 files:
