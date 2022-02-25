@@ -1,0 +1,16 @@
+<h2>Reducing persons by ages</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Given a list of persons:</p> 
+  <pre><code class="language-java">List&lt;Person&gt; persons = Arrays.asList(
+        new Person("Mary", 18),
+        new Person("John", 21),
+        new Person("Andrew", 31),
+        new Person("Julia", 19)
+);</code></pre> 
+  <p>Each person has a <code class="language-java">name</code> (<code class="language-java">String</code>) and an <code class="language-java">age</code> (<code class="language-java">Integer</code>).<br> <br> What person will be returned by the following code? Select by the person name.</p> 
+  <pre><code class="language-java">Person person = persons.stream()
+        .reduce(new Person("DEFAULT", 0), (p1, p2) -&gt; p1.getAge() &gt; p2.getAge() ? p1 : p2);</code></pre>
+ </body>
+</html>

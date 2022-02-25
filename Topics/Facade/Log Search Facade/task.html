@@ -1,0 +1,13 @@
+<h2>Log Search Facade</h2>
+<html>
+ <head></head>
+ <body>
+  <p>The <code class="java">search</code> method of <code class="java">LogSearchFacade</code> is intended to:</p> 
+  <ul> 
+   <li>collect logs from standard input;</li> 
+   <li>filter collected logs. Filtered ones should contain a passed expression;</li> 
+   <li>format filtered logs.</li> 
+  </ul> 
+  <p>There are 3 classes that help to achieve the goal: <code class="java">LogCollector</code>, <code class="java">LogFilter</code>and <code class="java">LogFormatter</code>. Use them to complete the <code class="java">search</code> method.</p>
+ </body>
+</html><br><b>Sample Input:</b><br><pre><code class="language-no-highlight">6<br>INFO: Entity [id = 3] is created<br>ERROR: Failed to update [id = 3], no permissions<br>INFO: Security configuration is updated<br>INFO: Entity [id = 3] is updated<br>INFO: Entity [id = 3] is removed<br>ERROR: Entity [id = 3] doesn&#39;t exist</code></pre><br><b>Sample Output:</b><br><pre><code class="language-no-highlight">Failed to update [id = 3], no permissions<br>Entity [id = 3] doesn&#39;t exist</code></pre><br><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 5 seconds</font><br><br>

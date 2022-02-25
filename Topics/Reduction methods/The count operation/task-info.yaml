@@ -1,0 +1,26 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: stream.reduce(0, (next, acc) -&gt; acc + 1)
+- text: stream.reduce(1, (acc, next) -&gt; acc + 1)
+- text: stream.reduce(0, (acc, next) -&gt; acc + 1)
+- text: stream.reduce(0, (acc, next) -&gt; acc + next - 1)
+- text: stream.reduce(1, (acc, next) -&gt; acc + next)
+- text: stream.reduce(1, (next, acc) -&gt; acc + 1)
+message_correct: Congratulations!
+message_incorrect: Incorrect solution
+files:
+- name: src/Task.java
+  visible: true
+  text: |
+    // You can experiment here, it won’t be checked
+
+    public class Task {
+      public static void main(String[] args) {
+        // put your code here
+      }
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/3354#comment
+status: Solved
+record: -1

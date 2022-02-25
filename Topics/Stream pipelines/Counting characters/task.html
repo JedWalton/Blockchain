@@ -1,0 +1,16 @@
+<h2>Counting characters</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Given a list of characters.</p> 
+  <pre><code class="language-java">List&lt;Character&gt; characters = 
+        Arrays.asList('z', '1', 'e', 'Z', 'q', 'd', '8', 'E');</code></pre> 
+  <p>And here is code with a stream:</p> 
+  <pre><code class="language-java">long count = characters.stream()
+        .filter(Character::isLetter)
+        .map(Character::toUpperCase)
+        .filter(c -&gt; c != 'E')
+        .count();</code></pre> 
+  <p>The <code class="language-java">count</code> is ...</p>
+ </body>
+</html>

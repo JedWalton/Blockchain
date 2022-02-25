@@ -41,6 +41,11 @@
       <module name="Blockchain.Topics-Branching_statements-Theory.main" target="11" />
       <module name="Blockchain.Topics-Calling_a_method-Area_of_parallelogram.main" target="11" />
       <module name="Blockchain.Topics-Calling_a_method-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Collectors-ASCII_Art.main" target="11" />
+      <module name="Blockchain.Topics-Collectors-Set_average.main" target="11" />
+      <module name="Blockchain.Topics-Collectors-The_product_of_squares.main" target="11" />
+      <module name="Blockchain.Topics-Collectors-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Collectors-Сollect_parameter.main" target="11" />
       <module name="Blockchain.Topics-Command-Forex_Broker.main" target="11" />
       <module name="Blockchain.Topics-Command-Participants.main" target="11" />
       <module name="Blockchain.Topics-Command-Real-World_examples.main" target="11" />
@@ -53,6 +58,16 @@
       <module name="Blockchain.Topics-Comparable-Implement_compareTo_method.main" target="11" />
       <module name="Blockchain.Topics-Comparable-Implement_comparing_by_additional_fields.main" target="11" />
       <module name="Blockchain.Topics-Comparable-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Comparator-Comparing_numbers.main" target="11" />
+      <module name="Blockchain.Topics-Comparator-Comparing_values.main" target="11" />
+      <module name="Blockchain.Topics-Comparator-Method_name.main" target="11" />
+      <module name="Blockchain.Topics-Comparator-Most_valuable_items.main" target="11" />
+      <module name="Blockchain.Topics-Comparator-Multiple_fields.main" target="11" />
+      <module name="Blockchain.Topics-Comparator-Non-abstract_methods.main" target="11" />
+      <module name="Blockchain.Topics-Comparator-Odd_and_even.main" target="11" />
+      <module name="Blockchain.Topics-Comparator-Reverse_sorting.main" target="11" />
+      <module name="Blockchain.Topics-Comparator-Sort_users.main" target="11" />
+      <module name="Blockchain.Topics-Comparator-Theory.main" target="11" />
       <module name="Blockchain.Topics-Constructor-Account.main" target="11" />
       <module name="Blockchain.Topics-Constructor-Account_and_its_owner.main" target="11" />
       <module name="Blockchain.Topics-Constructor-Book.main" target="11" />
@@ -81,6 +96,13 @@
       <module name="Blockchain.Topics-Declaring_a_method-Sum_of_numbers_in_the_range.main" target="11" />
       <module name="Blockchain.Topics-Declaring_a_method-The_sign_of_a_number.main" target="11" />
       <module name="Blockchain.Topics-Declaring_a_method-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Decorator-Advantages.main" target="11" />
+      <module name="Blockchain.Topics-Decorator-Breakfast_Decorator.main" target="11" />
+      <module name="Blockchain.Topics-Decorator-Coffee_Decorator.main" target="11" />
+      <module name="Blockchain.Topics-Decorator-Disadvantages.main" target="11" />
+      <module name="Blockchain.Topics-Decorator-Pizza_Decorator.main" target="11" />
+      <module name="Blockchain.Topics-Decorator-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Decorator-What_does_the_code_print.main" target="11" />
       <module name="Blockchain.Topics-Default_methods-Add_new_default_method.main" target="11" />
       <module name="Blockchain.Topics-Default_methods-Default_method's_body_.main" target="11" />
       <module name="Blockchain.Topics-Default_methods-Diamond_problem.main" target="11" />
@@ -103,12 +125,26 @@
       <module name="Blockchain.Topics-Errors_in_programs-Print_the_age.main" target="11" />
       <module name="Blockchain.Topics-Errors_in_programs-Theory.main" target="11" />
       <module name="Blockchain.Topics-Errors_in_programs-What's_wrong.main" target="11" />
+      <module name="Blockchain.Topics-Exception_handling-Catch_all_exceptions.main" target="11" />
+      <module name="Blockchain.Topics-Exception_handling-Converting_and_multiplying.main" target="11" />
+      <module name="Blockchain.Topics-Exception_handling-Determine_a_block_for_handling_exceptions.main" target="11" />
       <module name="Blockchain.Topics-Exception_handling-String_to_double_conversion.main" target="11" />
+      <module name="Blockchain.Topics-Exception_handling-Suitable_keywords.main" target="11" />
       <module name="Blockchain.Topics-Exception_handling-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Exception_handling-What_does_the_code_print.main" target="11" />
+      <module name="Blockchain.Topics-Exception_handling-What_exceptions_can_be_handled.main" target="11" />
       <module name="Blockchain.Topics-Executors-Asynchronous_email_sending.main" target="11" />
       <module name="Blockchain.Topics-Executors-Check_whether_a_number_is_prime.main" target="11" />
       <module name="Blockchain.Topics-Executors-Messaging.main" target="11" />
       <module name="Blockchain.Topics-Executors-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Facade-A_disadvantage.main" target="11" />
+      <module name="Blockchain.Topics-Facade-Cinema_Facade.main" target="11" />
+      <module name="Blockchain.Topics-Facade-Computer_Facade.main" target="11" />
+      <module name="Blockchain.Topics-Facade-Definition.main" target="11" />
+      <module name="Blockchain.Topics-Facade-Log_Search_Facade.main" target="11" />
+      <module name="Blockchain.Topics-Facade-Smart_house.main" target="11" />
+      <module name="Blockchain.Topics-Facade-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Facade-Type_of_facade_pattern.main" target="11" />
       <module name="Blockchain.Topics-Factory_method-Burger_store.main" target="11" />
       <module name="Blockchain.Topics-Factory_method-Clocks.main" target="11" />
       <module name="Blockchain.Topics-Factory_method-Laptop_store.main" target="11" />
@@ -120,6 +156,22 @@
       <module name="Blockchain.Topics-Files-Theory.main" target="11" />
       <module name="Blockchain.Topics-Files__1_-Are_siblings.main" target="11" />
       <module name="Blockchain.Topics-Files__1_-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Function_composition-Determine_the_result.main" target="11" />
+      <module name="Blockchain.Topics-Function_composition-Disjunct_all.main" target="11" />
+      <module name="Blockchain.Topics-Function_composition-How_to_compose_predicates_together.main" target="11" />
+      <module name="Blockchain.Topics-Function_composition-The_chain_of_responsibility.main" target="11" />
+      <module name="Blockchain.Topics-Function_composition-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Function_composition-What_function_is_executed_first.main" target="11" />
+      <module name="Blockchain.Topics-Functional_data_processing_with_streams-A_sorted_stream.main" target="11" />
+      <module name="Blockchain.Topics-Functional_data_processing_with_streams-Count_passwords.main" target="11" />
+      <module name="Blockchain.Topics-Functional_data_processing_with_streams-Create_a_stream_from_a_list.main" target="11" />
+      <module name="Blockchain.Topics-Functional_data_processing_with_streams-Finding_max_and_min_elements.main" target="11" />
+      <module name="Blockchain.Topics-Functional_data_processing_with_streams-Intermediate_operations.main" target="11" />
+      <module name="Blockchain.Topics-Functional_data_processing_with_streams-Long_ranges.main" target="11" />
+      <module name="Blockchain.Topics-Functional_data_processing_with_streams-Print_elements_of_a_stream.main" target="11" />
+      <module name="Blockchain.Topics-Functional_data_processing_with_streams-Statements_about_stream_operations.main" target="11" />
+      <module name="Blockchain.Topics-Functional_data_processing_with_streams-Statements_about_streams.main" target="11" />
+      <module name="Blockchain.Topics-Functional_data_processing_with_streams-Theory.main" target="11" />
       <module name="Blockchain.Topics-Functional_decomposition-Calculator_with_four_methods.main" target="11" />
       <module name="Blockchain.Topics-Functional_decomposition-Create_a_full_name.main" target="11" />
       <module name="Blockchain.Topics-Functional_decomposition-Decompose_a_math_function.main" target="11" />
@@ -145,6 +197,17 @@
       <module name="Blockchain.Topics-Getters_and_setters-Complex.main" target="11" />
       <module name="Blockchain.Topics-Getters_and_setters-Getting_the_fullname.main" target="11" />
       <module name="Blockchain.Topics-Getters_and_setters-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Grouping_collectors-Counting_clicks.main" target="11" />
+      <module name="Blockchain.Topics-Grouping_collectors-Downstream_collectors.main" target="11" />
+      <module name="Blockchain.Topics-Grouping_collectors-Grouping_numbers.main" target="11" />
+      <module name="Blockchain.Topics-Grouping_collectors-Map_keys.main" target="11" />
+      <module name="Blockchain.Topics-Grouping_collectors-Palindrome_or_not.main" target="11" />
+      <module name="Blockchain.Topics-Grouping_collectors-Partinioning_and_summing_numbers.main" target="11" />
+      <module name="Blockchain.Topics-Grouping_collectors-Splitting_data_with_a_collector.main" target="11" />
+      <module name="Blockchain.Topics-Grouping_collectors-Teeing_collector.main" target="11" />
+      <module name="Blockchain.Topics-Grouping_collectors-Teeing_collector_features.main" target="11" />
+      <module name="Blockchain.Topics-Grouping_collectors-The_total_sum_of_transaction_by_each_account.main" target="11" />
+      <module name="Blockchain.Topics-Grouping_collectors-Theory.main" target="11" />
       <module name="Blockchain.Topics-Hiding_and_overriding-Saying_animals.main" target="11" />
       <module name="Blockchain.Topics-Hiding_and_overriding-Shapes_area.main" target="11" />
       <module name="Blockchain.Topics-Hiding_and_overriding-Theory.main" target="11" />
@@ -152,6 +215,14 @@
       <module name="Blockchain.Topics-Hierarchy_of_exceptions-Theory.main" target="11" />
       <module name="Blockchain.Topics-Increment_and_decrement-Decrement_all.main" target="11" />
       <module name="Blockchain.Topics-Increment_and_decrement-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Infinite_streams-Generating_cats.main" target="11" />
+      <module name="Blockchain.Topics-Infinite_streams-Making_a_stream_finite.main" target="11" />
+      <module name="Blockchain.Topics-Infinite_streams-Making_a_stream_finite__1_.main" target="11" />
+      <module name="Blockchain.Topics-Infinite_streams-Methods_for_creating_infinite_streams.main" target="11" />
+      <module name="Blockchain.Topics-Infinite_streams-Powers_of_two.main" target="11" />
+      <module name="Blockchain.Topics-Infinite_streams-Select_output.main" target="11" />
+      <module name="Blockchain.Topics-Infinite_streams-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Infinite_streams-What_does_the_code_print.main" target="11" />
       <module name="Blockchain.Topics-Inheritance-Classes_for_Hospital.main" target="11" />
       <module name="Blockchain.Topics-Inheritance-Theory.main" target="11" />
       <module name="Blockchain.Topics-Inner_classes-Christmas_tree.main" target="11" />
@@ -221,6 +292,8 @@
       <module name="Blockchain.Topics-LocalTime-Seconds_since_start_of_a_day.main" target="11" />
       <module name="Blockchain.Topics-LocalTime-Some_hours_and_minutes_ago.main" target="11" />
       <module name="Blockchain.Topics-LocalTime-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Map_and_flatMap-Maximum_of_the_absolute_values.main" target="11" />
+      <module name="Blockchain.Topics-Map_and_flatMap-Theory.main" target="11" />
       <module name="Blockchain.Topics-Memento-Classification.main" target="11" />
       <module name="Blockchain.Topics-Memento-Components.main" target="11" />
       <module name="Blockchain.Topics-Memento-Downsides.main" target="11" />
@@ -256,10 +329,25 @@
       <module name="Blockchain.Topics-Objects-Change_identities.main" target="11" />
       <module name="Blockchain.Topics-Objects-Preparing_full_name.main" target="11" />
       <module name="Blockchain.Topics-Objects-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Optional-A_suitable_method.main" target="11" />
+      <module name="Blockchain.Topics-Optional-Avoiding_exceptions.main" target="11" />
+      <module name="Blockchain.Topics-Optional-Check_an_Optional_value.main" target="11" />
+      <module name="Blockchain.Topics-Optional-Create_an_Optional_value.main" target="11" />
+      <module name="Blockchain.Topics-Optional-Sum_up_optional_values.main" target="11" />
+      <module name="Blockchain.Topics-Optional-The_address_book.main" target="11" />
+      <module name="Blockchain.Topics-Optional-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Optional-What_is_Optional.main" target="11" />
       <module name="Blockchain.Topics-Output_streams-Convert_to_char_array.main" target="11" />
       <module name="Blockchain.Topics-Output_streams-Theory.main" target="11" />
       <module name="Blockchain.Topics-Package-Binary_search.main" target="11" />
       <module name="Blockchain.Topics-Package-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Parallel_streams-Fix_the_sorting_order.main" target="11" />
+      <module name="Blockchain.Topics-Parallel_streams-Getting_the_greater_speedup.main" target="11" />
+      <module name="Blockchain.Topics-Parallel_streams-Inverting_streams.main" target="11" />
+      <module name="Blockchain.Topics-Parallel_streams-Parallel_reducing.main" target="11" />
+      <module name="Blockchain.Topics-Parallel_streams-Prime_numbers.main" target="11" />
+      <module name="Blockchain.Topics-Parallel_streams-The_ordered_sequence.main" target="11" />
+      <module name="Blockchain.Topics-Parallel_streams-Theory.main" target="11" />
       <module name="Blockchain.Topics-Polymorphism-Find_mistake.main" target="11" />
       <module name="Blockchain.Topics-Polymorphism-Publication_and_its_subclasses.main" target="11" />
       <module name="Blockchain.Topics-Polymorphism-Theory.main" target="11" />
@@ -288,6 +376,15 @@
       <module name="Blockchain.Topics-Queue_and_Stack-The_LIFO_principle_in_action.main" target="11" />
       <module name="Blockchain.Topics-Queue_and_Stack-Theory.main" target="11" />
       <module name="Blockchain.Topics-Queue_and_Stack-Working_with_queue.main" target="11" />
+      <module name="Blockchain.Topics-Reduction_methods-Calculating_factorials.main" target="11" />
+      <module name="Blockchain.Topics-Reduction_methods-Range_quadratic_sum.main" target="11" />
+      <module name="Blockchain.Topics-Reduction_methods-Reduce-like_operations.main" target="11" />
+      <module name="Blockchain.Topics-Reduction_methods-Reduce_operations.main" target="11" />
+      <module name="Blockchain.Topics-Reduction_methods-Reducing_persons_by_ages.main" target="11" />
+      <module name="Blockchain.Topics-Reduction_methods-Statements.main" target="11" />
+      <module name="Blockchain.Topics-Reduction_methods-Sum_of_divisors.main" target="11" />
+      <module name="Blockchain.Topics-Reduction_methods-The_count_operation.main" target="11" />
+      <module name="Blockchain.Topics-Reduction_methods-Theory.main" target="11" />
       <module name="Blockchain.Topics-Scanning_the_input-Guest_list_of_a_hotel.main" target="11" />
       <module name="Blockchain.Topics-Scanning_the_input-Hiring_a_chef.main" target="11" />
       <module name="Blockchain.Topics-Scanning_the_input-Print_strings_in_the_reverse_order.main" target="11" />
@@ -304,11 +401,46 @@
       <module name="Blockchain.Topics-Singleton-Printing_data_of_a_singleton.main" target="11" />
       <module name="Blockchain.Topics-Singleton-Select_statements.main" target="11" />
       <module name="Blockchain.Topics-Singleton-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Standard_functional_interfaces-Accounts.main" target="11" />
+      <module name="Blockchain.Topics-Standard_functional_interfaces-An_infinite_numbers_supplier.main" target="11" />
+      <module name="Blockchain.Topics-Standard_functional_interfaces-Describe_the_function.main" target="11" />
+      <module name="Blockchain.Topics-Standard_functional_interfaces-Functional_interfaces_utilization.main" target="11" />
+      <module name="Blockchain.Topics-Standard_functional_interfaces-Package_java.util.function.main" target="11" />
+      <module name="Blockchain.Topics-Standard_functional_interfaces-Select_suitable_interfaces.main" target="11" />
+      <module name="Blockchain.Topics-Standard_functional_interfaces-Ternary_operator.main" target="11" />
+      <module name="Blockchain.Topics-Standard_functional_interfaces-Theory.main" target="11" />
       <module name="Blockchain.Topics-Static_members-Detail_manufacturing.main" target="11" />
       <module name="Blockchain.Topics-Static_members-Project_constants_and_methods.main" target="11" />
       <module name="Blockchain.Topics-Static_members-Theory.main" target="11" />
       <module name="Blockchain.Topics-Static_members-Time_constants.main" target="11" />
       <module name="Blockchain.Topics-Static_members-Too_many_cats.main" target="11" />
+      <module name="Blockchain.Topics-Stream_filtering-Bad_words_detecting.main" target="11" />
+      <module name="Blockchain.Topics-Stream_filtering-Check_if_a_number_is_prime.main" target="11" />
+      <module name="Blockchain.Topics-Stream_filtering-Numbers_filtering.main" target="11" />
+      <module name="Blockchain.Topics-Stream_filtering-Omitting_long_strings.main" target="11" />
+      <module name="Blockchain.Topics-Stream_filtering-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Stream_pipelines-Counting_words.main" target="11" />
+      <module name="Blockchain.Topics-Stream_pipelines-Possible_pipelines.main" target="11" />
+      <module name="Blockchain.Topics-Stream_pipelines-Programming_paradigms.main" target="11" />
+      <module name="Blockchain.Topics-Stream_pipelines-The_order_of_execution.main" target="11" />
+      <module name="Blockchain.Topics-Stream_pipelines-The_peek_method.main" target="11" />
+      <module name="Blockchain.Topics-Stream_pipelines-The_sum_of_odd_numbers.main" target="11" />
+      <module name="Blockchain.Topics-Stream_pipelines-The_ten_most_frequent_words.main" target="11" />
+      <module name="Blockchain.Topics-Stream_pipelines-The_total_number_of_employees.main" target="11" />
+      <module name="Blockchain.Topics-Stream_pipelines-The_total_sum_of_canceled_transactions.main" target="11" />
+      <module name="Blockchain.Topics-Stream_pipelines-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Stream_pipelines-Using_streams_many_times.main" target="11" />
+      <module name="Blockchain.Topics-Stream_pipelines-What_is_the_result.main" target="11" />
+      <module name="Blockchain.Topics-Streams_of_primitives-A_stream_without_zero.main" target="11" />
+      <module name="Blockchain.Topics-Streams_of_primitives-Producing_streams.main" target="11" />
+      <module name="Blockchain.Topics-Streams_of_primitives-The_average_salary.main" target="11" />
+      <module name="Blockchain.Topics-Streams_of_primitives-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Taking_elements-Secret_codes.main" target="11" />
+      <module name="Blockchain.Topics-Taking_elements-Sorting_and_skipping_numbers.main" target="11" />
+      <module name="Blockchain.Topics-Taking_elements-The_behavior_of_a_method.main" target="11" />
+      <module name="Blockchain.Topics-Taking_elements-The_name_of_a_method.main" target="11" />
+      <module name="Blockchain.Topics-Taking_elements-The_name_of_a_method__1_.main" target="11" />
+      <module name="Blockchain.Topics-Taking_elements-Theory.main" target="11" />
       <module name="Blockchain.Topics-Template_method-Template_Method.main" target="11" />
       <module name="Blockchain.Topics-Template_method-Template_Method__1_.main" target="11" />
       <module name="Blockchain.Topics-Template_method-Theory.main" target="11" />
@@ -322,6 +454,21 @@
       <module name="Blockchain.Topics-The_List_interface-Theory.main" target="11" />
       <module name="Blockchain.Topics-The_main_method-Print__We_are_robots_.main" target="11" />
       <module name="Blockchain.Topics-The_main_method-Theory.main" target="11" />
+      <module name="Blockchain.Topics-The_Map_interface-Basics_of_Maps.main" target="11" />
+      <module name="Blockchain.Topics-The_Map_interface-Counting_words.main" target="11" />
+      <module name="Blockchain.Topics-The_Map_interface-Creating_a_map.main" target="11" />
+      <module name="Blockchain.Topics-The_Map_interface-Determine_values_of_variables.main" target="11" />
+      <module name="Blockchain.Topics-The_Map_interface-Displaying_pairs.main" target="11" />
+      <module name="Blockchain.Topics-The_Map_interface-Existing_implementations.main" target="11" />
+      <module name="Blockchain.Topics-The_Map_interface-Getting_submaps.main" target="11" />
+      <module name="Blockchain.Topics-The_Map_interface-Kidnapper_of_Ice_cream.main" target="11" />
+      <module name="Blockchain.Topics-The_Map_interface-Modifying_a_map.main" target="11" />
+      <module name="Blockchain.Topics-The_Map_interface-The_property_of_TreeMap.main" target="11" />
+      <module name="Blockchain.Topics-The_Map_interface-Theory.main" target="11" />
+      <module name="Blockchain.Topics-The_Set_interface-Creating_a_set.main" target="11" />
+      <module name="Blockchain.Topics-The_Set_interface-Removing_elements.main" target="11" />
+      <module name="Blockchain.Topics-The_Set_interface-Strict_superset.main" target="11" />
+      <module name="Blockchain.Topics-The_Set_interface-Theory.main" target="11" />
       <module name="Blockchain.Topics-Thread_management-Calculate_the_number_of_distinct_characters.main" target="11" />
       <module name="Blockchain.Topics-Thread_management-Join.main" target="11" />
       <module name="Blockchain.Topics-Thread_management-Ordering_the_execution_of_threads.main" target="11" />

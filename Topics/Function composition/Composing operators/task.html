@@ -1,0 +1,13 @@
+<h2>Composing operators</h2>
+<html>
+ <head></head>
+ <body>
+  <p>You have the following part of code:</p> 
+  <pre><code class="language-java">IntUnaryOperator mult2 = num -&gt; num * 2;
+IntUnaryOperator add3 = num -&gt; num + 3;
+
+IntUnaryOperator combinedOperator = add3.compose(mult2.andThen(add3)).andThen(mult2);
+int result = combinedOperator.applyAsInt(5);</code></pre> 
+  <p>The<strong> result </strong>is ...</p>
+ </body>
+</html>

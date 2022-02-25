@@ -1,0 +1,25 @@
+<h2>Composing string functions</h2>
+<html>
+ <head></head>
+ <body>
+  Given the following three functions:
+  <div>
+   <br>
+  </div>
+  <div>
+   <pre><code class="language-java">Function&lt;String, String&gt; operator1 = s -&gt; s + s;
+Function&lt;String, String&gt; operator2 = s -&gt; String.valueOf(s.length());
+Function&lt;String, String&gt; resultOperator = operator1.compose(operator2);</code></pre> 
+   <br>
+  </div>
+  <div>
+   Enter the result of the following invocation (without quotes):
+  </div>
+  <div>
+   <br>
+  </div>
+  <div>
+   <pre><code class="language-java">resultOperator.apply("test");</code></pre>
+  </div>
+ </body>
+</html>

@@ -1,0 +1,43 @@
+type: code
+files:
+- name: src/Main.java
+  visible: true
+  text: |-
+    import java.util.List;
+
+    class User {
+        private String name;
+        private int age;
+
+        public User(String name, int age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        @Override
+        public String toString() {
+            return name + "=" + age;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public int getAge() {
+            return age;
+        }
+    }
+
+    class Utils {
+
+        public static void sortUsers(List<User> users) {
+            // your code here
+        }
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/12975#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Sat, 19 Feb 2022 14:04:10 UTC
+record: -1

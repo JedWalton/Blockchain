@@ -1,0 +1,24 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: All methods are always executed sequentially when the previous method has
+    completely processed all the elements of a stream.
+- text: The <b>map</b> method is always executed before the <b>filter</b> method.
+- text: The real order of execution depends on the internal stream optimization.
+message_correct: Congratulations!
+message_incorrect: Incorrect solution
+files:
+- name: src/Task.java
+  visible: true
+  text: |
+    // You can experiment here, it won’t be checked
+
+    public class Task {
+      public static void main(String[] args) {
+        // put your code here
+      }
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/10305#comment
+status: Solved
+record: -1

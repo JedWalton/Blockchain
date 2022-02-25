@@ -1,0 +1,25 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: list.stream().filter(...).map(...).filter(...).reduce(...);
+- text: list.stream(...).reduce(...).map();
+- text: list.stream().reduce(...).collect(...);
+- text: list.stream().map(...).collect(...);
+- text: list.stream().map(...).map(...).map(...).filter(...).collect(...);
+message_correct: Congratulations!
+message_incorrect: Incorrect solution
+files:
+- name: src/Task.java
+  visible: true
+  text: |
+    // You can experiment here, it won’t be checked
+
+    public class Task {
+      public static void main(String[] args) {
+        // put your code here
+      }
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/2444#comment
+status: Solved
+record: -1

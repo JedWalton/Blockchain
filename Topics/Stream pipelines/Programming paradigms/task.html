@@ -1,0 +1,22 @@
+<h2>Programming paradigms</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Given a list with programming paradigms:</p> 
+  <pre><code class="language-java">List&lt;String&gt; paradigms = Arrays.asList(
+        "Aspect-oriented programming",
+        "Functional programming",
+        "Object-oriented programming",
+        "Logical programming",
+        "Procedural programming",
+        "Automata-based programming"
+);</code></pre> 
+  <p>Here is a piece of code with streams:</p> 
+  <pre><code class="language-java">List&lt;String&gt; filtered = paradigms.stream()
+        .filter(paradigm -&gt; paradigm.contains("oriented") || paradigm.contains("Functional"))
+        .flatMap(paradigm -&gt; Arrays.stream(paradigm.split("\\s+")))
+        .distinct()
+        .collect(Collectors.toList());</code></pre> 
+  <p>What elements does the <code class="language-java">filtered</code> list contain (ignoring the order)?</p>
+ </body>
+</html>

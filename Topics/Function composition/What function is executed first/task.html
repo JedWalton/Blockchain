@@ -1,0 +1,15 @@
+<h2>What function is executed first</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Given the following of functions:</p>
+  <pre><code class="language-java">Function&lt;Integer, Integer&gt; next = n -&gt; n + 1;
+Function&lt;Integer, Integer&gt; previous = n -&gt; n - 1;
+Function&lt;Integer, Integer&gt; square = n -&gt; n * n;
+Function&lt;Integer, Integer&gt; mult3 = n -&gt; n * 3;
+
+Function&lt;Integer, Integer&gt; bigFunction =    
+        next.compose(next.compose(square).andThen(previous)).andThen(mult3);</code></pre>
+  <p>What function is executed first after calling apply of <code class="java">bigFunction</code>?</p>
+ </body>
+</html>

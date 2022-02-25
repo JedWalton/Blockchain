@@ -1,0 +1,20 @@
+type: code
+files:
+- name: src/Main.java
+  visible: true
+  text: "import java.util.Arrays;\nimport java.util.Scanner;\nimport java.util.stream.Stream;\n\
+    \npublic class Main {\n\n    /**\n     * Returns the number of elements in a given\
+    \ stream.\n     *\n     * @param passwordStream the input stream of strings \n\
+    \     * @return the number of elements in a given stream\n     */\n    public\
+    \ static long countPasswords(Stream<String> passwordStream) {\n        // write\
+    \ your code here\n    }\n\n    // Don't change the code below\n    public static\
+    \ void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n\
+    \        System.out.println(countPasswords(Arrays.stream(scanner.nextLine().split(\"\
+    \\\\s+\"))));\n    }\n}"
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/10236#comment
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Sat, 19 Feb 2022 14:47:25 UTC
+record: -1

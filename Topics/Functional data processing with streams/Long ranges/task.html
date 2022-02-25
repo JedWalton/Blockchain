@@ -1,0 +1,15 @@
+<h2>Long ranges</h2>
+<html>
+ <head></head>
+ <body>
+  What does this code print?
+  <br>
+  <br>
+  <pre><code class="language-java">boolean result = !IntStream
+        .generate(() -&gt; 100)
+        .limit(101)
+        .allMatch(val -&gt; val &gt;= 100);
+
+System.out.println(result);</code></pre>
+ </body>
+</html>

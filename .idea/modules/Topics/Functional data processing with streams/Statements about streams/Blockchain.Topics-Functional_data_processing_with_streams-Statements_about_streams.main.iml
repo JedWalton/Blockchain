@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":Topics-Functional_data_processing_with_streams-Statements_about_streams:main" external.linked.project.path="$MODULE_DIR$/../../../../../Topics/Functional data processing with streams/Statements about streams" external.root.project.path="$MODULE_DIR$/../../../../.." external.system.id="GRADLE" external.system.module.group="Blockchain" external.system.module.type="sourceSet" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_11">
+    <output url="file://$MODULE_DIR$/../../../../../Topics/Functional data processing with streams/Statements about streams/out/production/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../../../Topics/Functional data processing with streams/Statements about streams/src">
+      <sourceFolder url="file://$MODULE_DIR$/../../../../../Topics/Functional data processing with streams/Statements about streams/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

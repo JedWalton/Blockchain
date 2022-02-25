@@ -1,0 +1,14 @@
+<h2>Sum of numbers</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Given a list of integer numbers:</p> 
+  <pre><code class="language-java">List&lt;Integer&gt; numbers = Arrays.asList(0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55);</code></pre> 
+  <p>Here is a piece of code with streams:</p> 
+  <pre><code class="language-java">long result = numbers.stream()
+        .filter(n -&gt; n % 2 == 0)
+        .mapToInt(x -&gt; x)
+        .sum();</code></pre> 
+  <p>The <code class="language-java">result</code> is ...</p>
+ </body>
+</html>

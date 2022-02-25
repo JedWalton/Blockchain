@@ -1,0 +1,32 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: It takes two arguments (String and Double) and returns a value of the primitive
+    long type.
+- text: It takes two arguments (String and Double) and returns a value of the reference
+    Long type.
+- text: It takes two arguments (Long and String) and returns a value of the reference
+    Double type.
+- text: It takes two arguments (String and primitive double) and returns a value of
+    the primitive long type.
+- text: It takes two arguments (String and primitive double) and returns a value of
+    the reference Long type.
+- text: It takes two arguments (Long and String) and returns a value of the primitive
+    double type.
+message_correct: Congratulations!
+message_incorrect: Incorrect solution
+files:
+- name: src/Task.java
+  visible: true
+  text: |
+    // You can experiment here, it won’t be checked
+
+    public class Task {
+      public static void main(String[] args) {
+        // put your code here
+      }
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/2395#comment
+status: Solved
+record: -1

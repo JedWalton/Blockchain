@@ -1,0 +1,63 @@
+<h2>Teeing collector</h2>
+<html>
+ <head></head>
+ <body>
+   Take a look at these classes:
+  <p></p> 
+  <pre><code class="language-java">enum Status {ACTIVE, BLOCKED, REMOVED}
+
+class Account {
+    private long balance;
+    private String number;
+    private Status status;
+
+    public Account(long balance, String number, Status status) {
+        this.balance = balance;
+        this.number = number;
+        this.status = status;
+    }
+
+    public long getBalance() { return balance; }
+    public String getNumber() { return number; }
+    public Status getStatus() { return status; }
+    public boolean isBlocked() { return status == Status.BLOCKED; }
+    public boolean isActive() { return status == Status.ACTIVE; }
+}
+
+class Report {
+    List&lt;String&gt; blocked;
+    List&lt;String&gt; active;
+
+    public Report(List&lt;String&gt; blocked, List&lt;String&gt; active) {
+        this.blocked = blocked;
+        this.active = active;
+    }
+
+    @Override
+    public String toString() { return blocked + ", " + active; }
+}</code></pre> 
+  <p>What will the following code print to the console?</p> 
+  <pre><code class="language-java">List&lt;Account&gt; accounts = List.of(
+        new Account(3333L, "530012", Status.ACTIVE),
+        new Account(15000L, "771843", Status.BLOCKED),
+        new Account(15000L, "234465", Status.ACTIVE),
+        new Account(8800L, "110011", Status.ACTIVE),
+        new Account(45000L, "462181", Status.BLOCKED),
+        new Account(0L, "681891", Status.REMOVED)
+);
+
+Report report = accounts
+        .stream()
+        .collect(Collectors.teeing(
+                Collectors.filtering(Account::isBlocked,
+                        Collectors.mapping(Account::getNumber,
+                                Collectors.toList())),
+                Collectors.filtering(Account::isActive,
+                        Collectors.mapping(Account::getNumber,
+                                Collectors.toList())),
+                Report::new)
+        );
+
+System.out.println(report);</code></pre>
+ </body>
+</html>

@@ -239,5 +239,4 @@ class BlockChain implements Serializable {
             System.out.println();
         }
     }
-
 }

@@ -1,0 +1,19 @@
+<h2>How to compose predicates together</h2>
+<html>
+ <head></head>
+ <body>
+  <p>Two predicates are given:</p> 
+  <pre><code class="language-java">Predicate&lt;Character&gt; isLetter = Character::isLetter;
+
+Predicate&lt;Character&gt; isUpperCase = Character::isUpperCase;
+
+Predicate&lt;Character&gt; predicate = ... // the composed predicate</code></pre> 
+  <p>How to compose them together so that the <strong>predicate</strong><strong> </strong>returns the following results?</p> 
+  <pre><code class="language-java">predicate.test('1'); // false
+predicate.test('3'); // false
+predicate.test('c'); // true
+predicate.test('D'); // false
+predicate.test('e'); // true
+predicate.test('Q'); // false</code></pre>
+ </body>
+</html>

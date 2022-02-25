@@ -1,0 +1,20 @@
+<h2>Multiple fields</h2>
+<html>
+ <head></head>
+ <body>
+   You have a
+  <code class="java">User</code> class with two fields: 
+  <code class="java">String name</code> and 
+  <code class="java">int age</code>. Implement a method that takes a list of users, 
+  <code class="java">List&lt;User&gt;</code>, and sorts it according to the following rule:
+  <p></p> 
+  <p>Users should be sorted by their names in lexicographic order and if two or more users have the same names, they should be sorted by their age in descending order. You don't need to read or write anything from or to the console, just implement the method.</p> 
+  <p><button class="btn-sm btn-outline-secondary" onclick="getElementById('hint-556').style.display='inline'"> Hint </button> </p>
+  <div id="hint-556" style="display:none;">
+   The 
+   <code class="java">User</code> class actually does not impose any limitations on the values its fields may contain, however we can guarantee that they will never be 
+   <code class="java">null</code>
+  </div>
+  <p></p>
+ </body>
+</html><br><b>Sample Input:</b><br><pre><code class="language-no-highlight">John=25, Jane=25, Jim=18, Jack=18, John=30</code></pre><br><b>Sample Output:</b><br><pre><code class="language-no-highlight">Jack=18, Jane=25, Jim=18, John=30, John=25</code></pre><br><br><b>Sample Input:</b><br><pre><code class="language-no-highlight">Abby=19, Alice=19, Abby=21, Alice=21, Ashley=19</code></pre><br><b>Sample Output:</b><br><pre><code class="language-no-highlight">Abby=21, Abby=19, Alice=21, Alice=19, Ashley=19</code></pre><br><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 5 seconds</font><br><br>

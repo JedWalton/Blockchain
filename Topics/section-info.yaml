@@ -65,3 +65,22 @@ content:
 - Threads as objects
 - Custom threads
 - Singleton
+- Decorator
+- Facade
+- The Set interface
+- The Map interface
+- Standard functional interfaces
+- Function composition
+- Optional
+- Comparator
+- Functional data processing with streams
+- Stream filtering
+- Map and flatMap
+- Reduction methods
+- Collectors
+- Infinite streams
+- Taking elements
+- Streams of primitives
+- Stream pipelines
+- Parallel streams
+- Grouping collectors
