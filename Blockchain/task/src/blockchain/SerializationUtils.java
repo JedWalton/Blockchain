@@ -7,15 +7,11 @@ class SerializationUtils {
      * Serialize the given object to the file
      */
     public static void serialize(Object obj, String fileName) throws IOException {
-
-        BufferedOutputStream bos;
         FileOutputStream fos = new FileOutputStream(fileName);
-        bos = new BufferedOutputStream(fos);
-        ObjectOutputStream oos = null;
-        oos = new ObjectOutputStream(bos);
+        BufferedOutputStream bos = new BufferedOutputStream(fos);
+        ObjectOutputStream oos = new ObjectOutputStream(bos);
         oos.writeObject(obj);
         oos.close();
-
     }
 
     /**

@@ -1,5 +1,6 @@
 package blockchain;
 
+import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 
 class StringUtil {
@@ -8,7 +9,7 @@ class StringUtil {
         try {
             MessageDigest digest = MessageDigest.getInstance("SHA-256");
             /* Applies sha256 to our input */
-            byte[] hash = digest.digest(input.getBytes("UTF-8"));
+            byte[] hash = digest.digest(input.getBytes(StandardCharsets.UTF_8));
             StringBuilder hexString = new StringBuilder();
             for (byte elem: hash) {
                 String hex = Integer.toHexString(0xff & elem);

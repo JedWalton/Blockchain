@@ -1,17 +1,6 @@
 type: edu
 custom_name: stage5
 files:
-- name: src/blockchain/Main.java
-  visible: true
-  text: |
-    package blockchain;
-
-    public class Main {
-        public static void main(String[] args) {
-            System.out.println("Hello World!");
-        }
-    }
-  learner_created: false
 - name: test/BlockchainTest.java
   visible: false
   text: |
@@ -256,134 +245,6 @@ files:
 
     }
   learner_created: false
-- name: src/blockchain/StringUtil.java
-  visible: true
-  text: |-
-    package blockchain;
-
-    import java.security.MessageDigest;
-
-    class StringUtil {
-        /* Applies Sha256 to a string and returns a hash. */
-        public static String applySha256(String input){
-            try {
-                MessageDigest digest = MessageDigest.getInstance("SHA-256");
-                /* Applies sha256 to our input */
-                byte[] hash = digest.digest(input.getBytes("UTF-8"));
-                StringBuilder hexString = new StringBuilder();
-                for (byte elem: hash) {
-                    String hex = Integer.toHexString(0xff & elem);
-                    if(hex.length() == 1) hexString.append('0');
-                    hexString.append(hex);
-                }
-                return hexString.toString();
-            }
-            catch(Exception e) {
-                throw new RuntimeException(e);
-            }
-        }
-    }
-  learner_created: true
-- name: src/blockchain/SerializationUtil.java
-  visible: true
-  text: |-
-    package blockchain;
-
-    import java.io.*;
-
-    class SerializationUtils {
-        /**
-         * Serialize the given object to the file
-         */
-        public static void serialize(Object obj, String fileName) throws IOException {
-
-            BufferedOutputStream bos;
-            FileOutputStream fos = new FileOutputStream(fileName);
-            bos = new BufferedOutputStream(fos);
-            ObjectOutputStream oos = null;
-            oos = new ObjectOutputStream(bos);
-            oos.writeObject(obj);
-            oos.close();
-
-        }
-
-        /**
-         * Deserialize to an object from the file
-         */
-        public static Object deserialize(String fileName) throws IOException, ClassNotFoundException {
-            FileInputStream fis = new FileInputStream(fileName);
-            BufferedInputStream bis = new BufferedInputStream(fis);
-            ObjectInputStream ois = new ObjectInputStream(bis);
-            Object obj = ois.readObject();
-            ois.close();
-            return obj;
-        }
-    }
-  learner_created: true
-- name: src/blockchain/BlockChainFactory.java
-  visible: true
-  text: |-
-    package blockchain;
-
-    import java.util.ArrayList;
-    import java.util.HashSet;
-    import java.util.Set;
-    import java.util.concurrent.Callable;
-    import java.util.concurrent.ExecutionException;
-    import java.util.concurrent.ExecutorService;
-    import java.util.concurrent.Executors;
-
-    class BlockChainFactory {
-        private static BlockChainFactory instance = new BlockChainFactory();
-        int threads = Runtime.getRuntime().availableProcessors();
-
-        private BlockChainFactory() {
-        }
-
-        public static BlockChainFactory getInstance() {
-            return instance;
-        }
-
-        void setThreads(int threads) {
-            int numThreads = Runtime.getRuntime().availableProcessors();
-            this.threads = Math.min(threads, numThreads);
-        }
-
-        BlockChain generateChainSizeOf(int chainSize, int zeroesInHash) throws ExecutionException, InterruptedException {
-
-            BlockChain blockChain = new BlockChain(zeroesInHash);
-
-            extend(blockChain, chainSize);
-            return blockChain;
-        }
-
-        void extend(BlockChain blockChain, int blocksNum) throws ExecutionException, InterruptedException {
-            for (int i = 0; i < blocksNum; i++) {
-                extendByOneBlock(blockChain);
-            }
-        }
-
-        void extendByOneBlock(BlockChain blockChain) throws ExecutionException, InterruptedException {
-            Stopwatch.reset();
-            Set<Callable<Block>> miners = new HashSet<>();
-            ExecutorService executorService = Executors.newFixedThreadPool(threads);
-            ArrayList<String> messagesCache = new ArrayList<>(blockChain.Messages);
-            blockChain.Messages.removeAll(messagesCache);
-            String BlockData = String.join("\n", messagesCache);
-
-            for (int i = 1; i <= threads; i++) {
-                BlockMiner miner = new BlockMiner(blockChain);
-                miner.setId(i);
-                miner.BlockData = BlockData;
-                miners.add(miner);
-            }
-            Block result = executorService.invokeAny(miners);
-            result.printInfo();
-            blockChain.add(result);
-            executorService.shutdownNow();
-        }
-    }
-  learner_created: true
 - name: Database.txt
   visible: true
   text: "��\0\x05sr\0\x15blockchain.Blockchain3l`���<\x15\x02\0\x02I\0\x06zeroesL\0\
@@ -398,343 +259,64 @@ files:
     ~\0\nsq\0~\0\x05\0\0\0\x04?��\x1e��\x02�\0\0\0\0\0\0\x01~���\x06t\0@006dbdd9cf846589814160455a7161427e6b070e2f1c914cdff300662c20aeb4q\0\
     ~\0\x0fx"
   learner_created: true
-- name: src/blockchain/ChatEmulator.java
+- name: src/blockchain/Main.java
   visible: true
-  text: |-
-    package blockchain;
-
-    import java.util.HashSet;
-    import java.util.List;
-    import java.util.Set;
-    import java.util.concurrent.ExecutorService;
-    import java.util.concurrent.Executors;
-
-    class ChatEmulator {
-        private static ChatEmulator instance = new ChatEmulator();
-        List<String> botNames = List.of("Kate", "Tom", "Nick", "Alex", "John");
-        int threads = 4;
-        Set<MessageBot> bots;
-        ExecutorService executorService;
-
-        public static ChatEmulator getInstance() {
-            return instance;
-        }
-
-        void haveChatAt(BlockChain blockChain) {
-            bots = new HashSet<>();
-            executorService = Executors.newFixedThreadPool(threads);
-            botNames.forEach(bot -> bots.add(new MessageBot(bot, blockChain)));
-            bots.forEach(executorService::submit);
-
-        }
-
-        private ChatEmulator() {
-        }
-
-        void stop() {
-            bots.forEach(MessageBot::stop);
-            executorService.shutdown();
-        }
-    }
   learner_created: true
-- name: src/blockchain/BlockMiner.java
+- name: src/blockchain/BlockchainManager.java
   visible: true
-  text: |-
-    package blockchain;
-
-    import java.util.Random;
-    import java.util.concurrent.Callable;
-
-    import static java.lang.Thread.currentThread;
-
-    class BlockMiner implements Callable<Block> {
-        BlockChain blockChain;
-        int id;
-        String BlockData;
-
-        BlockMiner(BlockChain blockChain) {
-            this.blockChain = blockChain;
-        }
-
-
-        public void setId(int id) {
-            this.id = id;
-        }
-
-        public Block call() {
-            return generateNextBlock();
-        }
-
-        Block generateNextBlock() {
-            int chainSize = blockChain.size();
-            String previousBlockHash;
-            if (chainSize == 0) {
-                previousBlockHash = "0";
-            } else {
-                Block previousBlock = blockChain.getLastBlock();
-                previousBlockHash = previousBlock.generateHash();
-            }
-            int blockId = chainSize + 1;
-            Block nextBlock = new Block(previousBlockHash, blockId, BlockData);
-            nextBlock.minerId = id;
-            nextBlock.magicNumber = findMagicNumberFor(nextBlock);
-            return nextBlock;
-        }
-
-        int findMagicNumberFor(Block block) {
-            Random random = new Random(Integer.MAX_VALUE);
-            String validHashRegex = String.format("0{%d}\\w*", blockChain.getZeroesInHash());
-            int magicNumber;
-            String hash;
-            do {
-                magicNumber = random.nextInt();
-                hash = block.generateHashUsing(magicNumber);
-            }
-            while (!hash.matches(validHashRegex) & !currentThread().isInterrupted());
-            return magicNumber;
-        }
-    }
   learner_created: true
-- name: src/blockchain/MessageBot.java
+- name: src/blockchain/Miner.java
   visible: true
-  text: |-
-    package blockchain;
-
-    import java.util.Date;
-    import java.util.Random;
-
-    class MessageBot implements Runnable {
-        String name;
-        BlockChain blockChain;
-        int maxSleepDuration = 150;
-        boolean isStopped = false;
-
-        public MessageBot(String name, BlockChain blockChain) {
-            this.name = name;
-            this.blockChain = blockChain;
-        }
-
-
-        void SendRandomMessage() {
-            blockChain.addMessage(name, generateRandomMessage());
-        }
-
-        String generateRandomMessage() {
-
-            int leftLimit = 97; // letter 'a'
-            int rightLimit = 122; // letter 'z'
-            int targetStringLength = 10;
-            Random random = new Random();
-            StringBuilder buffer = new StringBuilder(targetStringLength);
-            for (int i = 0; i < targetStringLength; i++) {
-                int randomLimitedInt = leftLimit + (int)
-                        (random.nextFloat() * (rightLimit - leftLimit + 1));
-                buffer.append((char) randomLimitedInt);
-            }
-            return buffer.toString() + " " + new Date().getTime();
-        }
-
-        void stop() {
-            isStopped = true;
-        }
-
-        @Override
-        public void run() {
-            long sleepTimer = new Random().nextInt(maxSleepDuration);
-
-            while (!isStopped) {
-                SendRandomMessage();
-                try {
-                    Thread.sleep(sleepTimer);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-    }
   learner_created: true
-- name: src/blockchain/BlockChain.java
+- name: src/blockchain/HashCreator.java
   visible: true
-  text: |-
-    package blockchain;
-
-    import java.io.Serializable;
-    import java.util.ArrayList;
-    import java.util.Collections;
-    import java.util.Date;
-    import java.util.List;
-
-    class BlockChain implements Serializable {
-        private static final long serialVersionUID = 9L;
-        ArrayList<Block> blocks = new ArrayList<>();
-        private int zeroesInHash;
-        List<String> Messages =
-                Collections.synchronizedList(new ArrayList<>());
-
-        synchronized void addMessage(String author, String message) {
-            Messages.add(author + ": " + message);
-        }
-
-        public int getZeroesInHash() {
-            return zeroesInHash;
-        }
-
-        public int size() {
-            return blocks.size();
-        }
-
-        BlockChain(int zeroesInHash) {
-            this.zeroesInHash = zeroesInHash;
-        }
-
-
-        Block getBlockBy(int id) {
-            return blocks.get(id - 1);
-        }
-
-        Block getLastBlock() {
-            return (size() > 0) ? blocks.get(size() - 1) : null;
-        }
-
-        void add(Block block) {
-            if (canAdd(block)) {
-                blocks.add(block);
-                adjustZeroesInHash();
-            }
-        }
-
-        void adjustZeroesInHash() {
-            long elapsedTime = Stopwatch.getElapsedSeconds();
-            printGenerationTimeMsg(elapsedTime);
-            if (elapsedTime > 60) {
-                zeroesInHash -= 1;
-                System.out.printf("N was decreased to %d\n\n", zeroesInHash);
-            } else if (elapsedTime < 10) {
-                zeroesInHash += 1;
-                System.out.printf("N was increased to %d\n\n", zeroesInHash);
-            } else
-                System.out.println("N stays the same\n\n");
-        }
-
-        private static void printGenerationTimeMsg(long sec) {
-            System.out.printf("Block was generating for %d seconds\n", sec);
-        }
-
-        boolean canAdd(Block block) {
-            return block.hasValid(zeroesInHash) & canHaveValid(block);
-        }
-
-
-        boolean canHaveValid(Block block) {
-            int id = block.id;
-            boolean isValid = true;
-            if (id > 1) {
-                String previousHash = block.previousHash;
-                Block previousBlock = getBlockBy(id - 1);
-                String hash = previousBlock.generateHash();
-                if (!hash.equals(previousHash)) {
-                    isValid = false;
-                }
-            }
-            return isValid;
-        }
-
-
-        boolean isValid() {
-            boolean chainIsValid = true;
-            for (Block block : blocks) {
-                if (!canHaveValid(block)) {
-                    chainIsValid = false;
-                    break;
-                }
-            }
-            return chainIsValid;
-        }
-
-        void printAllBlock() {
-            for (Block block : blocks
-            ) {
-                block.printInfo();
-                System.out.println();
-            }
-        }
-
-    }
-
-    class Block implements Serializable {
-        private static final long serialVersionUID = 8L;
-        String previousHash;
-        long timesStamp = new Date().getTime();
-        int id;
-        int magicNumber;
-        int minerId;
-        String blockData;
-
-        Block(String hash, int id, String blockData) {
-            this.previousHash = hash;
-            this.id = id;
-            this.blockData = blockData;
-        }
-
-        void printInfo() {
-
-            StringBuilder output = new StringBuilder("Block:" +
-                    "\nCreated by miner # " + minerId +
-                    "\nId: " + id +
-                    "\nTimestamp: " + timesStamp +
-                    "\nMagic number: " + magicNumber +
-                    "\nHash of the previous block:\n" + previousHash +
-                    "\nHash of the block:\n" + generateHash() +
-                    "\nBlock data:");
-
-            if (blockData.isEmpty()) {
-                output.append("no messages");
-            } else {
-                output.append("\n").append(blockData);
-            }
-
-            System.out.println(output);
-
-        }
-
-        boolean hasValid(int zeroesInHash) {
-            String validHashRegex = "0{" + zeroesInHash + "}\\w*";
-            String hash = generateHash();
-            return hash.matches(validHashRegex);
-        }
-
-        String generateHash() {
-            return StringUtil.applySha256(previousHash + id + minerId + timesStamp + magicNumber + blockData);
-        }
-
-        String generateHashUsing(int magicNumber) {
-            return StringUtil.applySha256(previousHash + id + minerId + timesStamp + magicNumber + blockData);
-        }
-    }
   learner_created: true
-- name: src/blockchain/Stopwatch.java
+- name: src/blockchain/Blockchain.java
   visible: true
-  text: |-
-    package blockchain;
-
-    import java.util.concurrent.TimeUnit;
-
-    class Stopwatch {
-        static private long start;
-
-        static void reset() {
-            start = System.nanoTime();
-        }
-
-        static long getElapsedSeconds() {
-
-            long end = System.nanoTime();
-            long elapsedNano = end - start;
-            long elapsedSeconds = TimeUnit.SECONDS.convert(elapsedNano, TimeUnit.NANOSECONDS);
-            return elapsedSeconds;
-        }
-    }
+  learner_created: true
+- name: src/blockchain/Message.java
+  visible: true
+  learner_created: true
+- name: src/blockchain/StringUtil.java
+  visible: true
+  learner_created: true
+- name: src/blockchain/Block.java
+  visible: true
+  learner_created: true
+- name: src/blockchain/SerializationUtils.java
+  visible: true
+  learner_created: true
+- name: src/blockchain/MessageSender.java
+  visible: true
+  learner_created: true
+- name: src/blockchain/BotUser.java
+  visible: true
+  learner_created: true
+- name: src/blockchain/KeyPairCreator.java
+  visible: true
+  learner_created: true
+- name: src/blockchain/SignatureChecker.java
+  visible: true
+  learner_created: true
+- name: src/blockchain/BlockchainValidator.java
+  visible: true
+  learner_created: true
+- name: blockchain.data
+  visible: true
   learner_created: true
 feedback_link: https://hyperskill.org/learn/step/5417#comment
-status: Unchecked
+status: Failed
+feedback:
+  message: |-
+    Error in test #1
+
+    In this test, the program is running for a long time, more than 15 seconds. Most likely, the program has gone into an infinite loop.
+
+    Please find below the output of your program during this failed test.
+
+    ---
+
+    Retrieving existing Blockchain
+    Adding 5 blocks...
+  time: Sat, 26 Feb 2022 19:20:42 UTC
 record: -1

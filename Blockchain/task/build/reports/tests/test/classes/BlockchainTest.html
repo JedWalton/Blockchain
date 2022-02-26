@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">1</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">20.452s</div>
+<div class="counter">15.036s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,16 +61,78 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Tests</a>
+<a href="#tab0">Failed tests</a>
 </li>
 <li>
-<a href="#tab1">Standard output</a>
+<a href="#tab1">Tests</a>
 </li>
 <li>
-<a href="#tab2">Standard error</a>
+<a href="#tab2">Standard output</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="start"></a>
+<h3 class="failures">start</h3>
+<span class="code">
+<pre>java.lang.AssertionError: Error in test #1
+
+In this test, the program is running for a long time, more than 15 seconds. Most likely, the program has gone into an infinite loop.
+
+Please find below the output of your program during this failed test.
+
+---
+
+Retrieving existing Blockchain
+Adding 5 blocks...
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.hyperskill.hstest.stage.StageTest.start(StageTest.java:155)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -81,203 +143,19 @@
 </tr>
 </thead>
 <tr>
-<td class="success">start</td>
-<td class="success">20.452s</td>
-<td class="success">passed</td>
+<td class="failures">start</td>
+<td class="failures">15.036s</td>
+<td class="failures">failed</td>
 </tr>
 </table>
 </div>
-<div id="tab1" class="tab">
+<div id="tab2" class="tab">
 <h2>Standard output</h2>
 <span class="code">
 <pre>?[1;31m
 Start test 1?[0m
-Block:
-Created by miner # 7
-Id: 1
-Timestamp: 1645886896976
-Magic number: -1631654733
-Hash of the previous block:
-0
-Hash of the block:
-0f3ac7279c8c2d40bc782394f5efcf7fcab222783e5134aa4ca8d049ead553d0
-Block data:no messages
-Block was generating for 0 seconds
-N was increased to 1
-
-Block:
-Created by miner # 3
-Id: 2
-Timestamp: 1645886897004
-Magic number: -649748457
-Hash of the previous block:
-0f3ac7279c8c2d40bc782394f5efcf7fcab222783e5134aa4ca8d049ead553d0
-Hash of the block:
-0ffb8b529e24e43c8bdd2c60e0c543086e0c9887acb0a2d51199f455b58b8e7e
-Block data:
-Nick: owmalyvoiv 1645886896974
-Tom: zztekcjryo 1645886896974
-Kate: eqtcntvhoe 1645886896974
-John: smvaxuhrzq 1645886896974
-Block was generating for 0 seconds
-N was increased to 2
-
-Block:
-Created by miner # 8
-Id: 3
-Timestamp: 1645886897013
-Magic number: -138250836
-Hash of the previous block:
-0ffb8b529e24e43c8bdd2c60e0c543086e0c9887acb0a2d51199f455b58b8e7e
-Hash of the block:
-007d5f8fedcc11e76734a2d36079f107a8adf120f4b58d25a62e994853967cf4
-Block data:
-Tom: sdrdtzzmiq 1645886897009
-Block was generating for 0 seconds
-N was increased to 3
-
-Block:
-Created by miner # 11
-Id: 4
-Timestamp: 1645886897026
-Magic number: 1163220021
-Hash of the previous block:
-007d5f8fedcc11e76734a2d36079f107a8adf120f4b58d25a62e994853967cf4
-Hash of the block:
-00025d251c41661350f1e78132292c5cb6061c93fca5bbfc010f4357a6714f81
-Block data:no messages
-Block was generating for 0 seconds
-N was increased to 4
-
-Block:
-Created by miner # 1
-Id: 5
-Timestamp: 1645886897100
-Magic number: 984310356
-Hash of the previous block:
-00025d251c41661350f1e78132292c5cb6061c93fca5bbfc010f4357a6714f81
-Hash of the block:
-0000f852aa53f9d9b8244627922e16c27fe496157f15a3b84950eecaca53b1f3
-Block data:
-Tom: xsobzfjhgd 1645886897032
-Tom: lzpdsirikz 1645886897055
-John: olzexwvkji 1645886897073
-Tom: yxksqhurmw 1645886897078
-Block was generating for 0 seconds
-N was increased to 5
-
-?[1;31m
-Start test 2?[0m
-Block:
-Created by miner # 12
-Id: 1
-Timestamp: 1645886907249
-Magic number: -1631654733
-Hash of the previous block:
-0
-Hash of the block:
-b19e1339a5fe0164698ad139da963bf1be10edc59b9600eb9cdee1181a5203e8
-Block data:no messages
-Block was generating for 0 seconds
-N was increased to 1
-
-Block:
-Created by miner # 3
-Id: 2
-Timestamp: 1645886907257
-Magic number: -1631654733
-Hash of the previous block:
-b19e1339a5fe0164698ad139da963bf1be10edc59b9600eb9cdee1181a5203e8
-Hash of the block:
-0aeabc49227dcc855378b78d28cd6e72b2d00a23b8efb062317875fa81aad6eb
-Block data:
-Kate: hkpojootnn 1645886907249
-Alex: abypzkbgow 1645886907249
-Tom: vyqytuyflq 1645886907249
-Nick: wghszkcqzf 1645886907249
-Block was generating for 0 seconds
-N was increased to 2
-
-Block:
-Created by miner # 4
-Id: 3
-Timestamp: 1645886907267
-Magic number: 741491617
-Hash of the previous block:
-0aeabc49227dcc855378b78d28cd6e72b2d00a23b8efb062317875fa81aad6eb
-Hash of the block:
-0059638e73a120ab44e3fdd0c0e381595e47739cdd0c1ba92ce786c10035cbff
-Block data:no messages
-Block was generating for 0 seconds
-N was increased to 3
-
-Block:
-Created by miner # 2
-Id: 4
-Timestamp: 1645886907283
-Magic number: -1827888915
-Hash of the previous block:
-0059638e73a120ab44e3fdd0c0e381595e47739cdd0c1ba92ce786c10035cbff
-Hash of the block:
-0008a7cb1b8f790f34a7c18e127c0ce76854cc7980a5e62a025061e1c52cc52b
-Block data:no messages
-Block was generating for 0 seconds
-N was increased to 4
-
-Block:
-Created by miner # 1
-Id: 5
-Timestamp: 1645886907319
-Magic number: -206062899
-Hash of the previous block:
-0008a7cb1b8f790f34a7c18e127c0ce76854cc7980a5e62a025061e1c52cc52b
-Hash of the block:
-0000fe55f2d8bfe36d239f71ec07bffa115e550ab9fa2a76017f3b0890463266
-Block data:no messages
-Block was generating for 0 seconds
-N was increased to 5
-
-</pre>
-</span>
-</div>
-<div id="tab2" class="tab">
-<h2>Standard error</h2>
-<span class="code">
-<pre>java.lang.InterruptedException: sleep interrupted
-	at java.base/java.lang.Thread.sleep(Native Method)
-	at blockchain.MessageBot.run(MessageBot.java:48)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-java.lang.InterruptedException: sleep interrupted
-	at java.base/java.lang.Thread.sleep(Native Method)
-	at blockchain.MessageBot.run(MessageBot.java:48)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-java.lang.InterruptedException: sleep interrupted
-	at java.base/java.lang.Thread.sleep(Native Method)
-	at blockchain.MessageBot.run(MessageBot.java:48)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-java.lang.InterruptedException: sleep interrupted
-	at java.base/java.lang.Thread.sleep(Native Method)
-	at blockchain.MessageBot.run(MessageBot.java:48)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-java.lang.InterruptedException: sleep interrupted
-	at java.base/java.lang.Thread.sleep(Native Method)
-	at blockchain.MessageBot.run(MessageBot.java:48)
+Retrieving existing Blockchain
+Adding 5 blocks...
 </pre>
 </span>
 </div>
@@ -289,7 +167,7 @@ java.lang.InterruptedException: sleep interrupted
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.3.3</a> at 26 Feb 2022, 14:48:37</p>
+<a href="http://www.gradle.org">Gradle 7.3.3</a> at 26 Feb 2022, 19:20:42</p>
 </div>
 </div>
 </body>
