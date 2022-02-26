@@ -74,6 +74,16 @@
       <module name="Blockchain.Topics-Constructor-Complex_numbers.main" target="11" />
       <module name="Blockchain.Topics-Constructor-Geometric_cube.main" target="11" />
       <module name="Blockchain.Topics-Constructor-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Currying-A_correct_lambda_expression.main" target="11" />
+      <module name="Blockchain.Topics-Currying-Applying_a_number.main" target="11" />
+      <module name="Blockchain.Topics-Currying-Curried_function.main" target="11" />
+      <module name="Blockchain.Topics-Currying-Multifunctional_mapper.main" target="11" />
+      <module name="Blockchain.Topics-Currying-Reducer_operator.main" target="11" />
+      <module name="Blockchain.Topics-Currying-Returning_functions.main" target="11" />
+      <module name="Blockchain.Topics-Currying-Statements.main" target="11" />
+      <module name="Blockchain.Topics-Currying-String_concatenation.main" target="11" />
+      <module name="Blockchain.Topics-Currying-Theory.main" target="11" />
+      <module name="Blockchain.Topics-Currying-Types_of_a_curried_function.main" target="11" />
       <module name="Blockchain.Topics-Custom_exceptions-Checked_exception_with_constructor.main" target="11" />
       <module name="Blockchain.Topics-Custom_exceptions-DriverNotReadyException.main" target="11" />
       <module name="Blockchain.Topics-Custom_exceptions-Square_class.main" target="11" />

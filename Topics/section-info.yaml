@@ -84,3 +84,4 @@ content:
 - Stream pipelines
 - Parallel streams
 - Grouping collectors
+- Currying

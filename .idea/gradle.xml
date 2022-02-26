@@ -84,6 +84,16 @@
             <option value="$PROJECT_DIR$/Topics/Constructor/Complex numbers" />
             <option value="$PROJECT_DIR$/Topics/Constructor/Geometric cube" />
             <option value="$PROJECT_DIR$/Topics/Constructor/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Currying/A correct lambda expression" />
+            <option value="$PROJECT_DIR$/Topics/Currying/Applying a number" />
+            <option value="$PROJECT_DIR$/Topics/Currying/Curried function" />
+            <option value="$PROJECT_DIR$/Topics/Currying/Multifunctional mapper" />
+            <option value="$PROJECT_DIR$/Topics/Currying/Reducer operator" />
+            <option value="$PROJECT_DIR$/Topics/Currying/Returning functions" />
+            <option value="$PROJECT_DIR$/Topics/Currying/Statements" />
+            <option value="$PROJECT_DIR$/Topics/Currying/String concatenation" />
+            <option value="$PROJECT_DIR$/Topics/Currying/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Currying/Types of a curried function" />
             <option value="$PROJECT_DIR$/Topics/Custom exceptions/Checked exception with constructor" />
             <option value="$PROJECT_DIR$/Topics/Custom exceptions/DriverNotReadyException" />
             <option value="$PROJECT_DIR$/Topics/Custom exceptions/Square class" />
