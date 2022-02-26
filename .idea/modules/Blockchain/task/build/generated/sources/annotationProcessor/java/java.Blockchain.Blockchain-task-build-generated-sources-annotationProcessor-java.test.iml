@@ -9,7 +9,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="Blockchain.Blockchain-task-build-generated-sources-annotationProcessor-java.main" />
+    <orderEntry type="module" module-name="java.Blockchain.Blockchain-task-build-generated-sources-annotationProcessor-java.main" />
     <orderEntry type="module" module-name="Blockchain.util.main" />
     <orderEntry type="module" module-name="Blockchain.util.test" production-on-test="" />
     <orderEntry type="library" name="Gradle: com.github.hyperskill:hs-test:release-SNAPSHOT" level="project" />

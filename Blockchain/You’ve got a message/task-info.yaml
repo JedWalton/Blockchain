@@ -357,6 +357,24 @@ files:
   text: "package blockchain;\n\nimport junit.framework.TestCase;\n\npublic class BlockchainTest\
     \ extends TestCase {\n\n    \n\n}"
   learner_created: false
+- name: src/blockchain/ChatEmulator.java
+  visible: true
+  learner_created: true
+- name: src/blockchain/MessageBot.java
+  visible: true
+  learner_created: true
+- name: src/blockchain/BlockChainFactory.java
+  visible: true
+  learner_created: true
+- name: src/blockchain/BlockMiner.java
+  visible: true
+  learner_created: true
+- name: src/blockchain/BlockChain.java
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/5416#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Sat, 26 Feb 2022 14:48:37 UTC
 record: -1

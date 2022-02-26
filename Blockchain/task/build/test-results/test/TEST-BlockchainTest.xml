@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="BlockchainTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-02-26T14:48:16" hostname="PC" time="20.452">
+  <properties/>
+  <testcase name="start" classname="BlockchainTest" time="20.452"/>
+  <system-out><![CDATA[?[1;31m
+Start test 1?[0m
+Block:
+Created by miner # 7
+Id: 1
+Timestamp: 1645886896976
+Magic number: -1631654733
+Hash of the previous block:
+0
+Hash of the block:
+0f3ac7279c8c2d40bc782394f5efcf7fcab222783e5134aa4ca8d049ead553d0
+Block data:no messages
+Block was generating for 0 seconds
+N was increased to 1
+
+Block:
+Created by miner # 3
+Id: 2
+Timestamp: 1645886897004
+Magic number: -649748457
+Hash of the previous block:
+0f3ac7279c8c2d40bc782394f5efcf7fcab222783e5134aa4ca8d049ead553d0
+Hash of the block:
+0ffb8b529e24e43c8bdd2c60e0c543086e0c9887acb0a2d51199f455b58b8e7e
+Block data:
+Nick: owmalyvoiv 1645886896974
+Tom: zztekcjryo 1645886896974
+Kate: eqtcntvhoe 1645886896974
+John: smvaxuhrzq 1645886896974
+Block was generating for 0 seconds
+N was increased to 2
+
+Block:
+Created by miner # 8
+Id: 3
+Timestamp: 1645886897013
+Magic number: -138250836
+Hash of the previous block:
+0ffb8b529e24e43c8bdd2c60e0c543086e0c9887acb0a2d51199f455b58b8e7e
+Hash of the block:
+007d5f8fedcc11e76734a2d36079f107a8adf120f4b58d25a62e994853967cf4
+Block data:
+Tom: sdrdtzzmiq 1645886897009
+Block was generating for 0 seconds
+N was increased to 3
+
+Block:
+Created by miner # 11
+Id: 4
+Timestamp: 1645886897026
+Magic number: 1163220021
+Hash of the previous block:
+007d5f8fedcc11e76734a2d36079f107a8adf120f4b58d25a62e994853967cf4
+Hash of the block:
+00025d251c41661350f1e78132292c5cb6061c93fca5bbfc010f4357a6714f81
+Block data:no messages
+Block was generating for 0 seconds
+N was increased to 4
+
+Block:
+Created by miner # 1
+Id: 5
+Timestamp: 1645886897100
+Magic number: 984310356
+Hash of the previous block:
+00025d251c41661350f1e78132292c5cb6061c93fca5bbfc010f4357a6714f81
+Hash of the block:
+0000f852aa53f9d9b8244627922e16c27fe496157f15a3b84950eecaca53b1f3
+Block data:
+Tom: xsobzfjhgd 1645886897032
+Tom: lzpdsirikz 1645886897055
+John: olzexwvkji 1645886897073
+Tom: yxksqhurmw 1645886897078
+Block was generating for 0 seconds
+N was increased to 5
+
+?[1;31m
+Start test 2?[0m
+Block:
+Created by miner # 12
+Id: 1
+Timestamp: 1645886907249
+Magic number: -1631654733
+Hash of the previous block:
+0
+Hash of the block:
+b19e1339a5fe0164698ad139da963bf1be10edc59b9600eb9cdee1181a5203e8
+Block data:no messages
+Block was generating for 0 seconds
+N was increased to 1
+
+Block:
+Created by miner # 3
+Id: 2
+Timestamp: 1645886907257
+Magic number: -1631654733
+Hash of the previous block:
+b19e1339a5fe0164698ad139da963bf1be10edc59b9600eb9cdee1181a5203e8
+Hash of the block:
+0aeabc49227dcc855378b78d28cd6e72b2d00a23b8efb062317875fa81aad6eb
+Block data:
+Kate: hkpojootnn 1645886907249
+Alex: abypzkbgow 1645886907249
+Tom: vyqytuyflq 1645886907249
+Nick: wghszkcqzf 1645886907249
+Block was generating for 0 seconds
+N was increased to 2
+
+Block:
+Created by miner # 4
+Id: 3
+Timestamp: 1645886907267
+Magic number: 741491617
+Hash of the previous block:
+0aeabc49227dcc855378b78d28cd6e72b2d00a23b8efb062317875fa81aad6eb
+Hash of the block:
+0059638e73a120ab44e3fdd0c0e381595e47739cdd0c1ba92ce786c10035cbff
+Block data:no messages
+Block was generating for 0 seconds
+N was increased to 3
+
+Block:
+Created by miner # 2
+Id: 4
+Timestamp: 1645886907283
+Magic number: -1827888915
+Hash of the previous block:
+0059638e73a120ab44e3fdd0c0e381595e47739cdd0c1ba92ce786c10035cbff
+Hash of the block:
+0008a7cb1b8f790f34a7c18e127c0ce76854cc7980a5e62a025061e1c52cc52b
+Block data:no messages
+Block was generating for 0 seconds
+N was increased to 4
+
+Block:
+Created by miner # 1
+Id: 5
+Timestamp: 1645886907319
+Magic number: -206062899
+Hash of the previous block:
+0008a7cb1b8f790f34a7c18e127c0ce76854cc7980a5e62a025061e1c52cc52b
+Hash of the block:
+0000fe55f2d8bfe36d239f71ec07bffa115e550ab9fa2a76017f3b0890463266
+Block data:no messages
+Block was generating for 0 seconds
+N was increased to 5
+
+]]></system-out>
+  <system-err><![CDATA[java.lang.InterruptedException: sleep interrupted
+	at java.base/java.lang.Thread.sleep(Native Method)
+	at blockchain.MessageBot.run(MessageBot.java:48)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+java.lang.InterruptedException: sleep interrupted
+	at java.base/java.lang.Thread.sleep(Native Method)
+	at blockchain.MessageBot.run(MessageBot.java:48)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+java.lang.InterruptedException: sleep interrupted
+	at java.base/java.lang.Thread.sleep(Native Method)
+	at blockchain.MessageBot.run(MessageBot.java:48)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+java.lang.InterruptedException: sleep interrupted
+	at java.base/java.lang.Thread.sleep(Native Method)
+	at blockchain.MessageBot.run(MessageBot.java:48)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+java.lang.InterruptedException: sleep interrupted
+	at java.base/java.lang.Thread.sleep(Native Method)
+	at blockchain.MessageBot.run(MessageBot.java:48)
+]]></system-err>
+</testsuite>

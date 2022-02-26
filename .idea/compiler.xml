@@ -507,6 +507,8 @@
       <module name="Blockchain.Topics-What_is_an_exception-Avoid_division_by_zero.main" target="11" />
       <module name="Blockchain.Topics-What_is_an_exception-Theory.main" target="11" />
       <module name="Blockchain.util.main" target="11" />
+      <module name="java.Blockchain.Blockchain-task-build-generated-sources-annotationProcessor-java.main" target="11" />
+      <module name="java.Blockchain.Blockchain-task-build-generated-sources-headers-java.main" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
