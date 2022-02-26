@@ -1,65 +1,188 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="BlockchainTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2022-02-26T19:20:27" hostname="PC" time="15.036">
+<testsuite name="BlockchainTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-02-26T21:23:56" hostname="PC" time="7.254">
   <properties/>
-  <testcase name="start" classname="BlockchainTest" time="15.036">
-    <failure message="java.lang.AssertionError: Error in test #1&#10;&#10;In this test, the program is running for a long time, more than 15 seconds. Most likely, the program has gone into an infinite loop.&#10;&#10;Please find below the output of your program during this failed test.&#10;&#10;---&#10;&#10;Retrieving existing Blockchain&#10;Adding 5 blocks..." type="java.lang.AssertionError">java.lang.AssertionError: Error in test #1
-
-In this test, the program is running for a long time, more than 15 seconds. Most likely, the program has gone into an infinite loop.
-
-Please find below the output of your program during this failed test.
-
----
-
-Retrieving existing Blockchain
-Adding 5 blocks...
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.hyperskill.hstest.stage.StageTest.start(StageTest.java:155)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
-	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-	at jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
-	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-</failure>
-  </testcase>
+  <testcase name="start" classname="BlockchainTest" time="7.254"/>
   <system-out><![CDATA[?[1;31m
 Start test 1?[0m
+blockchain.data (No such file or directory)
+Creating new Blockchain
+Adding 5 blocks...
+Added new block... (#2)
+Added new block... (#5)
+Added new block... (#3)
+Added new block... (#3)
+Added new block... (#6)
+Is blockchain valid? true
+
+Block: 
+Created by Miner #2
+Id: 1
+Timestamp: 1645910636391
+Magic number: 1975738899
+Hash of the previous block: 
+0
+Hash of the block: 
+0b95e937986737c00857a6651a78e4f02434fa40aab10f2866fabda262a81688
+Block data:
+no messages
+Block was generating for 0 seconds
+N was increased by 1
+
+Block: 
+Created by Miner #5
+Id: 2
+Timestamp: 1645910636407
+Magic number: 1163560465
+Hash of the previous block: 
+0b95e937986737c00857a6651a78e4f02434fa40aab10f2866fabda262a81688
+Hash of the block: 
+0c6132d9a1e2e8037c6875fb83c54e3d0fdcbc5037dc9b0f85af3b55f1d23dfb
+Block data:
+no messages
+Block was generating for 0 seconds
+N was increased by 1
+
+Block: 
+Created by Miner #3
+Id: 3
+Timestamp: 1645910636408
+Magic number: 2068063934
+Hash of the previous block: 
+0c6132d9a1e2e8037c6875fb83c54e3d0fdcbc5037dc9b0f85af3b55f1d23dfb
+Hash of the block: 
+00cc386ec5909b912fd7c45e829c62e935577d7042e01b4c89e467bd2c4dfb4d
+Block data:
+no messages
+Block was generating for 0 seconds
+N was increased by 1
+
+Block: 
+Created by Miner #3
+Id: 4
+Timestamp: 1645910636416
+Magic number: 800295938
+Hash of the previous block: 
+00cc386ec5909b912fd7c45e829c62e935577d7042e01b4c89e467bd2c4dfb4d
+Hash of the block: 
+0000d877d5f5130603b755df6eb8cf4d05fbc9cbf356e9f895f12ce7567fb386
+Block data:
+no messages
+Block was generating for 0 seconds
+N was increased by 1
+
+Block: 
+Created by Miner #6
+Id: 5
+Timestamp: 1645910636424
+Magic number: 1430833764
+Hash of the previous block: 
+0000d877d5f5130603b755df6eb8cf4d05fbc9cbf356e9f895f12ce7567fb386
+Hash of the block: 
+0000e42c5682de4347f8183e03403257aa1ba7dba2c6fa4d8220965bf18a90bb
+Block data:
+no messages
+Block was generating for 0 seconds
+N was increased by 1
+
+?[1;31m
+Start test 2?[0m
 Retrieving existing Blockchain
 Adding 5 blocks...
+Added new block... (#5)
+Added new block... (#1)
+Added new block... (#1)
+Added new block... (#4)
+Added new block... (#6)
+Is blockchain valid? true
+
+Block: 
+Created by Miner #5
+Id: 6
+Timestamp: 1645910636585
+Magic number: 2055009668
+Hash of the previous block: 
+0000e42c5682de4347f8183e03403257aa1ba7dba2c6fa4d8220965bf18a90bb
+Hash of the block: 
+000003596456d2d75bca24b6092846212cee93c56e10187c4a9c9ff2e9cfa58d
+Block data:
+no messages
+Block was generating for 1 seconds
+N stays the same
+
+Block: 
+Created by Miner #1
+Id: 7
+Timestamp: 1645910638029
+Magic number: 1216540525
+Hash of the previous block: 
+000003596456d2d75bca24b6092846212cee93c56e10187c4a9c9ff2e9cfa58d
+Hash of the block: 
+00000da138cf8f3d8a36cdb159cb644bb2698ba1c169ef6e404a407073df7f61
+Block data:
+Tom: Hey, I'm first!
+Sarah: It's not fair!
+Sarah: You always will be first because it is your blockchain!
+Block was generating for 0 seconds
+N was increased by 1
+
+Block: 
+Created by Miner #1
+Id: 8
+Timestamp: 1645910638244
+Magic number: 702884405
+Hash of the previous block: 
+00000da138cf8f3d8a36cdb159cb644bb2698ba1c169ef6e404a407073df7f61
+Hash of the block: 
+000000922d53d88a63f65ad189bb4fe80a69dedafe9c75607b4fff7bbd3f048c
+Block data:
+no messages
+Block was generating for 1 seconds
+N stays the same
+
+Block: 
+Created by Miner #4
+Id: 9
+Timestamp: 1645910639605
+Magic number: 1151914181
+Hash of the previous block: 
+000000922d53d88a63f65ad189bb4fe80a69dedafe9c75607b4fff7bbd3f048c
+Hash of the block: 
+000000bf8321237491e9103ff351d0061b27adb21c9f679f214f25fa82e9579d
+Block data:
+no messages
+Block was generating for 0 seconds
+N was increased by 1
+
+Block: 
+Created by Miner #6
+Id: 10
+Timestamp: 1645910639685
+Magic number: 611993953
+Hash of the previous block: 
+000000bf8321237491e9103ff351d0061b27adb21c9f679f214f25fa82e9579d
+Hash of the block: 
+0000000cadc50453618856b441ffdebd1f18eee09213b04b617e6c51ea98667c
+Block data:
+no messages
+Block was generating for 3 seconds
+N stays the same
+
 ]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+  <system-err><![CDATA[java.lang.InterruptedException: sleep interrupted
+	at java.base/java.lang.Thread.sleep(Native Method)
+	at java.base/java.lang.Thread.sleep(Thread.java:337)
+	at java.base/java.util.concurrent.TimeUnit.sleep(TimeUnit.java:446)
+	at blockchain.MessageSender.lambda$run$0(MessageSender.java:30)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at blockchain.MessageSender.run(MessageSender.java:27)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+java.lang.InterruptedException: sleep interrupted
+	at java.base/java.lang.Thread.sleep(Native Method)
+	at java.base/java.lang.Thread.sleep(Thread.java:337)
+	at java.base/java.util.concurrent.TimeUnit.sleep(TimeUnit.java:446)
+	at blockchain.MessageSender.lambda$run$0(MessageSender.java:30)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at blockchain.MessageSender.run(MessageSender.java:27)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+]]></system-err>
 </testsuite>

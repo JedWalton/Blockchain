@@ -268,6 +268,39 @@ files:
         }
     }
   learner_created: true
+- name: Database.txt
+  visible: true
+  text: "��\0\x05sr\0\x15blockchain.Blockchain3l`���<\x15\x02\0\x02I\0\x06zeroesL\0\
+    \x06blockst\0\x10Ljava/util/List;xp\0\0\0\x02sr\0\x13java.util.ArrayListx��\x1d\
+    ��a�\x03\0\x01I\0\x04sizexp\0\0\0\x05w\x04\0\0\0\x05sr\0\x10blockchain.Block\x18\
+    \ �\x11��zB\x02\0\x06I\0\x02idJ\0\vmagicNumberI\0\x0etimeToGenerateJ\0\ttimestampL\0\
+    \tblockHasht\0\x12Ljava/lang/String;L\0\nprevBlockHashq\0~\0\x06xp\0\0\0\0�#�\n\
+    T�Y�\0\0\0\0\0\0\x01~���\0t\0@008c253efae727b907550a0fb492ddf4e7cbb2edf5d5da940ae3ac73c3838d75t\0\
+    \x010sq\0~\0\x05\0\0\0\x01\nb0l�\x7f\x03�\0\0\0\0\0\0\x01~���\x04t\0@00f89bacdd1f291776e6445d522e3b94884b3c80b52093921b2282e0606ae0aeq\0\
+    ~\0\bsq\0~\0\x05\0\0\0\x02$o�lQ\f\a_\0\0\0\0\0\0\x01~���\x05t\0@00978548c030cc8e2cd0a0b4b5f53a9eb71b9592e4c76a8441d2679ead42a285q\0\
+    ~\0\vsq\0~\0\x05\0\0\0\x03g�$�LO?b\0\0\0\0\0\0\x01~���\x06t\0@0010956cd10d5c80aba32a01cbb7b6c5b7959be68fbc26f9d2d25acd74e1e941q\0\
+    ~\0\nsq\0~\0\x05\0\0\0\x04?��\x1e��\x02�\0\0\0\0\0\0\x01~���\x06t\0@006dbdd9cf846589814160455a7161427e6b070e2f1c914cdff300662c20aeb4q\0\
+    ~\0\x0fx"
+  learner_created: true
+- name: test/blockchain/MainTest.java
+  visible: true
+  text: |-
+    package blockchain;
+
+    import junit.framework.TestCase;
+
+    public class MainTest extends TestCase {
+
+    }
+  learner_created: false
+- name: test/blockchain/BlockchainTest.java
+  visible: true
+  text: "package blockchain;\n\nimport junit.framework.TestCase;\n\npublic class BlockchainTest\
+    \ extends TestCase {\n\n    \n\n}"
+  learner_created: false
+- name: src/blockchain/MessageBot.java
+  visible: true
+  learner_created: true
 - name: src/blockchain/SerializationUtil.java
   visible: true
   text: |-
@@ -304,19 +337,17 @@ files:
         }
     }
   learner_created: true
-- name: Database.txt
+- name: src/blockchain/BlockChainFactory.java
   visible: true
-  text: "��\0\x05sr\0\x15blockchain.Blockchain3l`���<\x15\x02\0\x02I\0\x06zeroesL\0\
-    \x06blockst\0\x10Ljava/util/List;xp\0\0\0\x02sr\0\x13java.util.ArrayListx��\x1d\
-    ��a�\x03\0\x01I\0\x04sizexp\0\0\0\x05w\x04\0\0\0\x05sr\0\x10blockchain.Block\x18\
-    \ �\x11��zB\x02\0\x06I\0\x02idJ\0\vmagicNumberI\0\x0etimeToGenerateJ\0\ttimestampL\0\
-    \tblockHasht\0\x12Ljava/lang/String;L\0\nprevBlockHashq\0~\0\x06xp\0\0\0\0�#�\n\
-    T�Y�\0\0\0\0\0\0\x01~���\0t\0@008c253efae727b907550a0fb492ddf4e7cbb2edf5d5da940ae3ac73c3838d75t\0\
-    \x010sq\0~\0\x05\0\0\0\x01\nb0l�\x7f\x03�\0\0\0\0\0\0\x01~���\x04t\0@00f89bacdd1f291776e6445d522e3b94884b3c80b52093921b2282e0606ae0aeq\0\
-    ~\0\bsq\0~\0\x05\0\0\0\x02$o�lQ\f\a_\0\0\0\0\0\0\x01~���\x05t\0@00978548c030cc8e2cd0a0b4b5f53a9eb71b9592e4c76a8441d2679ead42a285q\0\
-    ~\0\vsq\0~\0\x05\0\0\0\x03g�$�LO?b\0\0\0\0\0\0\x01~���\x06t\0@0010956cd10d5c80aba32a01cbb7b6c5b7959be68fbc26f9d2d25acd74e1e941q\0\
-    ~\0\nsq\0~\0\x05\0\0\0\x04?��\x1e��\x02�\0\0\0\0\0\0\x01~���\x06t\0@006dbdd9cf846589814160455a7161427e6b070e2f1c914cdff300662c20aeb4q\0\
-    ~\0\x0fx"
+  learner_created: true
+- name: src/blockchain/ChatEmulator.java
+  visible: true
+  learner_created: true
+- name: src/blockchain/BlockMiner.java
+  visible: true
+  learner_created: true
+- name: src/blockchain/BlockChain.java
+  visible: true
   learner_created: true
 - name: src/blockchain/Stopwatch.java
   visible: true
@@ -340,37 +371,6 @@ files:
             return elapsedSeconds;
         }
     }
-  learner_created: true
-- name: test/blockchain/MainTest.java
-  visible: true
-  text: |-
-    package blockchain;
-
-    import junit.framework.TestCase;
-
-    public class MainTest extends TestCase {
-
-    }
-  learner_created: false
-- name: test/blockchain/BlockchainTest.java
-  visible: true
-  text: "package blockchain;\n\nimport junit.framework.TestCase;\n\npublic class BlockchainTest\
-    \ extends TestCase {\n\n    \n\n}"
-  learner_created: false
-- name: src/blockchain/ChatEmulator.java
-  visible: true
-  learner_created: true
-- name: src/blockchain/MessageBot.java
-  visible: true
-  learner_created: true
-- name: src/blockchain/BlockChainFactory.java
-  visible: true
-  learner_created: true
-- name: src/blockchain/BlockMiner.java
-  visible: true
-  learner_created: true
-- name: src/blockchain/BlockChain.java
-  visible: true
   learner_created: true
 feedback_link: https://hyperskill.org/learn/step/5416#comment
 status: Solved
