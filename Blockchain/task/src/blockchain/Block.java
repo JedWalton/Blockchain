@@ -1,94 +1,115 @@
 package blockchain;
 
-import java.io.Serializable;
-import java.util.List;
-import java.util.Objects;
-import java.util.stream.Collectors;
+import java.security.PublicKey;
+import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
 
-public class Block implements Serializable {
-
-    private static final long serialVersionUID = 12L;
-
-    private final int id;
-    private final long timeStamp;
-    private final int magicNumber;
-    private final int generationDuration;
-    private String changeOfNbOfZeros;
-    private final String minerId;
+public class Block {
+    private final String previousHash;
     private final String hash;
-    private final String hashOfPreviousBlock;
-    private final List<Message> messages;
+    private final long timestamp;
+    private final int uid;
+    private final int magicNumber;
+    private final int miningDuration;
+    private final long messagesMaxUid;
+    private final List<Transaction> transactions;
+    private final String author;
 
-    public Block(int id, String hashOfPreviousBlock, long timestamp,
-                 int magicNumber, int generationDuration,
-                 List<Message> messages, String minerId) {
-        this.id = id;
-        this.hashOfPreviousBlock = hashOfPreviousBlock;
-        this.magicNumber = magicNumber;
-        this.generationDuration = generationDuration;
-        this.timeStamp = timestamp;
-        this.minerId = minerId;
-        this.messages = messages;
-        this.hash = HashCreator.createHash(hashOfPreviousBlock, id, timeStamp, magicNumber, messages, minerId);
+    public Block(String author, LinkedList<Block> blockchain, int zeros, List<Transaction> transactions, PublicKey publicKey) {
+        Block previous = blockchain.isEmpty() ? null : blockchain.getLast();
+
+        this.author = author;
+        previousHash = previous == null ? "0" : previous.hash;
+        timestamp = new Date().getTime();
+        uid = previous == null ? 0 : previous.uid + 1;
+        messagesMaxUid = tryVerify(blockchain, previous, transactions, publicKey);
+        this.transactions = new ArrayList<>(transactions);
+
+        String hashProbe;
+        int magicNumberProbe;
+
+        long timer = System.currentTimeMillis();
+        do {
+            if (Thread.currentThread().isInterrupted()) throw new RuntimeException(new InterruptedException());
+
+            magicNumberProbe = randomInt();
+            hashProbe = Util.sha256(serialize(uid, timestamp, magicNumberProbe, previousHash, transactions.toString()));
+        } while (!hashProbe.startsWith("0".repeat(zeros)));
+        miningDuration = (int) ((System.currentTimeMillis() - timer) / 1000);
+
+        magicNumber = magicNumberProbe;
+        hash = hashProbe;
     }
 
-    public int getId() {
-        return id;
+    private long tryVerify(LinkedList<Block> blockchain, Block previous, List<Transaction> transactions, PublicKey publicKey) {
+        long previousMaxUid = Optional.ofNullable(previous).map(Block::getMessagesMaxUid).orElse(Long.MIN_VALUE);
+        try {
+            long max = previousMaxUid;
+            for (Transaction transaction : transactions) {
+                if (!SignatureHelper.verify(transaction, publicKey)) {
+                    throw new IllegalArgumentException("verification failed");
+                }
+                if (previousMaxUid >= transaction.getUid()) {
+                    throw new IllegalArgumentException("verification failed");
+                }
+                String from = transaction.getFrom();
+                double balance = TransactionMaster.getInstance().getBalance(blockchain, from);
+                if (balance - transaction.getValue() < 0) {
+                    throw new IllegalArgumentException("verification failed");
+                }
+                max = Math.max(max, transaction.getUid());
+            }
+            return max;
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
-    public int getGenerationDuration() {
-        return generationDuration;
+    private long getMessagesMaxUid() {
+        return messagesMaxUid;
     }
 
-    public String getHashOfPreviousBlock() {
-        return hashOfPreviousBlock;
+    private int randomInt() {
+        return ThreadLocalRandom.current().nextInt();
+    }
+
+    private String serialize(int uid, long timestamp, int magicNumber, String previousHash, String message) {
+        return String.format("%d-%d-%d-%s-%s", uid, timestamp, magicNumber, previousHash, message);
+    }
+
+    public String getPreviousHash() {
+        return previousHash;
     }
 
     public String getHash() {
         return hash;
     }
 
-    public String getMinerId() {
-        return minerId;
+    public long getTimestamp() {
+        return timestamp;
     }
 
-    public List<Message> getMessages() {
-        return messages;
+    public int getUid() {
+        return uid;
     }
 
-    public void setChangeOfZeros(int change) {
-        switch (change) {
-            case 0:
-                this.changeOfNbOfZeros = "N stays the same";
-                break;
-            case 1:
-                this.changeOfNbOfZeros = "N was increased by 1";
-                break;
-            case -1:
-                this.changeOfNbOfZeros = "N was decreased by 1";
-                break;
-            default:
-                this.changeOfNbOfZeros = "?";
-        }
+    public int getMagicNumber() {
+        return magicNumber;
     }
 
-    @Override
-    public String toString() {
-        String strMessages = messages.isEmpty() ? "no messages" :
-                messages.stream()
-                        .map(Objects::toString)
-                        .collect(Collectors.joining("\n"));
-        return String.format("Block: %n" +
-                        "Created by Miner %s%n" +
-                        "Id: %s%nTimestamp: %d%n" +
-                        "Magic number: %d%n" +
-                        "Hash of the previous block: %n%s%n" +
-                        "Hash of the block: %n%s%n" +
-                        "Block data:%n" +
-                        "%s%n" +
-                        "Block was generating for %d seconds%n" +
-                        "%s%n",
-                minerId, id, timeStamp, magicNumber, hashOfPreviousBlock, hash,
-                strMessages, generationDuration, changeOfNbOfZeros);
+    public int getMiningDuration() {
+        return miningDuration;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public double getReward() {
+        return 100;
+    }
+
+    public List<Transaction> getTransactions() {
+        return new ArrayList<>(transactions);
     }
 }
