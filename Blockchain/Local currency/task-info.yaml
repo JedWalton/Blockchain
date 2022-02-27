@@ -240,72 +240,563 @@ files:
     package blockchain;
 
     import junit.framework.TestCase;
+    import org.junit.Test;
 
     public class MainTest extends TestCase {
-
+        @Test
+        public void testPrintMessage() {
+            assertEquals("test", "test");
+        }
     }
   learner_created: false
 - name: test/blockchain/BlockchainTest.java
   visible: true
-  text: "package blockchain;\n\nimport junit.framework.TestCase;\n\npublic class BlockchainTest\
-    \ extends TestCase {\n\n    \n\n}"
+  text: |-
+    package blockchain;
+
+    import junit.framework.TestCase;
+    import org.junit.Test;
+
+    public class BlockchainTest extends TestCase {
+
+        @Test
+        public void testPrintMessage() {
+            assertEquals("hi", "hi");
+        }
+
+    }
   learner_created: false
-- name: Database.txt
+- name: src/blockchain/Main.java
   visible: true
-  text: "��\0\x05sr\0\x15blockchain.Blockchain3l`���<\x15\x02\0\x02I\0\x06zeroesL\0\
-    \x06blockst\0\x10Ljava/util/List;xp\0\0\0\x02sr\0\x13java.util.ArrayListx��\x1d\
-    ��a�\x03\0\x01I\0\x04sizexp\0\0\0\x05w\x04\0\0\0\x05sr\0\x10blockchain.Block\x18\
-    \ �\x11��zB\x02\0\x06I\0\x02idJ\0\vmagicNumberI\0\x0etimeToGenerateJ\0\ttimestampL\0\
-    \tblockHasht\0\x12Ljava/lang/String;L\0\nprevBlockHashq\0~\0\x06xp\0\0\0\0�#�\n\
-    T�Y�\0\0\0\0\0\0\x01~���\0t\0@008c253efae727b907550a0fb492ddf4e7cbb2edf5d5da940ae3ac73c3838d75t\0\
-    \x010sq\0~\0\x05\0\0\0\x01\nb0l�\x7f\x03�\0\0\0\0\0\0\x01~���\x04t\0@00f89bacdd1f291776e6445d522e3b94884b3c80b52093921b2282e0606ae0aeq\0\
-    ~\0\bsq\0~\0\x05\0\0\0\x02$o�lQ\f\a_\0\0\0\0\0\0\x01~���\x05t\0@00978548c030cc8e2cd0a0b4b5f53a9eb71b9592e4c76a8441d2679ead42a285q\0\
-    ~\0\vsq\0~\0\x05\0\0\0\x03g�$�LO?b\0\0\0\0\0\0\x01~���\x06t\0@0010956cd10d5c80aba32a01cbb7b6c5b7959be68fbc26f9d2d25acd74e1e941q\0\
-    ~\0\nsq\0~\0\x05\0\0\0\x04?��\x1e��\x02�\0\0\0\0\0\0\x01~���\x06t\0@006dbdd9cf846589814160455a7161427e6b070e2f1c914cdff300662c20aeb4q\0\
-    ~\0\x0fx"
   learner_created: true
 - name: src/blockchain/Blockchain.java
-  visible: true
-  learner_created: true
-- name: src/blockchain/StringUtil.java
-  visible: true
-  learner_created: true
-- name: src/blockchain/Message.java
-  visible: true
-  learner_created: true
-- name: src/blockchain/SignatureChecker.java
   visible: true
   learner_created: true
 - name: src/blockchain/Block.java
   visible: true
   learner_created: true
-- name: src/blockchain/SerializationUtils.java
+- name: src/blockchain/Miner.java
   visible: true
   learner_created: true
 - name: src/blockchain/BotUser.java
   visible: true
-  learner_created: true
-- name: src/blockchain/BlockchainValidator.java
-  visible: true
-  learner_created: true
-- name: src/blockchain/Miner.java
-  visible: true
-  learner_created: true
-- name: src/blockchain/HashCreator.java
-  visible: true
+  text: |-
+    package blockchain;
+
+    import java.security.*;
+    import java.time.LocalDateTime;
+    import java.util.HashMap;
+    import java.util.Map;
+
+    public class BotUser {
+
+        private static final Map<String, BotUser> users = new HashMap<>();
+
+        private final String name;
+        private final Blockchain blockchain;
+        private PrivateKey privateKey;
+        private PublicKey publicKey;
+
+        private BotUser(String name) {
+            this.name = name;
+            this.blockchain = Blockchain.getInstance();
+            users.put(name, this);
+            createKeyPair();
+        }
+
+        public static BotUser getBotUser(String name) {
+            return users.getOrDefault(name, new BotUser(name));
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public PublicKey getPublicKey() {
+            return publicKey;
+        }
+
+        public void createKeyPair() {
+            try {
+                KeyPair keyPair = KeyPairCreator.createKeyPair();
+                privateKey = keyPair.getPrivate();
+                publicKey = keyPair.getPublic();
+            } catch (NoSuchAlgorithmException | NoSuchProviderException e) {
+                e.printStackTrace();
+            }
+        }
+
+        public void sendMessage(String textMessage) {
+            byte[] signature;
+            try {
+                LocalDateTime dateTime = LocalDateTime.now();
+                long id = blockchain.getNewDataId();
+                signature = signMessage(name + textMessage + dateTime.toString() + id);
+                Message message = new Message(name, textMessage, dateTime, id, signature, publicKey);
+                blockchain.addMessage(message);
+            } catch (NoSuchAlgorithmException | InvalidKeyException | SignatureException e) {
+                e.printStackTrace();
+            }
+        }
+
+        private byte[] signMessage(String data) throws NoSuchAlgorithmException, InvalidKeyException, SignatureException {
+            Signature rsa = Signature.getInstance("SHA1withRSA");
+            rsa.initSign(privateKey);
+            rsa.update(data.getBytes());
+            return rsa.sign();
+        }
+    }
   learner_created: true
 - name: src/blockchain/KeyPairCreator.java
   visible: true
+  text: |-
+    package blockchain;
+
+    import java.security.*;
+
+    public class KeyPairCreator {
+        public static KeyPair createKeyPair() throws NoSuchAlgorithmException, NoSuchProviderException {
+            KeyPairGenerator keyGen = KeyPairGenerator.getInstance("RSA");
+
+            SecureRandom random = SecureRandom.getInstance("SHA1PRNG", "SUN");
+            keyGen.initialize(1024, random);
+
+            return keyGen.generateKeyPair();
+        }
+    }
+  learner_created: true
+- name: src/blockchain/BlockchainValidator.java
+  visible: true
+  text: |-
+    package blockchain;
+
+    import java.util.List;
+    import java.util.Objects;
+    import java.util.OptionalLong;
+
+    public class BlockchainValidator {
+
+        public static boolean isBlockchainValid() {
+            Blockchain blockchain = Blockchain.getInstance();
+            List<Block> blocks = blockchain.getBlocks();
+
+            if (isBlockchainEmpty()) {
+                return true;
+            }
+            if (!isFirstBlockValid(blocks.get(0))) {
+                return false;
+            }
+            for (int i = 1; i < blocks.size(); i++) {
+                if (hasWrongPreviousHash(blocks.get(i), blocks.get(i - 1))) {
+                    return false;
+                }
+                if (hasOneOfTheMessagesAnInvalidId(blocks.get(i), i - 1)) {
+                    return false;
+                }
+                if (hasOneOfTheMessagesAnInvalidSignature(blocks.get(i))) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        public static boolean isNewBlockValid(Block block) {
+            if (isBlockchainEmpty()) {
+                return isFirstBlockValid(block);
+            }
+            Block lastBlock = Blockchain.getInstance().getLastBlock();
+            if (hasWrongPreviousHash(block, lastBlock)) {
+                return false;
+            }
+            int indexOfLastBlock = Blockchain.getInstance().getNbOfBlocks() - 1;
+            if (hasOneOfTheMessagesAnInvalidId(block, indexOfLastBlock)) {
+                return false;
+            }
+            if (hasOneOfTheMessagesAnInvalidSignature(block)) {
+                return false;
+            }
+            if (hasWrongNumberOfZerosInHash(block)) {
+                return false;
+            }
+            return true;
+        }
+
+        private static boolean isBlockchainEmpty() {
+            List<Block> blocks = Blockchain.getInstance().getBlocks();
+            return blocks.size() == 0;
+        }
+
+        private static boolean isFirstBlockValid(Block block) {
+            return "0".equals(block.getHashOfPreviousBlock());
+        }
+
+        private static boolean hasOneOfTheMessagesAnInvalidId(Block block, int indexOfPreviousBlock) {
+            if (indexOfPreviousBlock == 0) {
+                return false;
+            }
+            List<Block> blocks = Blockchain.getInstance().getBlocks();
+            OptionalLong previousBlockMax = blocks.get(indexOfPreviousBlock).getMessages().stream()
+                    .map(Message::getId)
+                    .mapToLong(l -> l)
+                    .max();
+            if (previousBlockMax.isPresent()) {
+                return block.getMessages().stream()
+                        .anyMatch(message -> message.getId() <= previousBlockMax.getAsLong());
+            }
+            // Recursive check of another block up the chain if there was no message in the previous one.
+            return hasOneOfTheMessagesAnInvalidId(block, indexOfPreviousBlock - 1);
+        }
+
+        private static boolean hasWrongPreviousHash(Block block, Block previousBlock) {
+            return !Objects.equals(previousBlock.getHash(), block.getHashOfPreviousBlock());
+        }
+
+        private static boolean hasOneOfTheMessagesAnInvalidSignature(Block block) {
+            return block.getMessages().stream()
+                    .anyMatch(message -> !SignatureChecker.check(message));
+        }
+
+        private static boolean hasWrongNumberOfZerosInHash(Block block) {
+            long nbOfZeros = Blockchain.getInstance().getNbOfZeros();
+            String pattern = String.format("0{%s}.*", nbOfZeros);
+            return !block.getHash().matches(pattern);
+        }
+
+    }
+  learner_created: true
+- name: src/blockchain/SerializationUtils.java
+  visible: true
+  text: |-
+    package blockchain;
+
+    import java.io.*;
+
+    class SerializationUtils {
+        /**
+         * Serialize the given object to the file
+         */
+        public static void serialize(Object obj, String fileName) throws IOException {
+            FileOutputStream fos = new FileOutputStream(fileName);
+            BufferedOutputStream bos = new BufferedOutputStream(fos);
+            ObjectOutputStream oos = new ObjectOutputStream(bos);
+            oos.writeObject(obj);
+            oos.close();
+        }
+
+        /**
+         * Deserialize to an object from the file
+         */
+        public static Object deserialize(String fileName) throws IOException, ClassNotFoundException {
+            FileInputStream fis = new FileInputStream(fileName);
+            BufferedInputStream bis = new BufferedInputStream(fis);
+            ObjectInputStream ois = new ObjectInputStream(bis);
+            Object obj = ois.readObject();
+            ois.close();
+            return obj;
+        }
+    }
+  learner_created: true
+- name: src/blockchain/SignatureChecker.java
+  visible: true
+  text: |-
+    package blockchain;
+
+    import java.security.InvalidKeyException;
+    import java.security.NoSuchAlgorithmException;
+    import java.security.Signature;
+    import java.security.SignatureException;
+
+    public class SignatureChecker {
+
+        public static boolean check(Message message) {
+            Signature signature;
+            try {
+                signature = Signature.getInstance("SHA1withRSA");
+                signature.initVerify(message.getPublicKey());
+                String data = message.getSender() + message.getTextMessage() + message.getDateTime().toString() + message.getId();
+                signature.update(data.getBytes());
+                return signature.verify(message.getSignature());
+            } catch (NoSuchAlgorithmException | InvalidKeyException | SignatureException e) {
+                e.printStackTrace();
+            }
+            return false;
+        }
+    }
+  learner_created: true
+- name: src/blockchain/HashCreator.java
+  visible: true
+  text: |
+    package blockchain;
+
+    import java.util.List;
+    import java.util.stream.Collectors;
+
+    public class HashCreator {
+
+        public static String createHash(
+                String hashOfPreviousBlock,
+                int id,
+                long timestamp,
+                int magicNumber,
+                List<Message> messages,
+                String minerId
+        ) {
+            String strMessages = messages.stream()
+                    .map(Object::toString)
+                    .collect(Collectors.joining("\n"));
+            String data = hashOfPreviousBlock + id + timestamp + strMessages + minerId + magicNumber;
+            return StringUtil.applySha256(data);
+        }
+    }
   learner_created: true
 - name: src/blockchain/MessageSender.java
   visible: true
+  text: |-
+    package blockchain;
+
+    import java.util.List;
+    import java.util.Map;
+    import java.util.Random;
+    import java.util.concurrent.TimeUnit;
+
+    public class MessageSender implements Runnable {
+        private final List<Map.Entry<String, String>> textMessages = List.of(
+                Map.entry("Tom", "Hey, I'm first!"),
+                Map.entry("Sarah", "It's not fair!"),
+                Map.entry("Sarah", "You always will be first because it is your blockchain!"),
+                Map.entry("Sarah", "Anyway, thank you for this amazing chat."),
+                Map.entry("Tom", "You're welcome :)"),
+                Map.entry("Nick", "Hey Tom, nice chat"),
+                Map.entry("Nick", "How did you do that?"),
+                Map.entry("Tom", "Well, I asked Vladimir"),
+                Map.entry("Tom", "You know him, right?"),
+                Map.entry("Sarah", "Blah blah blah"),
+                Map.entry("Nick", "Really? Oh wow"),
+                Map.entry("Tom", "Yeah and blah blah blah...")
+        );
+
+        @Override
+        public void run() {
+            Random rand = new Random();
+            textMessages.forEach(
+                    message -> {
+                        try {
+                            TimeUnit.SECONDS.sleep(rand.nextInt(4));
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                        BotUser.getBotUser(message.getKey())
+                                .sendMessage(message.getValue());
+                    }
+            );
+        }
+    }
+  learner_created: true
+- name: src/blockchain/StringUtil.java
+  visible: true
+  text: |-
+    package blockchain;
+
+    import java.nio.charset.StandardCharsets;
+    import java.security.MessageDigest;
+
+    class StringUtil {
+        /* Applies Sha256 to a string and returns a hash. */
+        public static String applySha256(String input){
+            try {
+                MessageDigest digest = MessageDigest.getInstance("SHA-256");
+                /* Applies sha256 to our input */
+                byte[] hash = digest.digest(input.getBytes(StandardCharsets.UTF_8));
+                StringBuilder hexString = new StringBuilder();
+                for (byte elem: hash) {
+                    String hex = Integer.toHexString(0xff & elem);
+                    if(hex.length() == 1) hexString.append('0');
+                    hexString.append(hex);
+                }
+                return hexString.toString();
+            }
+            catch(Exception e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
   learner_created: true
 - name: src/blockchain/BlockchainManager.java
   visible: true
+  text: |-
+    package blockchain;
+
+    import java.util.ArrayList;
+    import java.util.List;
+
+    public class BlockchainManager {
+
+        Blockchain blockchain;
+
+        public BlockchainManager(Blockchain blockchain) {
+            this.blockchain = blockchain;
+        }
+
+        public void startBlockchain(int nbOfThreads, int nbOfBlocksToAdd) {
+
+            int totalNbOfBlocks = nbOfBlocksToAdd + blockchain.getNbOfBlocks();
+
+            List<Thread> threads = new ArrayList<>(nbOfThreads);
+
+            for (int i = 0; i < nbOfThreads; i++) {
+                threads.add(new Thread(
+                        new Miner(blockchain, totalNbOfBlocks),
+                        "#" + (i + 1)
+                ));
+                threads.get(i).start();
+            }
+
+            startMessageSender();
+
+            for (Thread thread : threads) {
+                try {
+                    thread.join();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+
+        }
+
+        private void startMessageSender() {
+            MessageSender messageSender = new MessageSender();
+            Thread messageThread = new Thread(messageSender);
+            messageThread.start();
+        }
+
+        public static Blockchain retrieveOrCreateBlockchain(String fileName) {
+            Blockchain blockchain;
+
+            try {
+                blockchain = (Blockchain) SerializationUtils.deserialize(fileName);
+                System.out.println("Retrieving existing Blockchain");
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+                System.out.println("Creating new Blockchain");
+                blockchain = Blockchain.getInstance();
+            }
+
+            if (!BlockchainValidator.isBlockchainValid()) {
+                System.out.println("Invalid blockchain! Creating new one");
+                blockchain = Blockchain.getInstance();
+            }
+
+            return blockchain;
+        }
+
+    }
   learner_created: true
-- name: src/blockchain/Main.java
+- name: src/blockchain/Message.java
   visible: true
+  text: |-
+    package blockchain;
+
+    import java.io.Serializable;
+    import java.security.PublicKey;
+    import java.time.LocalDateTime;
+
+    public class Message implements Serializable {
+
+        private static final long serialVersionUID = 12L;
+
+        private final String sender;
+        private final String textMessage;
+        private final LocalDateTime dateTime;
+        private final long id;
+        private final byte[] signature;
+        private final PublicKey publicKey;
+
+        public Message(String sender, String textMessage, LocalDateTime dateTime,
+                       long id, byte[] signature, PublicKey publicKey) {
+            this.sender = sender;
+            this.textMessage = textMessage;
+            this.dateTime = dateTime;
+            this.id = id;
+            this.signature = signature;
+            this.publicKey = publicKey;
+        }
+
+        public byte[] getSignature() {
+            return signature;
+        }
+
+        public PublicKey getPublicKey() {
+            return publicKey;
+        }
+
+        public String getTextMessage() {
+            return textMessage;
+        }
+
+        public LocalDateTime getDateTime() {
+            return dateTime;
+        }
+
+        public String getSender() {
+            return sender;
+        }
+
+        public long getId() {
+            return id;
+        }
+
+        @Override
+        public String toString() {
+            return String.format("%s: %s", sender, textMessage);
+        }
+    }
   learner_created: true
 feedback_link: https://hyperskill.org/learn/step/5418#comment
 status: Failed
+feedback:
+  message: "Error in test #1\n\nIn this test, the program is running for a long time,\
+    \ more than 15 seconds. Most likely, the program has gone into an infinite loop.\n\
+    \nPlease find below the output of your program during this failed test.\n\n---\n\
+    \nBlock:\nCreated by miner # 1\nminer1 gets 100 VC\nId: 1\nTimestamp: 11989925829710\n\
+    Magic number: 224011744581899707\nHash of the previous block:\n0\nHash of the\
+    \ block:\n23a932cdcd3f5726a10a067960afcaeb4a863ff267aa3cfc7cd3706e3ac0b744\nBlock\
+    \ data: \nNo transactions\nBlock was generating for 0 seconds\nN was increased\
+    \ to 2\n\nBlock:\nCreated by miner # 3\nminer3 gets 100 VC\nId: 2\nTimestamp:\
+    \ 11989951805295\nMagic number: 8507550953913682281\nHash of the previous block:\n\
+    23a932cdcd3f5726a10a067960afcaeb4a863ff267aa3cfc7cd3706e3ac0b744\nHash of the\
+    \ block:\n005c73f49656c3d67af934df1082735aac9076153f64c78c3745780b6487f69e\nBlock\
+    \ data: \nNo transactions\nBlock was generating for 0 seconds\nN was increased\
+    \ to 4\n\nBlock:\nCreated by miner # 14\nminer14 gets 100 VC\nId: 3\nTimestamp:\
+    \ 11990066571664\nMagic number: 6395704386184595149\nHash of the previous block:\n\
+    005c73f49656c3d67af934df1082735aac9076153f64c78c3745780b6487f69e\nHash of the\
+    \ block:\n0000ed2b89b14cb0cfde953da34948f96531d671f06491428d55209f8f7657ef\nBlock\
+    \ data: \nNo transactions\nBlock was generating for 0 seconds\nN was increased\
+    \ to 5\n\nBlock:\nCreated by miner # 14\nminer14 gets 100 VC\nId: 4\nTimestamp:\
+    \ 11990126682563\nMagic number: 3143342609177637558\nHash of the previous block:\n\
+    0000ed2b89b14cb0cfde953da34948f96531d671f06491428d55209f8f7657ef\nHash of the\
+    \ block:\n000004ff9af1b416f2a07922d5f84f8ac60e2da255a5e68736530499c49ff7ed\nBlock\
+    \ data: \n#1 boss24&#39;s money: 100\nboss24 send 30 VC TO employee21\n#2 boss24&#39;s\
+    \ money: 70\nboss24 send 30 VC TO employee23\n#3 boss24&#39;s money: 40\nboss24\
+    \ send 30 VC TO employee22\n#4 boss28&#39;s money: 100\nboss28 send 31 VC TO employee25\n\
+    #5 boss28&#39;s money: 69\nboss28 send 31 VC TO employee27\n#6 boss28&#39;s money:\
+    \ 38\nboss28 send 31 VC TO employee26\n#7 boss32&#39;s money: 100\nboss32 send\
+    \ 30 VC TO employee29\n#8 boss32&#39;s money: 70\nboss32 send 30 VC TO employee31\n\
+    #9 boss32&#39;s money: 40\nboss32 send 30 VC TO employee30\n#10 boss36&#39;s money:\
+    \ 100\nboss36 send 31 VC TO employee33\n#11 boss36&#39;s money: 69\nboss36 send\
+    \ 31 VC TO employee35\n#12 boss36&#39;s money: 38\nboss36 send 31 VC TO employee34\n\
+    #13 boss40&#39;s money: 100\nboss40 send 30 VC TO employee37\n#14 boss40&#39;s\
+    \ money: 70\nboss40 send 30 VC TO employee39\n#15 boss40&#39;s money: 40\nboss40\
+    \ send 30 VC TO employee38\n#16 miner2&#39;s money: 100\nminer2 send 33 VC TO\
+    \ boss24\n#17 boss24&#39;s money: 43\nboss24 send 30 VC TO employee21\n#18 employee21&#39;s\
+    \ money: 160\nemployee21 send 26 VC TO boss40\n#19 boss40&#39;s money: 36\nboss40\
+    \ send 30 VC TO employee37\n#20 employee31&#39;s money: 130\nemployee31 send 27\
+    \ VC TO boss36\n#21 employee29&#39;s money: 130\nemployee29 send 30 VC TO boss24\n\
+    #22 boss36&#39;s money: 34\nboss36 send 31 VC TO employee33\n#23 boss24&#39;s\
+    \ money: 43\nboss24 send 30 VC TO employee21\n#24 employee21&#39;s money: 164\n\
+    employee21 send 26 VC TO boss40\n#25 employee22&#39;s money: 130\nemployee22 send\
+    \ 31 VC TO boss32\n#26 boss32&#39;s money: 41\nboss32 send 30 VC TO employee29\n\
+    #27 boss40&#39;s money: 32\nboss40 send 30 VC TO employee37\n#28 employee31&#39;s\
+    \ money: 103\nemployee31 send 31 VC TO boss24\nBlock was generating for 0 seconds\n\
+    N was increased to 6"
+  time: Sun, 27 Feb 2022 17:46:12 UTC
 record: 6

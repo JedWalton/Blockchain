@@ -479,6 +479,8 @@
       <module name="Blockchain.Topics-The_Set_interface-Removing_elements.main" target="11" />
       <module name="Blockchain.Topics-The_Set_interface-Strict_superset.main" target="11" />
       <module name="Blockchain.Topics-The_Set_interface-Theory.main" target="11" />
+      <module name="Blockchain.Topics-The_while_and_do-while_loops-The_smallest_value.main" target="11" />
+      <module name="Blockchain.Topics-The_while_and_do-while_loops-Theory.main" target="11" />
       <module name="Blockchain.Topics-Thread_management-Calculate_the_number_of_distinct_characters.main" target="11" />
       <module name="Blockchain.Topics-Thread_management-Join.main" target="11" />
       <module name="Blockchain.Topics-Thread_management-Ordering_the_execution_of_threads.main" target="11" />

@@ -248,13 +248,16 @@ files:
 - name: src/blockchain/Main.java
   visible: true
   learner_created: true
-- name: src/blockchain/StringUtil.java
+- name: src/blockchain/Blockchain.java
   visible: true
   learner_created: true
-- name: src/blockchain/BotUser.java
+- name: src/blockchain/Block.java
   visible: true
   learner_created: true
 - name: src/blockchain/Miner.java
+  visible: true
+  learner_created: true
+- name: src/blockchain/BotUser.java
   visible: true
   learner_created: true
 - name: src/blockchain/KeyPairCreator.java
@@ -275,13 +278,10 @@ files:
 - name: src/blockchain/MessageSender.java
   visible: true
   learner_created: true
-- name: src/blockchain/Blockchain.java
+- name: src/blockchain/StringUtil.java
   visible: true
   learner_created: true
 - name: src/blockchain/BlockchainManager.java
-  visible: true
-  learner_created: true
-- name: src/blockchain/Block.java
   visible: true
   learner_created: true
 - name: src/blockchain/Message.java
@@ -294,5 +294,5 @@ feedback_link: https://hyperskill.org/learn/step/5417#comment
 status: Solved
 feedback:
   message: Congratulations!
-  time: Sat, 26 Feb 2022 21:24:03 UTC
+  time: Sun, 27 Feb 2022 17:48:50 UTC
 record: 5
