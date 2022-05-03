@@ -3,7 +3,7 @@
  <head></head>
  <body>
   <p>The lifetime of all objects within a program is limited by the runtime. When we stop and then reopen the program, the information about previously created objects is lost. Imagine it happens in a computer game: this behavior is not what we actually need! Fortunately, a program can save objects to some permanent storage like a hard drive and read them back the next time the program starts. </p> 
-  <h5 style="text-align: center;">Serialization and deserialization</h5> 
+  <h5 style="text-align: center;" id="serialization-and-deserialization">Serialization and deserialization</h5> 
   <p>There are two processes to save and restore the state of objects between program launches: <strong>serialization</strong> and <strong>deserialization</strong>.</p> 
   <p><strong>Serialization </strong>is a process that converts the state of an object into a stream of bytes. Objects are saved to some permanent storage for reconstruction at a later time.</p> 
   <p><strong>Deserialization </strong>is the reverse process when the serialized byte form is used to reconstruct the actual object.</p> 
@@ -11,7 +11,7 @@
   <p>The following picture shows that an object can be serialized into a byte stream to store the data in a file or a database and then reconstructed again to be used in a program.</p> 
   <p style="text-align: center;"><img alt="" height="255" src="https://ucarecdn.com/f727023c-5e01-452d-90a3-33f95fa1455d/" width="749"></p> 
   <p>An additional feature of serialization is the ability to send some serialized objects through the network and then deserialize and use them in another Java program. So, serialization makes it easy for objects to be used over connected systems.</p> 
-  <h5 style="text-align: center;">Making a class serializable</h5> 
+  <h5 style="text-align: center;" id="making-a-class-serializable">Making a class serializable</h5> 
   <p>To make a class serializable, it must implement the <code class="language-java">Serializable</code> interface. This is a marker interface without methods. This is used to inform the compiler that the class implementing it has some special behavior.</p> 
   <pre><code class="language-java">class SomeClass implements Serializable {
     // fields and methods
@@ -28,7 +28,7 @@
    <code class="language-java">serialVersionUID</code> value across different Java compiler implementations. At the same time, there is no need for two different classes to have unique values for this field.
   </div>
   <p></p> 
-  <h5 style="text-align: center;">Streams for objects</h5> 
+  <h5 style="text-align: center;" id="streams-for-objects">Streams for objects</h5> 
   <p>In Java, the serialization and deserialization mechanisms are based on the standard I/O system and byte streams. They use the <code class="language-java">ObjectOutputStream</code> and <code class="language-java">ObjectInputStream</code> classes accordingly.</p> 
   <p>The first class provides a method called <code class="language-java">void writeObject(Object object)</code> which writes the state of the specified object to the stream . The second class has a corresponding method <code class="language-java">Object readObject()</code> to restore the object. Both methods throw exceptions when something is wrong.</p> 
   <p>Here are two of our complete methods for serialization and deserialization put inside the <code class="language-java">SerializationUtils</code> class for convenience.</p> 
@@ -64,7 +64,7 @@
    <li><code class="language-java">ObjectOutputStream</code> and <code class="language-java">ObjectInputStream</code> perform serialization and deserialization of objects and also invoke wrapped streams to work with the file;</li> 
    <li>both methods also close the streams to avoid resource leaks.</li> 
   </ul> 
-  <h5 style="text-align: center;">An example: citizens</h5> 
+  <h5 style="text-align: center;" id="an-example-citizens">An example: citizens</h5> 
   <p>Suppose, you need to develop an information system that persistently stores all citizens of a country. Here are two related classes for this system: <code class="language-java">Citizen</code> and <code class="language-java">Address</code>. Both classes implement the <code class="language-java">Serializable</code> interface and contain the <code class="language-java">serialVersionUID</code> fields.</p> 
   <p>The <code class="language-java">Citizen</code> class represents a citizen of the country. It has a name, an address and a non-serializable field called <code class="language-java">passport</code>.</p> 
   <pre><code class="language-java">public class Citizen implements Serializable {
@@ -113,7 +113,7 @@
   <p></p> 
   <ul> 
   </ul> 
-  <h5 style="text-align: center;">Serializing and deserializing objects</h5> 
+  <h5 style="text-align: center;" id="serializing-and-deserializing-objects">Serializing and deserializing objects</h5> 
   <p>Finally, it's time to see how serialization works. Here is a method that generates an array of citizens.</p> 
   <pre><code class="language-java">public static Citizen[] initCitizens() {
     Citizen mark = new Citizen();
@@ -162,7 +162,7 @@ Citizen{name='Anna Flores', passport='null', address=Address{state='Georgia', ci
 Mark Olsonsq ~ sq ~ t Atlantat Georgiat 4353  Flint Streett  Anna Flores</code></pre> 
   <p>It is possible to find some familiar parts here, but actually it is not a human-readable data format.</p> 
   <p>The complete code example is <a target="_blank" href="https://github.com/hyperskill/hs-java-samples/tree/master/src/main/java/org/hyperskill/samples/serialization/basics" rel="noopener noreferrer nofollow">available on GitHub</a>. It has a slightly different package structure which is closer to a real project. You can navigate it in the GitHub web interface.</p> 
-  <h5 style="text-align: center;">Conclusion</h5> 
+  <h5 style="text-align: center;" id="conclusion">Conclusion</h5> 
   <p>Now you are familiar with the concept of serialization and considered a specific example.</p> 
   <p>Here are a few points to remember:</p> 
   <ul> 

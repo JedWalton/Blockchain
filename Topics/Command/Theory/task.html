@@ -5,7 +5,7 @@
   <p>You probably have heard of <strong>behavioral </strong>patterns by now. Behavioral patterns are concerned about the interaction of objects. While there are about 12 design patterns that belong to behavioral patterns, the command pattern takes a special place as it is used more often than other design patterns. The purpose of the command pattern is to <strong>decouple </strong>the logic between command and its consumers.</p> 
   <p>The formal definition of the command pattern is <strong>encapsulating </strong>all the data related to command in one object. Usually, this data consists of a set of methods, their parameters, and one or more objects to which these methods belong to. We call this object <strong>Receiver</strong>. So the important point about decoupling is if you had to change any of these values, you only have to change one class.</p> 
   <p>In its classic version, implementing the command pattern involves five steps. Let's see what they are. </p> 
-  <h5 style="text-align: center;">The classic version</h5> 
+  <h5 style="text-align: center;" id="the-classic-version">The classic version</h5> 
   <p>The classic version of the <strong>Command</strong> pattern has the following elements:</p> 
   <ul> 
    <li>The<strong> Command</strong> interface usually declares just a single method for executing the command.</li> 
@@ -24,7 +24,7 @@
   <p style="text-align: center;"><img alt="" height="311" src="https://ucarecdn.com/2ec87a27-dfe8-4105-8fa6-8705de6f9e53/" width="775"></p> 
   <p>The <em>Client</em> creates an object of <em>Receiver</em> and a <em>ConcreteCommand</em> and sets up the Invoker to execute the command. Each type of <em>ConcreteCommand</em> (e.g. <em>CreateFileCommand</em>, <em>RemoveFileCommand</em>) has a set of fields which represent the params. A command calls one or more methods of the <em>Receiver</em> to execute concrete actions to change the state of the application.</p> 
   <p>You will be able to understand these concepts better with a real-world example. </p> 
-  <h5 style="text-align: center;">Example of the command pattern</h5> 
+  <h5 style="text-align: center;" id="example-of-the-command-pattern">Example of the command pattern</h5> 
   <p>Suppose you are going to build a home automation system where you need to turn the light on and off. Here we have two commands which are quite similar. So first, we will create the <code class="language-java">Command</code> interface. It will have only one method – <code class="language-java">execute()</code>. </p> 
   <pre><code class="language-java">public interface Command {
     void execute();
@@ -111,7 +111,7 @@
   <p>There could be other steps that are needed to support these three main steps. For example, this <code class="language-java">main()</code> method has created a <code class="language-java">Light</code> object because a <code class="language-java">Light</code> object is needed to pass to create <code class="language-java">Command</code> objects. When you execute this code, the following output will be produced. </p> 
   <pre><code class="language-java">Turn on Light
 Turn off Light</code></pre> 
-  <h5 style="text-align: center;">Additional options</h5> 
+  <h5 style="text-align: center;" id="additional-options">Additional options</h5> 
   <p>The Command pattern can be used together with the following options:</p> 
   <ul> 
    <li>adding commands to a queue to execute them later;</li> 
@@ -122,7 +122,7 @@ Turn off Light</code></pre>
   </ul> 
   <p>These options are not essential to the pattern but are often used in practice.</p> 
   <p>Sometimes, a command performs all the work by itself instead of invoking the receiver object to do the action. This option is somewhat simpler and also used in practice.</p> 
-  <h5 style="text-align: center;">Applicability</h5> 
+  <h5 style="text-align: center;" id="applicability">Applicability</h5> 
   <p>Possible applications of this pattern include:</p> 
   <ul> 
    <li><strong>GUI buttons and menu items. </strong>In Swing programming, an <em>Action</em> is a command object. In addition to the ability to perform the desired command, an Action may have an associated icon, a keyboard shortcut, tooltip text, and so on.</li> 
@@ -136,7 +136,7 @@ Turn off Light</code></pre>
   <ul> 
    <li><strong>Asynchronous method invocation. </strong>In multithreading programming, this pattern makes it possible to run commands asynchronously in the background of an application. In this case, the Invoker is running in the main thread and sends the requests to the Receiver which is running in a separate thread. The invoker will keep a queue of commands and send them to the receiver while it finishes running them.</li> 
   </ul> 
-  <h5 style="text-align: center;">Conclusion</h5> 
+  <h5 style="text-align: center;" id="conclusion">Conclusion</h5> 
   <p>The main advantage of the command pattern is that it decouples the object that invokes the operation from the one that knows how to perform it. Various modifications of this pattern can be used to keep a history of requests, implement the undo functionality and create macro commands. However, keep in mind that your application can become more complex because this pattern adds another layer of abstraction instead of simply invoking methods.</p>
  </body>
 </html>

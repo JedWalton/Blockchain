@@ -1,16 +1,14 @@
 type: choice
 is_multiple_choice: true
 options:
+- text: It returns a positive integer if the first argument is greater than the second
+    argument
 - text: It returns true when the first argument is greater than the second argument
-- text: It returns a negative integer number when the first argument is less than
-    the second one
 - text: It returns false when the first argument is greater than the second argument
 - text: It returns a negative integer number when the first argument is greater than
     the second one
-- text: It returns a positive integer if the first argument is greater than the second
-    argument
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: It returns a negative integer number when the first argument is less than
+    the second one
 files:
 - name: src/Task.java
   visible: true

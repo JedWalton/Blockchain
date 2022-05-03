@@ -2,9 +2,9 @@
 <html>
  <head></head>
  <body>
-  <h5 style="text-align: center;">Design problem</h5> 
+  <h5 style="text-align: center;" id="design-problem">Design problem</h5> 
   <p>Sometimes it is necessary to impose additional responsibilities on a separate object rather than the whole class. A library for building graphics in the user interface should be able to add a new property, say, frames or new behavior (for example, the ability to scroll to any element). Adding new responsibilities is permissible through inheritance. However, this solution is static, and therefore not flexible enough.</p> 
-  <h5 style="text-align: center;">Decorator</h5> 
+  <h5 style="text-align: center;" id="decorator">Decorator</h5> 
   <p>A more flexible approach is to put the component in another object called the <strong>decorator.</strong> The Decorator is a structural pattern used to add new responsibilities to an object dynamically without extending functionality. That lets you dynamically change the behavior of an object at runtime by wrapping it in an object of a decorator class.</p> 
   <p>Decorators are used for adding some behavior that is not part of the core functionality to all interface methods. Decorator pattern perfectly suits the following tasks:</p> 
   <ul> 
@@ -26,7 +26,7 @@
    <li>Streams: java.io package;</li> 
    <li>Collections: java.util package.</li> 
   </ul> 
-  <h5 style="text-align: center;">Practical example</h5> 
+  <h5 style="text-align: center;" id="practical-example">Practical example</h5> 
   <p>Let’s consider a more specific example. Our components are software developers that have to make some job, that’s why we create the Developer interface:</p> 
   <pre><code class="language-java">public interface Developer {
 
@@ -93,7 +93,7 @@
         System.out.println(developer.makeJob());
     }
 }</code></pre> 
-  <h5 style="text-align: center;">Conclusion</h5> 
+  <h5 style="text-align: center;" id="conclusion">Conclusion</h5> 
   <p>The decorator pattern is applicable in the following cases:</p> 
   <ul> 
    <li>When you want to add new properties and functions to the object dynamically;</li> 

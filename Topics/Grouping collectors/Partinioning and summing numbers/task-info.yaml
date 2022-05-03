@@ -1,13 +1,11 @@
 type: choice
 is_multiple_choice: false
 options:
-- text: map.get(false) returns 16, map.get(true) returns -7
 - text: map.get(false) returns 16, map.get(true) returns 16
 - text: map.get(false) returns 4, map.get(true) returns 2
+- text: map.get(false) returns 16, map.get(true) returns -7
 - text: map.get(false) returns -7, map.get(true) returns 16
 - text: map.get(false) returns 2, map.get(true) returns 4
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
 files:
 - name: src/Task.java
   visible: true

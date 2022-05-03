@@ -3,7 +3,7 @@
  <head></head>
  <body>
   <p style="font-variant: normal;"><span style="color: #000000;">Every time we need to sort a collection of data, we need to compare its elements with each other to determine which of them should go first and which should go last. It is not a big deal if we have to compare numbers or dates but becomes slightly complicated for many other real-world examples such as school students, social media posts, or bank accounts. This is where <code class="language-java">Comparator</code> comes to the rescue, and we are going to discuss how to use it in detail in this topic.</span></p> 
-  <h5 style="font-variant: normal;">Custom data types</h5> 
+  <h5 style="font-variant: normal;" id="custom-data-types">Custom data types</h5> 
   <p style="font-variant: normal;"><span style="color: #000000;">Let's create a class modeling a general message. For simplicity, we assume that the content of such a message can be represented by a <code class="language-java">String</code>:</span></p> 
   <pre><code class="language-java">class Message {
 
@@ -32,7 +32,7 @@ messages.add(new Message("came"));
 messages.add(new Message("with"));
 messages.add(new Message("peace!"));</code></pre> 
   <p style="font-variant: normal;"><span style="color: #000000;">If we try to sort the list of these <code class="language-java">Message</code> objects, we will get a compilation error, because our <code class="language-java">Message</code> class does not support any methods that allow for comparing its instances. To solve this issue, let's create a <code class="language-java">Comparator</code> that will define a sorting ordering for objects of the <code class="language-java">Message</code> class.</span></p> 
-  <h5 style="font-variant: normal;">Comparator</h5> 
+  <h5 style="font-variant: normal;" id="comparator">Comparator</h5> 
   <p style="font-variant: normal;"><span style="color: #000000;"><code class="language-java">Comparator&lt;T&gt;</code> is a generic interface that has a single abstract method <code class="language-java">compare</code> and quite a few non-abstract methods that we will take a look at later. To create a <code class="language-java">Comparator</code>, we need to define a class that implements the <code class="language-java">Comparator</code> interface and overrides its single abstract method:</span></p> 
   <pre><code class="language-java">class MessageContentComparator implements Comparator&lt;Message&gt; {
 
@@ -77,7 +77,7 @@ Hello
 peace!
 humans!</code></pre> 
   <p style="font-variant: normal;"><span style="color: #000000;">The messages have been printed in the order of the length of their content rather than in the order they were added to the list. Moreover, we can have multiple <code class="language-java">Comparator</code> classes for our class and sort its instances using different orderings depending on our needs. </span></p> 
-  <h5 style="font-variant: normal;">Multiple fields</h5> 
+  <h5 style="font-variant: normal;" id="multiple-fields">Multiple fields</h5> 
   <p style="font-variant: normal;"><span style="color: #000000;">First, let's extend the <code class="language-java">Message</code> class and then see how we can implement sorting:</span></p> 
   <pre><code class="language-java">class Message {
 
@@ -144,7 +144,7 @@ class MessageAuthorComparator implements Comparator&lt;Message&gt; {
 2033-01-14 Unregistered wrote: This message was marked as spam (-18)
 2033-02-17 User765214 wrote: Bump! (1)</code></pre> 
   <p style="font-variant: normal;"><span style="color: #000000;">As you can see, with a suitable <code class="language-java">Comparator</code>, we can apply any sorting logic to any class.</span></p> 
-  <h5 style="font-variant: normal;">Java 8 features</h5> 
+  <h5 style="font-variant: normal;" id="java-8-features">Java 8 features</h5> 
   <p><span style="color: #000000;">Since <code class="language-java">Comparator</code> has only a single abstract method (SAM) and therefore is a functional interface, we can use lambda functions to create <code class="language-java">Comparator</code> instances. For example, instead of the full class declaration, we can rewrite <code class="language-java">MessageDateComparator</code> as follows:</span></p> 
   <pre><code class="language-java">Comparator&lt;Message&gt; dateComparator = (m1, m2) -&gt; 
         m1.getCreated().compareTo(m2.getCreated());
@@ -152,7 +152,7 @@ messages.sort(dateComparator);</code></pre>
   <p style="font-variant: normal;"><span style="color: #000000;">We can even avoid using the named declaration and pass the lambda directly to the sort method as an argument:</span></p> 
   <pre><code class="language-java">messages.sort((m1, m2) -&gt; m1.getCreated().compareTo(m2.getCreated()));</code></pre> 
   <p style="font-variant: normal;"><span style="color: #000000;">If you are not going to reuse a <code class="language-java">Comparator</code> object, declaring it as a standalone class would be unnecessary, so you can just define it as a lambda function and use it immediately.</span></p> 
-  <h5 style="font-variant: normal;">Utility methods</h5> 
+  <h5 style="font-variant: normal;" id="utility-methods">Utility methods</h5> 
   <p style="font-variant: normal;"><span style="color: #000000;"><code class="language-java">Comparator</code> also has several non-abstract methods that can be used for combining comparators to create complex conditions for comparing objects. Let's take a look at some of them.</span></p> 
   <p style="font-variant: normal;"><span style="color: #000000;"><code class="language-java">Comparator.naturalOrder</code> returns <code class="language-java">Comparator</code> of the applicable type that compares <code class="language-java">Comparable</code> objects in the natural order. This means that if the class you want to compare using this method does not implement the <code class="language-java">Comparable</code> interface, you will get a compilation error.</span></p> 
   <p style="font-variant: normal;"><span style="color: #000000;"><code class="language-java">Comparator.reverseOrder</code> similar to the above, but compares <code class="language-java">Comparable</code> objects using the reverse of the natural ordering.</span></p> 
@@ -178,12 +178,12 @@ messages.sort(dateComparator);</code></pre>
         .reversed()
         .thenComparing(Message::getFrom));</code></pre> 
   <p style="font-variant: normal;"><span style="color: #000000;">And so on. Try it on a bigger collection to see how it works. This way you can implement any sorting of messages on a message board.</span></p> 
-  <h5 style="font-variant: normal;">Comparator vs Comparable</h5> 
+  <h5 style="font-variant: normal;" id="comparator-vs-comparable">Comparator vs Comparable</h5> 
   <p style="font-variant: normal;"><span style="color: #000000;">Both these interfaces provide similar functionality: they allow for comparing objects of the same class. Which one should you choose? It depends on many factors.</span></p> 
   <p style="font-variant: normal;"><span style="color: #000000;"><code class="language-java">Comparable</code> defines the natural ordering for objects of a class implementing it. Therefore, it suits perfectly in the cases where we compare objects that inherently have a certain natural order, such as numbers or dates. If your class has an obvious natural ordering, then using <code class="language-java">Comparable</code> is the way to go.</span></p> 
   <p style="font-variant: normal;"><span style="color: #000000;">In other cases, when your class has multiple properties, for example, <code class="language-java">name</code> and <code class="language-java">age</code> or <code class="language-java">price</code> and <code class="language-java">userRating</code>, you might be unable to define the natural order for such objects. Also, there may be a situation where a class whose instances are to be compared does not implement the <code class="language-java">Comparable</code> interface and you cannot modify the source code of that class. In all such cases, the <code class="language-java">Comparator</code> interface is your choice.</span></p> 
   <p style="font-variant: normal;"><span style="color: #000000;">Also, <code class="language-java">Comparator</code> serves as an extension and allows for customizing the sorting process. With its help, you can easily redefine the natural ordering or add new rules for sorting objects. Further, it makes it possible to combine sorting orderings to create complex sorting logic based on different properties of objects.</span></p> 
-  <h5 style="font-variant: normal;">Conclusion</h5> 
+  <h5 style="font-variant: normal;" id="conclusion">Conclusion</h5> 
   <p style="font-variant: normal;"><span style="color: #000000;"><code class="language-java">Comparator</code> is a generic interface similar to <code class="language-java">Comparable</code>, which can define rules for comparing Java objects. It has a single abstract method and therefore is a functional interface that allows you to utilize lambda functions to override its <code class="language-java">compare</code> method.</span></p> 
   <p style="font-variant: normal;"><span style="color: #000000;">In contrast to the <code class="language-java">Comparable</code> interface, <code class="language-java">Comparator</code> can be used to compare objects of a class that does not implement any default ordering. In addition, <code class="language-java">Comparator</code> provides several non-abstract methods that you can employ to combine different <code class="language-java">Comparator</code> objects or extract <code class="language-java">Comparable</code> sort keys.</span></p>
  </body>

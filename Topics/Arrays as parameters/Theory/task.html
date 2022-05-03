@@ -2,7 +2,7 @@
 <html>
  <head></head>
  <body>
-  <h5 style="text-align: center;">Passing arrays to methods</h5> 
+  <h5 style="text-align: center;" id="passing-arrays-to-methods">Passing arrays to methods</h5> 
   <p>A method can have parameters of any types including arrays, strings, primitive types, and so on.</p> 
   <p>In the following example, the method <code class="language-java">processArray</code> has a single parameter of the type <code class="language-java">int[]</code>:</p> 
   <pre><code class="language-java">public static void processArray(int[] array) { /* do something */ }</code></pre> 
@@ -34,7 +34,7 @@
   <pre><code class="language-java">[1, 2, 3, 4, 5]
 [5, 2, 3, 4, 1]</code></pre> 
   <p>So, in the body of the main method, an array is visible as modified.</p> 
-  <h5 style="text-align: center;">Varargs</h5> 
+  <h5 style="text-align: center;" id="varargs">Varargs</h5> 
   <p>It's possible to pass an arbitrary number of the same type arguments to a method using the special syntax named <strong>varargs (variable-length arguments)</strong>. These arguments are specified by three dots after the type. In the body of the method, you can process this parameter as a regular array of the specified type.</p> 
   <p>The following method takes an integer <strong>vararg </strong>parameter and outputs the number of arguments in the standard output using the<strong> length</strong> property of arrays.</p> 
   <pre><code class="language-java">public static void printNumberOfArguments(int... numbers) {
@@ -54,7 +54,7 @@ printNumberOfArguments(new int[] { 1, 2 });</code></pre>
 0
 2</code></pre> 
   <p>This example also demonstrates the difference between the arguments and parameters of a method. The method has only a single parameter but it can be called with several arguments.</p> 
-  <h5 style="text-align: center;">Varargs and other parameters</h5> 
+  <h5 style="text-align: center;" id="varargs-and-other-parameters">Varargs and other parameters</h5> 
   <p>If a method has more than one parameter, the <code class="language-java">vararg</code> parameter must be the last one in the declaration of the method.</p> 
   <p>Here is an incorrect example:</p> 
   <pre><code class="language-java">public static void method(double... varargs, int a) { /* do something */ }</code></pre> 

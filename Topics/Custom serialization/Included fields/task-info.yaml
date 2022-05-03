@@ -1,13 +1,11 @@
 type: choice
 is_multiple_choice: true
 options:
+- text: volatile transient final int i;
+- text: public final int i;
 - text: public transient int i;
 - text: private final int i;
-- text: public final int i;
-- text: volatile transient final int i;
 - text: 'public static int i; '
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
 files:
 - name: src/Task.java
   visible: true

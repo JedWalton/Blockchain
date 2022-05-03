@@ -1,12 +1,10 @@
 type: choice
 is_multiple_choice: false
 options:
-- text: allows to reduce cohesion
 - text: adds a layer of indirection which may affect performance
-- text: provides client isolation from the system components
 - text: it's perfect
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: provides client isolation from the system components
+- text: allows to reduce cohesion
 files:
 - name: src/Task.java
   visible: true

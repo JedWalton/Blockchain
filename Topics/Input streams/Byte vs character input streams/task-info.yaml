@@ -1,13 +1,11 @@
 type: choice
 is_multiple_choice: true
 options:
+- text: byte input stream can read text data as a sequence of characters
+- text: byte input stream can read binary data as a sequence of bytes
 - text: character input stream cannot read binary data
 - text: character input stream can read binary data, immediately converting bytes
     to characters
-- text: byte input stream can read text data as a sequence of characters
-- text: byte input stream can read binary data as a sequence of bytes
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
 files:
 - name: src/Task.java
   visible: true

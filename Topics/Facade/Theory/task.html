@@ -3,11 +3,11 @@
  <head></head>
  <body>
   <p>Imagine you have a complex system with a large number of different subsystems. In order to start using your system, you activate all subsystems every day. Wouldn't it be awesome if you had some sort of a controller with the big red button that will do the algorithm for you? Well, this is what the <strong>Facade</strong> structural pattern is about.</p> 
-  <h5 style="text-align: center;">The Facade pattern</h5> 
+  <h5 style="text-align: center;" id="the-facade-pattern">The Facade pattern</h5> 
   <p><strong>Facade</strong> provides a unified interface to a group of subsystem interfaces for you as a client and makes using the main system easier. Think of a car: when you insert a key and start it, there are subsystems that should be activated — the engine, the heated seats and your stereo system. When you arrive at your destination, you turn off the car and thus turn off the engine, the heated seats and the stereo.</p> 
   <p>The following diagram shows the relation between entities using Facade:</p> 
   <p style="text-align: center;"><img alt="" height="579" src="https://ucarecdn.com/6744e76c-798e-40cb-b9a5-1ff6c93b51db/" width="774"></p> 
-  <h5 style="text-align: center;">Example: CarFacade</h5> 
+  <h5 style="text-align: center;" id="example-carfacade">Example: CarFacade</h5> 
   <p>This pattern is pretty easy to implement and most likely you did it in your projects. </p> 
   <p>First of all, we should define our subsystems: <code class="language-java">Engine</code><em>, </em><code class="language-java">StereoSystem</code><em>, </em>and <code class="language-java">HeatedSeats</code>.</p> 
   <pre><code class="language-java">class Engine {
@@ -185,7 +185,7 @@ We have arrived
 Engine is off
 HeatedSeats System is off
 Stereo system is turning off</code></pre> 
-  <h5 style="text-align: center;">Conclusion</h5> 
+  <h5 style="text-align: center;" id="conclusion">Conclusion</h5> 
   <p>1) Use the Facade when you want to provide a simple interface to a complex system. The Facade offers some kind of default system that suits most customers.</p> 
   <p>2) The Facade will allow separating the subsystem both from the customers and from other subsystems, which, in turn, increases independence and portability.</p> 
   <p>3) The Facade does not prevent applications from directly accessing the subsystem classes, if necessary.</p>

@@ -1,14 +1,12 @@
 type: choice
 is_multiple_choice: true
 options:
-- text: A stream allows using any number of intermediate operations.
-- text: Only terminal operations begin evaluations.
 - text: Any intermediate operation returns a primitive type or an object (even a collection)
     or nothing (void).
+- text: A stream allows using any number of intermediate operations.
 - text: Some operations return streams.
 - text: Stream has intermediate, terminal and semi-intermediate operations.
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: Only terminal operations begin evaluations.
 files:
 - name: src/Task.java
   visible: true

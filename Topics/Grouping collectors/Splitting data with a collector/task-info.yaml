@@ -4,10 +4,8 @@ options:
 - text: separatingBy
 - text: partitioningBy
 - text: splittingBy
-- text: groupingBy
 - text: dividingBy
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: groupingBy
 files:
 - name: src/Task.java
   visible: true

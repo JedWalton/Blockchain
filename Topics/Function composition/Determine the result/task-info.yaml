@@ -1,13 +1,11 @@
 type: choice
 is_multiple_choice: false
 options:
-- text: 32
 - text: 16
 - text: 36
-- text: 26
 - text: 24
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: 32
+- text: 26
 files:
 - name: src/Task.java
   visible: true

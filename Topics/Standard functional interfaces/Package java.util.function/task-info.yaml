@@ -1,13 +1,11 @@
 type: choice
 is_multiple_choice: false
 options:
-- text: Operators
-- text: Generators
 - text: Suppliers
 - text: Consumers
+- text: Generators
+- text: Operators
 - text: Providers
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
 files:
 - name: src/Task.java
   visible: true

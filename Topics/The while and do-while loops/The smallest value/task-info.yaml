@@ -1,0 +1,22 @@
+type: code
+files:
+- name: src/Main.java
+  visible: true
+  learner_created: true
+feedback_link: https://hyperskill.org/learn/step/2229#comment
+status: Failed
+feedback:
+  message: |+
+    Failed test #1 of 13. Time limit exceeded
+
+    This is a sample test from the problem statement!
+
+    Test input:
+    6188989133
+    Correct output:
+    13
+
+    Your code output:
+
+  time: Sun, 27 Feb 2022 16:12:06 UTC
+record: -1

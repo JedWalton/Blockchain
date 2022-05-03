@@ -1,12 +1,10 @@
 type: choice
 is_multiple_choice: false
 options:
-- text: Structural patterns
 - text: Creational patterns
-- text: Behavioral patterns
 - text: J2EE patterns
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: Structural patterns
+- text: Behavioral patterns
 files:
 - name: src/Task.java
   visible: true

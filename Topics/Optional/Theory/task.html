@@ -2,9 +2,9 @@
 <html>
  <head></head>
  <body>
-  <h5>A billion-dollar mistake</h5> 
+  <h5 id="a-billion-dollar-mistake">A billion-dollar mistake</h5> 
   <p>Like many programming languages, Java uses <code class="language-java">null</code> to represent the absence of a value. Sometimes this approach leads to exceptions like <strong>NPE</strong> while non-null checks make code less readable. The British computer scientist Tony Hoare—the inventor of the <code class="language-java">null</code> concept—even describes introducing <code class="language-java">null</code> as a <strong>"billion-dollar mistake" </strong>since it has led to innumerable errors, vulnerabilities, and system crashes. To avoid the issues associated with <code class="language-java">null</code>, Java provides the <code class="language-java">Optional</code> class that is a safer alternative for standard <code class="language-java">null</code> references.</p> 
-  <h5>Optional values</h5> 
+  <h5 id="optional-values">Optional values</h5> 
   <p>The <code class="language-java">Optional&lt;T&gt;</code> class represents the presence or absence of a value of the specified type <code class="language-java">T</code>. An object of this class can be either <strong>empty</strong> or <strong>non-empty</strong>.</p> 
   <ul> 
   </ul> 
@@ -23,7 +23,7 @@ System.out.println(present.isPresent()); // true</code></pre>
    <strong>NPE</strong>.
   </div>
   <p></p> 
-  <h5>Optionals and nullable objects</h5> 
+  <h5 id="optionals-and-nullable-objects">Optionals and nullable objects</h5> 
   <p>In a situation when you don't know whether a variable is <code class="language-java">null</code> or not, you should pass it to the <code class="language-java">ofNullable</code> method instead of the <code class="language-java">of</code> method. It creates an empty Optional if the passed value is <code class="language-java">null</code>.</p> 
   <p></p>
   <div class="alert alert-primary">
@@ -49,7 +49,7 @@ System.out.println(optMessage.isPresent()); // true or false</code></pre>
    <code class="language-java">Optional</code> type is possible, but it is considered as a bad programming practice.
   </div>
   <p></p> 
-  <h5>Getting the value from an Optional</h5> 
+  <h5 id="getting-the-value-from-an-optional">Getting the value from an Optional</h5> 
   <p>The most obvious thing to do with an Optional is to get its value. For now, we're going to discuss three methods with such purpose:</p> 
   <ul> 
    <li><code class="language-java">get</code> returns the value if it's present, otherwise throws an exception;</li> 
@@ -82,7 +82,7 @@ System.out.println(name); // unknown</code></pre>
         .ofNullable(nullableName)
         .orElseGet(SomeClass::getDefaultResult);</code></pre> 
   <p>In this example, we use the <code class="language-java">getDefaultResult</code> method for producing a default result.</p> 
-  <h5>Conditional actions</h5> 
+  <h5 id="conditional-actions">Conditional actions</h5> 
   <p>There are also convenient methods that take functions as arguments and perform some actions on values wrapped inside Optional:</p> 
   <ul> 
    <li><code class="language-java">ifPresent</code> performs the given action with the value, otherwise does nothing;</li> 
@@ -110,7 +110,7 @@ optName.ifPresentOrElse(
         () -&gt; System.out.println(0)
 );</code></pre> 
   <p>If <code class="language-java">optName</code> contains some value (like <code class="language-java">"Google"</code>), the lambda expression is called and it prints the length of the name. If <code class="language-java">optName</code> is empty, the second function prints <code class="language-java">0</code> as the default value. Sometimes, developers call the second lambda expression <strong>fallback</strong> which is an alternative plan if something went wrong (no value).</p> 
-  <h5>Conclusion</h5> 
+  <h5 id="conclusion">Conclusion</h5> 
   <p>Objects of the <code class="language-java">Optional</code> class represent the presence or absence of a value in a safer way than <code class="language-java">null</code> does.</p> 
   <p>This class:</p> 
   <ul> 

@@ -1,12 +1,10 @@
 type: choice
 is_multiple_choice: false
 options:
-- text: compareTo
-- text: comparing
 - text: comparator
+- text: compareTo
 - text: compare
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: comparing
 files:
 - name: src/Task.java
   visible: true

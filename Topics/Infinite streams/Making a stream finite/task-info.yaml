@@ -1,12 +1,10 @@
 type: choice
 is_multiple_choice: false
 options:
-- text: count
 - text: forEach
-- text: findAny
 - text: max
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: count
+- text: findAny
 files:
 - name: src/Task.java
   visible: true

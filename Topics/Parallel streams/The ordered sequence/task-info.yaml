@@ -6,8 +6,6 @@ options:
 - text: numbers.stream().sorted().parallel().forEach(System.out::println);
 - text: numbers.parallelStream().sorted().forEachOrdered(System.out::println);
 - text: numbers.parallelStream().sorted().sequential().forEach(System.out::println);
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
 files:
 - name: src/Task.java
   visible: true

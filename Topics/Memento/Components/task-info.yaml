@@ -1,13 +1,11 @@
 type: choice
 is_multiple_choice: true
 options:
-- text: Custodian
-- text: Reminder
-- text: Originator
 - text: Caretaker
+- text: Originator
+- text: Reminder
 - text: Memento
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: Custodian
 files:
 - name: src/Task.java
   visible: true

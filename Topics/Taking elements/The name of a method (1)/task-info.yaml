@@ -1,14 +1,12 @@
 type: choice
 is_multiple_choice: false
 options:
-- text: skip
-- text: dropWhile
-- text: dropUntil
 - text: skipUntil
-- text: filter
 - text: skipWhile
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: dropWhile
+- text: filter
+- text: dropUntil
+- text: skip
 files:
 - name: src/Task.java
   visible: true

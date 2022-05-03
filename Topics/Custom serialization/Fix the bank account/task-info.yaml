@@ -1,12 +1,10 @@
 type: choice
 is_multiple_choice: false
 options:
-- text: oos.defaultWriteObject();
 - text: oos.defaultSerialize()
-- text: defaultWriteObject();
 - text: defaultSerialize()
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: defaultWriteObject();
+- text: oos.defaultWriteObject();
 files:
 - name: src/Task.java
   visible: true

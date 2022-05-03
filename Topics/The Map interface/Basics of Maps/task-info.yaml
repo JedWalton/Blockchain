@@ -1,12 +1,10 @@
 type: choice
 is_multiple_choice: true
 options:
-- text: the key must be only an integer number (Integer, Long, Byte, etc)
-- text: it can't contain duplicate keys
 - text: it can't contain duplicate values
+- text: the key must be only an integer number (Integer, Long, Byte, etc)
 - text: the interface <b>Map</b> does not extend <b>Collection</b>
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: it can't contain duplicate keys
 files:
 - name: src/Task.java
   visible: true

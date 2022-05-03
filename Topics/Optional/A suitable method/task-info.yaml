@@ -1,12 +1,10 @@
 type: choice
 is_multiple_choice: false
 options:
-- text: of(object)
-- text: orElse(object)
 - text: ofNullable(object)
 - text: get(object)
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: of(object)
+- text: orElse(object)
 files:
 - name: src/Task.java
   visible: true

@@ -2,11 +2,11 @@
 <html>
  <head></head>
  <body>
-  <h5 style="text-align: center;">Resizable arrays</h5> 
+  <h5 style="text-align: center;" id="resizable-arrays">Resizable arrays</h5> 
   <p>One of the most widely used classes of Java Class Library is a class named <code class="language-java">ArrayList</code> that represents a resizable array of objects of a specified type. Unlike the standard array denoted as <code class="language-java">[]</code>, it can dynamically grow after the addition and shrink after the removal of its elements. This behavior is very useful if you do not know the size of the array in advance or you need one that can change size over the lifetime of a program.</p> 
   <p>In fact, this class is built on top of a standard Java array, extending it with a set of convenient operations. Like a standard array, it allows getting the current number of elements (its size) as well as accessing its elements by their indexes.</p> 
   <p>There is only one restriction: <code class="language-java">ArrayList</code>: being a generic class, it cannot store primitive types. However, it can store any reference types, including <code class="language-java">String</code>'s, wrapper classes (like <code class="language-java">Integer</code>'s), other <code class="language-java">ArrayList</code>'s, and custom classes.</p> 
-  <h5 style="text-align: center;">Creating an instance of ArrayList</h5> 
+  <h5 style="text-align: center;" id="creating-an-instance-of-arraylist">Creating an instance of ArrayList</h5> 
   <p>To start using the class by its short name, make the following import:</p> 
   <pre><code class="language-java">import java.util.ArrayList;</code></pre> 
   <p>Let's consider several ways to create instances of this class.</p> 
@@ -27,7 +27,7 @@
    <strong>inheritance</strong>. We believe that the current approach is enough for now since it requires less knowledge to start using dynamic collections.
   </div>
   <p></p> 
-  <h5 style="text-align: center;">Basic methods</h5> 
+  <h5 style="text-align: center;" id="basic-methods">Basic methods</h5> 
   <p>The collection has a set of convenient methods that emulate and extend the functionality of standard arrays. Let's discuss what they are. First, let's initialize some collection:</p> 
   <pre><code class="language-java">ArrayList&lt;String&gt; names = new ArrayList&lt;&gt;(); // empty collection of strings</code></pre> 
   <p>First of all, there's a method to determine the size of the collection <code class="language-java">size</code> that returns the number of elements of the list. Let's try learning the size of ours:</p> 
@@ -67,7 +67,7 @@ names.clear();          // []</code></pre>
   </div>
   <p></p> 
   <p>Try to play with this code by yourself and enjoy the power of <code class="language-java">ArrayList</code> . </p> 
-  <h5 style="text-align: center;">More ArrayList methods</h5> 
+  <h5 style="text-align: center;" id="more-arraylist-methods">More ArrayList methods</h5> 
   <p>We've illustrated the possibilities of basic methods for collections in Java applied to an <code class="language-java">ArrayList</code> object. But this class has some more methods of its own. First, let's create another <code class="language-java">ArrayList</code>:</p> 
   <pre><code class="language-java">/* an ArrayList of Integers, not ints */
 ArrayList&lt;Integer&gt; numbers = new ArrayList&lt;&gt;();
@@ -88,7 +88,7 @@ System.out.println(numbers.indexOf(1));     // 0
 System.out.println(numbers.lastIndexOf(1)); // 3
 System.out.println(numbers.lastIndexOf(4)); // -1</code></pre> 
   <p>As you see, this class provides a rich set of methods to work with elements. You do not have to write them by yourself, as you do for standard arrays.</p> 
-  <h5 style="text-align: center;">Iterating over ArrayList</h5> 
+  <h5 style="text-align: center;" id="iterating-over-arraylist">Iterating over ArrayList</h5> 
   <p>It is possible to iterate over elements of an instance of the class. It is done in the same way as iterating over an array. In the following example, we use <em>for </em>and <em>for-each</em> loops to add the five first powers of ten in a list and then print the numbers to the standard output.</p> 
   <pre><code class="language-java">ArrayList&lt;Long&gt; powersOfTen = new ArrayList&lt;&gt;();
 
@@ -104,7 +104,7 @@ for (Long value : powersOfTen) {
   <p>The code prints the following:</p> 
   <pre><code class="language-java">1 10 100 1000 10000</code></pre> 
   <p>It is not harder than using a standard array.</p> 
-  <h5 style="text-align: center;">Conclusion</h5> 
+  <h5 style="text-align: center;" id="conclusion">Conclusion</h5> 
   <p>We've considered the <code class="language-java">ArrayList</code> class from the <code class="language-java">java.util</code> package. This class is similar to standard Java arrays but has the possibility to dynamically change its size. It has methods to get the size, add, remove and access elements by their indexes. In addition, <code class="language-java">ArrayList</code> provides a set of useful methods that check whether an element is present in the array and find it. A regular array does not have such methods built-in.</p>
  </body>
 </html>

@@ -7,7 +7,7 @@
    Wow! This problem is kind of tricky. If you're ready to put your thinking cap on, brace yourself and good luck! Otherwise, you can skip it for now and return any time later.
   </div>
   <p></p> 
-  <h5 style="text-align: center;">Overview</h5> 
+  <h5 style="text-align: center;" id="overview">Overview</h5> 
   <p><a target="_blank" href="https://en.wikipedia.org/wiki/Chain-of-responsibility_pattern" rel="noopener noreferrer nofollow"><strong>The chain of responsibility</strong></a> is an object-oriented design pattern that processes a request through a series of handlers (a chain). The request is passed from one handler to another and processed by one or all of these handlers in the chain.</p> 
   <p>As a rule, an implementation of this pattern requires the following classes and methods:</p> 
   <ul> 
@@ -15,7 +15,7 @@
    <li>one or more <strong>concrete handlers </strong>that implement the general handler.</li> 
   </ul> 
   <p>The functional style allows us to implement this pattern easier. Instead of writing all concrete handlers we can write lambda expressions (or method references). For setting the next handler it's possible to use function composition in similar to functions way.</p> 
-  <h5 style="text-align: center;">Problem</h5> 
+  <h5 style="text-align: center;" id="problem">Problem</h5> 
   <p>There is a class called <code class="language-xml">Request(data: String)</code> for representing some XML requests in a payment system. It has a getter for the data field and a constructor with a single argument.</p> 
   <p>The following is what the value of <code class="language-xml">data</code> looks like in a human-readable format (it is a single line string when processing).</p> 
   <pre><code class="language-xml">&lt;request&gt;
@@ -37,7 +37,7 @@
   </div>
   <p></p> 
   <p>Further, you can read how the requests should be created. Keep in mind, all handlers have been already implemented and available for you. You need to write only a suitable functional interface and compose all existing handlers as functions into one <code class="language-xml">commonRequestHandler</code> to follow the described algorithm.</p> 
-  <h5 style="text-align: center;">The algorithm for creating a XML request</h5> 
+  <h5 style="text-align: center;" id="the-algorithm-for-creating-a-xml-request">The algorithm for creating a XML request</h5> 
   <p><strong></strong>0) Initial request data looks like shown below (it contains only business data).</p> 
   <pre><code class="language-java">&lt;type&gt;payment&lt;/type&gt;&lt;sum&gt;100000&lt;/sum&gt;&lt;order_id&gt;e94dc619-6172-4ffe-aae8-63112c551570&lt;/order&gt;&lt;desc&gt;We'd like to buy an elephant&lt;/desc&gt;</code></pre> 
   <p>1) First, a tag <em>&lt;transaction&gt;...&lt;/transaction&gt;</em> is added as border of the data (data is wrapped in the tag). The result:</p> 

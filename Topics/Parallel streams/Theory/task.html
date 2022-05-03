@@ -10,7 +10,7 @@
   </div>
   <p></p> 
   <p>In this topic, you will learn how to create and use parallel streams, as well as learn about the performance and some caveats associated with them.</p> 
-  <h5 style="text-align: center;">Creating parallel streams</h5> 
+  <h5 style="text-align: center;" id="creating-parallel-streams">Creating parallel streams</h5> 
   <p>There are several simple ways to create parallel streams:</p> 
   <ul> 
    <li>to invoke the <code class="language-java">parallelStream()</code><strong> </strong>method of a collection instead of <code class="language-java">stream()</code>:</li> 
@@ -51,7 +51,7 @@ System.out.println(sum); // 500000500000</code></pre>
    <code class="language-java">sequential()</code> methods, the last call wins.
   </div>
   <p></p> 
-  <h5 style="text-align: center;">Performance of parallel streams</h5> 
+  <h5 style="text-align: center;" id="performance-of-parallel-streams">Performance of parallel streams</h5> 
   <p>It's really easy to make a stream parallel. But should we always do this? Not really.</p> 
   <p></p>
   <div class="alert alert-primary">
@@ -79,10 +79,10 @@ System.out.println(sum); // 500000500000</code></pre>
    <li><strong>Type of operations: stateless or stateful</strong>. Stateless operations (for example, <code class="language-java">filter</code> and <code class="language-java">map</code>) are better for parallel processing than stateful operations (for example, <code class="language-java">distinct</code>, <code class="language-java">sorted</code>, <code class="language-java">limit</code>). Operations that are based on the order of elements are especially hard for parallelizing. But it's not always possible to avoid them.</li> 
   </ul> 
   <p>Of course, the listed factors give us only an approximate estimate, i.e. some reference points. When developing a real application, you need to perform some measurements to decide whether to use parallel streams. Another important question is "<em><strong>Are you ready to spend additional server's threads on the streams?"</strong></em>.</p> 
-  <h5 style="text-align: center;">Some caveats with parallel streams</h5> 
+  <h5 style="text-align: center;" id="some-caveats-with-parallel-streams">Some caveats with parallel streams</h5> 
   <p>In addition to the fact that parallel streams do not always increase the performance (and sometimes, decrease), there are some differences in the behavior of parallel and sequential streams which you need to understand before using them.</p> 
   <p>If you know additional caveats with parallel streams, write them into comments, please.</p> 
-  <h5 style="text-align: center;">The reduce method and its initial value</h5> 
+  <h5 style="text-align: center;" id="the-reduce-method-and-its-initial-value">The reduce method and its initial value</h5> 
   <p>Let's assume, you'd like to calculate the sum of numbers and add 100 to the result. When using a sequential stream, you can just set 100 as the initial value (seed) of the <code class="language-java">reduce()</code> method:</p> 
   <pre><code class="language-java">int result = numbers.stream().reduce(100, Integer::sum);</code></pre> 
   <p>This code produces the same result as following:</p> 
@@ -94,7 +94,7 @@ System.out.println(sum); // 500000500000</code></pre>
    <code class="language-java">reduce</code> method. It is better to do the same with sequential streams.
   </div>
   <p></p> 
-  <h5 style="text-align: center;">The forEach method and the order of elements</h5> 
+  <h5 style="text-align: center;" id="the-foreach-method-and-the-order-of-elements">The forEach method and the order of elements</h5> 
   <p>Given a sorted list of numbers <code class="language-java">1, 2, ..., 10</code>. We'd like to process and print each number from the list using streams.</p> 
   <p>Here is a sequential stream:</p> 
   <pre><code class="language-java">sortedNumbers.stream()
@@ -123,7 +123,7 @@ System.out.println(sum); // 500000500000</code></pre>
    <code class="language-java">forEach</code> if the order of elements matters to you. But, at the same time, this will reduce the speedup from the parallelization.
   </div>
   <p></p> 
-  <h5 style="text-align: center;">Empty lists and the order of elements</h5> 
+  <h5 style="text-align: center;" id="empty-lists-and-the-order-of-elements">Empty lists and the order of elements</h5> 
   <p>You may have thought that there are no more problems with the order of elements. But this is not true: the order and parallelization are not friends.</p> 
   <p>Let's assume, we'd like to get the first three even numbers from a parallel stream of two concatenated streams.</p> 
   <pre><code class="language-java">// create a filled list of integers
@@ -149,7 +149,7 @@ List&lt;Integer&gt; emptyList = List.of();</code></pre>
    Just a general, but an important advice: be careful with the order of elements in parallel streams. You can encounter troubles in the most unpredictable places.
   </div>
   <p></p> 
-  <h5 style="text-align: center;">Should I use parallel streams?</h5> 
+  <h5 style="text-align: center;" id="should-i-use-parallel-streams">Should I use parallel streams?</h5> 
   <p><strong>Stream API</strong> makes it very easy to start using parallel streams. But they are not always faster than equivalent sequential streams since their performance depends on many factors including the volume of data, the hardware, and the used operations. At the same time, it is quite difficult to predict the speedup without performing measurements in the realities. In addition, there are some possible caveats when using a parallel stream especially related to the order of its elements.</p> 
   <p>Thus, you must be absolutely sure why you need parallel streams in your case. If there are enough resources or the performed operations are simple, it may be better to use sequential streams. But if you've achieved a measurable stable speedup, you can try using parallel streams.</p>
  </body>

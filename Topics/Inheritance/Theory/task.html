@@ -2,8 +2,8 @@
 <html>
  <head></head>
  <body>
-  <h5 style="text-align: center;">Extending classes</h5> 
   <p><strong>Inheritance</strong> is a mechanism for deriving a new class from another class (base class). The new class acquires some fields and methods of the base class. Inheritance is one of the main principles of object-oriented programming. It allows developers to build convenient class hierarchies and reuse existing code.</p> 
+  <h5 style="text-align: center;" id="extending-classes">Extending classes</h5> 
   <p>When it comes to inheritance, there are several terms. A class <strong>derived</strong> from another class is called a <strong>subclass</strong> (it's also known as a <strong>derived class</strong>, <strong>extended class</strong> or <strong>child class</strong>). The class from which the subclass is derived is called a <strong>superclass</strong> (also a <strong>base class</strong> or a <strong>parent class)</strong>.</p> 
   <p>To derive a new class from another the keyword <code class="language-java">extends</code> is used. The common syntax is shown below.</p> 
   <pre><code class="language-java">class SuperClass { }
@@ -24,7 +24,7 @@ class SubClassC extends SubClassA { }</code></pre>
   <p>Constructors are not inherited, but the superclass's constructor can be invoked from the subclass using the special keyword <code class="language-java">super</code>. This keyword is discussed in more detail in another topic.</p> 
   <p>If you'd like the base class members to be accessible from all subclasses but not from the outside code (excluding the same package), use the access modifier <code class="language-java">protected</code>.</p> 
   <p><strong>Inheritance</strong> represents the <strong>IS-A</strong> relationship. A base class represents the general and a subclass represents the particular or specific.</p> 
-  <h5 style="text-align: center;">An example of a class hierarchy</h5> 
+  <h5 style="text-align: center;" id="an-example-of-a-class-hierarchy">An example of a class hierarchy</h5> 
   <p>Let's consider a more graphic example. A telecommunication company serves clients. It has a small staff consisting only of managers and programmers. Let's consider a class hierarchy for people associated with the company's activities (including clients).</p> 
   <p>At first, we present the hierarchy as a figure. An arrow indicates that one class extends another one.</p> 
   <p style="text-align: center;"><img alt="" height="301px" src="https://ucarecdn.com/204baef8-7807-4f39-b853-a3b53de89d14/" width="398px"></p> 
@@ -98,12 +98,12 @@ System.out.println(p.getSalary()); // 500000
 System.out.println(Arrays.toString(p.getProgrammingLanguages())); // [Java, Scala, Kotlin]</code></pre> 
   <p>We also can create an instance of any class included in the considered hierarchy.</p> 
   <p>So,<strong> inheritance</strong> provides a powerful mechanism for code reuse and writing convenient hierarchies. Many things of the real world can be simulated like hierarchies from a more general to a more particular concept.</p> 
-  <h5 style="text-align: center;">Final classes</h5> 
+  <h5 style="text-align: center;" id="final-classes">Final classes</h5> 
   <p>If a class is declared with the keyword <code class="language-java">final</code>, it cannot have subclasses at all.</p> 
   <pre><code class="language-java">final class SuperClass { }</code></pre> 
   <p>If you try to extend the class, a compile-time error will occur.</p> 
   <p>Some standard classes are declared as final: <code class="language-java">Integer</code>, <code class="language-java">Long</code>, <code class="language-java">String</code>, <code class="language-java">Math</code>. They cannot be extended.</p> 
-  <h5 style="text-align: center;">Conclusion</h5> 
+  <h5 style="text-align: center;" id="conclusion">Conclusion</h5> 
   <p><strong>Inheritance</strong> allows you to build class hierarchies when subclasses (children) take some fields and methods of the superclass (parent). Such a hierarchy can have multiple levels, but every class can inherit only a single superclass. A good class hierarchy helps to avoid code duplication and make your program more modular. If a class should not have subclasses, it should be marked as <code class="language-java">final</code>.</p>
  </body>
 </html>

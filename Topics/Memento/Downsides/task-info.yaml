@@ -1,12 +1,10 @@
 type: choice
 is_multiple_choice: true
 options:
-- text: A program that implements it might be considered malware.
-- text: It is an anti-pattern that should be avoided.
 - text: It may lead to high memory consumption.
+- text: A program that implements it might be considered malware.
 - text: It is very complicated and hard to implement.
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: It is an anti-pattern that should be avoided.
 files:
 - name: src/Task.java
   visible: true

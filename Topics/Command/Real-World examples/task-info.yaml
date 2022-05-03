@@ -1,12 +1,10 @@
 type: choice
 is_multiple_choice: false
 options:
-- text: Handling DOM events
 - text: Undo functionality
-- text: Provide search results
 - text: Listeners in Java Swing API
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: Handling DOM events
+- text: Provide search results
 files:
 - name: src/Task.java
   visible: true

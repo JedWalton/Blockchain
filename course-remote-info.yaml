@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/209941/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: Sun, 27 Feb 2022 15:19:31 UTC
+update_date: Tue, 03 May 2022 19:37:00 UTC
 stages:
 - id: 271
   step: 5413
@@ -33,18 +33,20 @@ topics:
     theory_id: 6865
   - title: IDE
     theory_id: 10996
-  - title: Immutability
-    theory_id: 7929
-  - title: Introduction to operating systems
-    theory_id: 9704
   - title: Computer algorithms
     theory_id: 16547
+  - title: Immutability
+    theory_id: 7929
+  - title: Introduction to Operating systems
+    theory_id: 9704
   - title: The big O notation
     theory_id: 16699
   - title: Data structures
     theory_id: 16927
   - title: Computer programming
     theory_id: 8739
+  - title: Paradigms
+    theory_id: 15860
   - title: Introduction to Java
     theory_id: 3500
   - title: Basic literals
@@ -85,8 +87,6 @@ topics:
     theory_id: 3507
   - title: Switch statement
     theory_id: 3504
-  - title: Characters
-    theory_id: 3514
   - title: Sizes and ranges
     theory_id: 3532
   - title: Type casting
@@ -99,8 +99,6 @@ topics:
     theory_id: 3489
   - title: Functional decomposition
     theory_id: 10570
-  - title: String
-    theory_id: 3523
   - title: Primitive and reference types
     theory_id: 5035
   - title: Array
@@ -111,6 +109,10 @@ topics:
     theory_id: 3525
   - title: Iterating over arrays
     theory_id: 3602
+  - title: Characters
+    theory_id: 3514
+  - title: String
+    theory_id: 3523
   - title: Final variables
     theory_id: 7427
   - title: Errors in programs
@@ -127,12 +129,16 @@ topics:
     theory_id: 3570
   - title: Exception handling
     theory_id: 3552
-  - title: Command line overview
-    theory_id: 8977
-  - title: Parameters and options
-    theory_id: 9746
   - title: Pseudocode
     theory_id: 15090
+  - title: Pseudocode basics
+    theory_id: 19510
+  - title: Command line overview
+    theory_id: 8977
+  - title: Parameters and Options
+    theory_id: 9746
+  - title: Running programs on your computer
+    theory_id: 3746
   - title: Fixed-size array
     theory_id: 7255
   - title: Dynamic array
@@ -147,8 +153,6 @@ topics:
     theory_id: 3617
   - title: Introduction to generic programming
     theory_id: 3492
-  - title: Running programs on your computer
-    theory_id: 3746
   - title: What are collections
     theory_id: 3770
   - title: ArrayList
@@ -219,13 +223,13 @@ topics:
   - title: Queue
     theory_id: 5350
   - title: Deque
-    theory_id: 5356
-  - title: Class Diagrams
-    theory_id: 15588
+    theory_id: 18635
   - title: Design principles
     theory_id: 8956
   - title: Single Responsibility Principle
     theory_id: 8963
+  - title: Class Diagrams
+    theory_id: 15588
   - title: Generics and Object
     theory_id: 3493
   - title: Generic methods
@@ -246,10 +250,10 @@ topics:
     theory_id: 3576
   - title: Introduction to creational patterns
     theory_id: 16251
-  - title: Factory Method and Prototype
-    theory_id: 16430
   - title: Memento
     theory_id: 16528
+  - title: Factory Method and Prototype
+    theory_id: 16430
   - title: Abstract factory
     theory_id: 17108
   - title: Abstract factory
@@ -318,8 +322,6 @@ topics:
     theory_id: 3575
   - title: Function composition
     theory_id: 3580
-  - title: Facade
-    theory_id: 5527
   - title: Decorator
     theory_id: 5216
   - title: Comparator
@@ -348,6 +350,12 @@ topics:
     theory_id: 3558
   - title: Grouping collectors
     theory_id: 10512
+  - title: Structural design patterns
+    theory_id: 17649
+  - title: Facade pattern
+    theory_id: 19222
+  - title: Facade
+    theory_id: 5527
   4:
   - title: Currying
     theory_id: 3579

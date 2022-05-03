@@ -3,11 +3,11 @@
  <head></head>
  <body>
   <p>Imagine that you are the boss of a factory<em>, </em>any factory producing any product you could imagine. You have a perfect creational algorithm that is being used. However, one day you decide to expand your business and open one more factory in another city. That means that you have to encapsulate your creational algorithm for old and new factories. This is what the <em>Abstract Factory</em> is about.</p> 
-  <h5 style="text-align: center;">The Abstract Factory pattern</h5> 
+  <h5 style="text-align: center;" id="the-abstract-factory-pattern">The Abstract Factory pattern</h5> 
   <p><strong>Abstract Factory</strong> is one of the creational patterns. It encapsulates the creational process of related or dependent objects. The most interesting thing here is that there is no need to specify the concrete classes of these objects.</p> 
   <p><img alt="" src="https://ucarecdn.com/832526da-d80c-454c-8baa-b4203db94645/"></p> 
   <p>Let's get down to business and create a <em>TableFactory</em>. We want to be an outstanding company, so like IKEA, we will be producing something that is easy to build. For this reason, it is also necessary to create the <em>ToolsFactory</em>. Before we begin implementing, it is important to clarify the definition of <em>Abstract Factory. </em>This pattern is creational, so in general, it should not modify the provided objects, it should just provide them in a simple manner.</p> 
-  <h5 style="text-align: center;">Example: TableFactory</h5> 
+  <h5 style="text-align: center;" id="example-tablefactory">Example: TableFactory</h5> 
   <p>First of all, let's define our <em>Table</em><strong> </strong>interface and <em>Kitchen</em> and <em>Office</em> implementations of it:</p> 
   <pre><code class="language-java">interface Table {
     String getTable();
@@ -112,7 +112,7 @@ These are kitchen table tools
 There is an office table
 These are office table tools
 -There they are!</code></pre> 
-  <h5 style="text-align: center;">Conclusion</h5> 
+  <h5 style="text-align: center;" id="conclusion">Conclusion</h5> 
   <p>We’ve implemented a <em>TableFactory</em> that controls the creational process. Each factory implementation encapsulated its product. For example, <em>KitchenFactory </em>encapsulated <em>KitchenTable </em>and <em>KitchenTableTools. </em>One of the benefits is that we can be sure that we will get the correct <em>TableTools</em> with the corresponding <em>Table. </em></p> 
   <p>1) Abstract Factory provides an interface (or abstract class) for creating a family of related objects without specifying their concrete classes.</p> 
   <p>2) Abstract Factory is based on composition: object creation occurs in a method that is accessed through the factory interface (or abstract class).</p> 

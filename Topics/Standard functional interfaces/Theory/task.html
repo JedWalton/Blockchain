@@ -3,7 +3,7 @@
  <head></head>
  <body>
   <p>You have already learned how to create and use functional interfaces. However, you don't have to create your own functional interface each time when you need it for a common use case. Instead, you could use built-in functional interfaces that were presented in Java 8 and can be found in the <code class="language-java">java.util.function</code> package. In this topic, you will learn about the built-in functional interfaces, their types and naming conventions, and how to use them.</p> 
-  <h5>Groups of functional interfaces</h5> 
+  <h5 id="groups-of-functional-interfaces">Groups of functional interfaces</h5> 
   <p>All functional interfaces that are presented in the java.util.function package can be divided into five groups:</p> 
   <ul> 
    <li><strong>functions</strong> that accept arguments and produce results;</li> 
@@ -18,7 +18,7 @@
    Functional interfaces from the same group may differ in the number of arguments and be generic as well as non-generic.
   </div>
   <p></p> 
-  <h5>Naming convention</h5> 
+  <h5 id="naming-convention">Naming convention</h5> 
   <p>Thanks to the naming conventions of functional interfaces in the <code class="language-java">java.util.function</code> package, you can easily understand an interface characteristic just by looking at its name prefix, which may indicate the following:</p> 
   <ul> 
    <li>a number of parameters that are accepted by an operation. The prefix <em>Bi</em> indicates that a function, a predicate, or a consumer accepts two parameters. Similarly to the <em>Bi</em> prefix, <em>Unary</em> and <em>Binary</em> prefixes indicate that an operator accepts one and two parameters respectively.</li> 
@@ -33,7 +33,7 @@
    <code class="language-java">Integer</code>type.
   </div>
   <p></p> 
-  <h5>Standard functional interfaces with examples</h5> 
+  <h5 id="standard-functional-interfaces-with-examples">Standard functional interfaces with examples</h5> 
   <p>Let's look at examples for each of the five groups of the standard functional interfaces.</p> 
   <p><strong>1) Functions</strong></p> 
   <p>Each function accepts a value as a parameter and returns a single value. For example, the <code class="language-java">Function&lt;T, R&gt;</code> is a generic interface that represents a function that accepts a value of type <code class="language-java">T</code> and produces a result of type <code class="language-java">R</code>.</p> 
@@ -85,7 +85,7 @@ intSupplier.getAsInt(); // the result is 33 (int)</code></pre>
   <pre><code class="language-java">// it prints a given string
 Consumer&lt;String&gt; printer = System.out::println;
 printer.accept("!!!"); // It prints "!!!"</code></pre> 
-  <h5>Conclusion</h5> 
+  <h5 id="conclusion">Conclusion</h5> 
   <p>In this topic, we have observed a set of built-in functional interfaces that can be divided into five groups. Each of them can be used as a lambda expression or a method reference. It is important that input parameters and returning value of a lambda expression (or a method reference) correspond to the input parameters and returning value of a single abstract method presented in the functional interface. Also, we have observed the interface naming conventions and figured out how the name prefixes indicate the number of input parameters and the type of input and output values. Further, we will observe how to use generic and primitive-specialized standard functional interfaces together.</p>
  </body>
 </html>

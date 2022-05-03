@@ -1,12 +1,10 @@
 type: choice
 is_multiple_choice: false
 options:
-- text: '[771843, 462181], [530012, 234465, 110011]'
 - text: '[771843, 462181, 530012, 234465, 110011]'
-- text: '[530012, 234465, 110011], [771843, 462181]'
 - text: '[771843, 462181], [530012, 234465, 110011], [681891]'
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: '[530012, 234465, 110011], [771843, 462181]'
+- text: '[771843, 462181], [530012, 234465, 110011]'
 files:
 - name: src/Task.java
   visible: true

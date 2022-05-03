@@ -5,7 +5,7 @@
   <p>The <strong>Factory Method</strong><em> </em>pattern is a good place to start, especially if you wish to understand the concept of other factory patterns. It is probably the simplest one and you can implement it for sure. </p> 
   <p>Imagine a situation that you are the boss of a factory producing something — anything you really want. You are lucky to have a qualified engineer in your team who can create any type of product at your factory provided the specification: <em>TYPE_A </em>or <em>TYPE_B. </em>This is what the Factory Method<em> </em>design pattern is about.</p> 
   <p>This pattern defines an interface for creating an object but leaves it to the subclasses to decide which class to instantiate. So basically, Factory Method allows the class to delegate instantiation to subclasses. The goal of any factory is to protect customers from the details of creating copies of classes or class hierarchy. Factory Method is a special case of the Template Method pattern, the variable step of which is responsible for creating the desired type of object.</p> 
-  <h5 style="text-align: center;">Structure</h5> 
+  <h5 style="text-align: center;" id="structure">Structure</h5> 
   <p>The Factory Method pattern has the following components:</p> 
   <ul> 
    <li>Creator;</li> 
@@ -22,7 +22,7 @@
    <li><strong>ConcreteProduct</strong> determines the specific type of products. Samples: RobotCleaner, ElfHero, MP3File, Detail13.</li> 
   </ol> 
   <p>The pattern in JDK is available in <code class="language-java">java.util</code>, <code class="language-java">java.io</code> and <code class="language-java">javax.persistence</code>.</p> 
-  <h5 style="text-align: center;">Practice example</h5> 
+  <h5 style="text-align: center;" id="practice-example">Practice example</h5> 
   <p>Let's make our abstract example from the beginning a little more vivid and detailed. As you remember, you are the boss of a factory. Suppose the factory makes tables: they are truly indispensable in the house. You work with a qualified employee, an engineer, who, as you might have guessed, is your factory method.</p> 
   <p>First, let's define the abstract class <em>Table:</em></p> 
   <pre><code class="language-java">abstract class Table {
@@ -105,7 +105,7 @@ Making Kitchen Table
 Attaching Legs
 Attaching tabletop
 Created Kitchen Table</code></pre> 
-  <h5 style="text-align: center;">Conclusion</h5> 
+  <h5 style="text-align: center;" id="conclusion">Conclusion</h5> 
   <p>Factory Method comes in handy in situations when you need to:</p> 
   <ul> 
    <li>deal with a complicated process of constructing objects;</li> 

@@ -2,11 +2,9 @@ type: choice
 is_multiple_choice: true
 options:
 - text: Stream.generate(Math::random);
+- text: Stream.of(1, 2, 3).mapToLong(n -&gt; n);
 - text: IntStream.of(1, 2, 3);
 - text: Stream.of(1, 2, 3);
-- text: Stream.of(1, 2, 3).mapToLong(n -&gt; n);
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
 files:
 - name: src/Task.java
   visible: true

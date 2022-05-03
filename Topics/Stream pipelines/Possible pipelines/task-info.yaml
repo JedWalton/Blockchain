@@ -1,13 +1,11 @@
 type: choice
 is_multiple_choice: true
 options:
-- text: list.stream().filter(...).map(...).filter(...).reduce(...);
-- text: list.stream(...).reduce(...).map();
-- text: list.stream().reduce(...).collect(...);
 - text: list.stream().map(...).collect(...);
 - text: list.stream().map(...).map(...).map(...).filter(...).collect(...);
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: list.stream().filter(...).map(...).filter(...).reduce(...);
+- text: list.stream().reduce(...).collect(...);
+- text: list.stream(...).reduce(...).map();
 files:
 - name: src/Task.java
   visible: true

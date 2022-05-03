@@ -15,7 +15,7 @@
   <p></p> 
   <ul> 
   </ul> 
-  <h5 style="text-align: center;">Creating primitive type streams</h5> 
+  <h5 style="text-align: center;" id="creating-primitive-type-streams">Creating primitive type streams</h5> 
   <p>There are lots of ways to create primitive type streams. Some of the ways are suitable for all streams while others are not.</p> 
   <ul> 
    <li>Passing elements in the <code class="language-java">of</code> method:</li> 
@@ -45,7 +45,7 @@ LongStream longs = LongStream.rangeClosed(1_000_000, 2_000_000); // it includes 
         .limit(10)
         .forEach(System.out::println);</code></pre> 
   <p>Now let's look at some operations with primitive streams.</p> 
-  <h5 style="text-align: center;">Additional operations</h5> 
+  <h5 style="text-align: center;" id="additional-operations">Additional operations</h5> 
   <p>The primitive streams have all the same methods as generic streams, but their methods accept primitive specialized functions as arguments. For example the <code class="language-java">forEach</code> method of <code class="language-java">IntStream</code> takes <code class="language-java">IntConsumer</code>, but not <code class="language-java">Consumer&lt;Integer&gt;</code>. Fortunately, this does not affect the possibilities of the streams.</p> 
   <p>There are a few additional aggregating operations such as <code class="language-java">min</code>, <code class="language-java">max</code>, <code class="language-java">average</code> and <code class="language-java">sum</code>. The first three return an optional object which represents a result or nothing since the initial stream can be empty.</p> 
   <p></p>
@@ -78,7 +78,7 @@ System.out.println(String.format("Count: %d, Min: %d, Max: %d, Avg: %.1f",
   <p>Here are the results:</p> 
   <pre><code class="language-java">Count: 55555, Min: 1, Max: 55555, Avg: 27778.0</code></pre> 
   <p>Wow! And no loops here.</p> 
-  <h5 style="text-align: center;">Transforming streams</h5> 
+  <h5 style="text-align: center;" id="transforming-streams">Transforming streams</h5> 
   <p>You can perform various transformations of primitive type streams.</p> 
   <ul> 
    <li><strong> Transforming a primitive type stream to another one</strong> using <code class="language-java">asDoubleStream()</code> for <code class="language-java">IntStream</code> and <code class="language-java">LongStream</code>, or <code class="language-java">asLongStream()</code> for <code class="language-java">IntStream</code> only.</li> 
@@ -97,7 +97,7 @@ System.out.println(String.format("Count: %d, Min: %d, Max: %d, Avg: %.1f",
   <pre><code class="language-java">List&lt;Integer&gt; numbers = List.of(1, 5, 9);
 int sum = numbers.stream().mapToInt(i -&gt; i).sum(); // 15</code></pre> 
   <p>This can be especially useful when you want to invoke one of the specific primitive stream's methods.</p> 
-  <h5 style="text-align: center;">Summary</h5> 
+  <h5 style="text-align: center;" id="summary">Summary</h5> 
   <p>We've considered three primitive specialized streams which are similar to the generalized stream but have some features:</p> 
   <ul> 
    <li>their methods take primitive specialized functions as arguments;</li> 

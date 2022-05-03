@@ -1,12 +1,10 @@
 type: choice
 is_multiple_choice: false
 options:
-- text: ls.elements()
+- text: ls.sequence()
 - text: ls.stream()
 - text: ls.listStream()
-- text: ls.sequence()
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: ls.elements()
 files:
 - name: src/Task.java
   visible: true

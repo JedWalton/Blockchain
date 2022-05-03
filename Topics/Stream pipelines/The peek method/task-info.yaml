@@ -1,12 +1,10 @@
 type: choice
 is_multiple_choice: false
 options:
-- text: It returns the first element of the stream
-- text: It transforms every element of the stream
-- text: It allows seeing every element of the stream without changing it
 - text: It print the order of methods when the stream executes
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: It transforms every element of the stream
+- text: It returns the first element of the stream
+- text: It allows seeing every element of the stream without changing it
 files:
 - name: src/Task.java
   visible: true

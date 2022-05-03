@@ -1,12 +1,10 @@
 type: choice
 is_multiple_choice: false
 options:
-- text: IllegalArgumentException
-- text: RuntimeException
-- text: all possible exceptions
 - text: NullPointerException
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: RuntimeException
+- text: IllegalArgumentException
+- text: all possible exceptions
 files:
 - name: src/Task.java
   visible: true

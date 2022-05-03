@@ -3,7 +3,7 @@
  <head></head>
  <body>
   <p>Sometimes developers need to use a small class that overrides some methods of another class or interface only <strong>once</strong>. In this case, declaring a new class may be superfluous. Fortunately, Java provides a mechanism for creating a class in a single statement without having to declare a new named class. Such classes are called <strong>anonymous</strong> because they don't have name identifiers like <code class="java">String</code> or <code class="java">MyClass</code> (but they do have an internal name).</p> 
-  <h5 style="text-align: center;">What is an anonymous class?</h5> 
+  <h5 style="text-align: center;" id="what-is-an-anonymous-class">What is an anonymous class?</h5> 
   <p>Anonymous classes enable you to declare and instantiate a class at the same time.</p> 
   <p>An anonymous class always implements an interface or extends another class (concrete or abstract). Here is the common syntax of creating an anonymous class:</p> 
   <pre><code class="java">new SuperClassOrInterfaceName() {
@@ -18,7 +18,7 @@
    An anonymous class must override all abstract methods of the superclass. That is, all interface methods must be overridden except default methods. If an anonymous class extends a class that has no abstract methods, it doesn't have to override anything.
   </div>
   <p></p> 
-  <h5 style="text-align: center;">Writing anonymous classes</h5> 
+  <h5 style="text-align: center;" id="writing-anonymous-classes">Writing anonymous classes</h5> 
   <p>Let's assume we have the following interface with two methods:</p> 
   <pre><code class="java">interface SpeakingEntity {
 
@@ -63,7 +63,7 @@ Bye!</code></pre>
   <pre><code class="java">Meow!
 Meow!</code></pre> 
   <p>So, <code class="java">englishSpeakingPerson</code> and <code class="java">cat</code> are instances of different anonymous classes that implement the same interface.</p> 
-  <h5 style="text-align: center;">Accessing context variables</h5> 
+  <h5 style="text-align: center;" id="accessing-context-variables">Accessing context variables</h5> 
   <p>In the body of an anonymous class, it is possible to capture variables from a context where it is defined:</p> 
   <ul> 
    <li>an anonymous class can capture members of its enclosing class (the outer class);</li> 
@@ -104,7 +104,7 @@ Auf Wiedersehen!</code></pre>
    A declaration of a variable or a method in an anonymous class shadows any other declaration in the enclosing scope that has the same name. You cannot access any shadowed declarations by their names.
   </div>
   <p></p> 
-  <h5 style="text-align: center;">When to use anonymous classes</h5> 
+  <h5 style="text-align: center;" id="when-to-use-anonymous-classes">When to use anonymous classes</h5> 
   <p>Generally, you should consider using an anonymous class when:</p> 
   <ul> 
    <li>only one instance of the class is needed</li> 

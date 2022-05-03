@@ -11,7 +11,7 @@
   </div>
   <p></p> 
   <p>In this topic, we will consider <strong>mutable</strong> and <strong>immutable</strong> sets and their differences. All our examples will use strings and numbers, since storing objects of custom classes as elements has some significant points. It will be considered in other topics.</p> 
-  <h5 style="text-align: center;">The Set interface</h5> 
+  <h5 style="text-align: center;" id="the-set-interface">The Set interface</h5> 
   <p><em>The Collections framework</em> provides the <code class="language-java">Set&lt;E&gt;</code> interface to represent a <strong>set</strong> as an abstract data type. It inherits all the methods from the <code class="language-java">Collection&lt;E&gt;</code> interface but doesn't add any new ones. The most widely used methods include <code class="language-java">contains</code>, <code class="language-java">add</code>, <code class="language-java">addAll</code>, <code class="language-java">remove</code>, <code class="language-java">removeAll</code>, <code class="language-java">size,</code> and others we've considered in the earlier topic on the Collections framework. </p> 
   <p></p>
   <div class="alert alert-primary">
@@ -23,7 +23,7 @@
   <p>One method is worth special attention when talking about <code class="language-java">Set&lt;E&gt;</code> interface, as it is often used with sets: <code class="language-java">retainAll(Collection&lt;E&gt; coll)</code>. It retains only those set elements that are contained in the specified collection.</p> 
   <p>To start using a set, you need to instantiate one of its implementations: <code class="language-java">HashSet</code>, <code class="language-java">TreeSet</code>, and <code class="language-java">LinkedHashSet</code>. These are mutable sets and they use different rules for ordering elements and have some additional methods. They are also optimized for different types of operations. There are also <strong>immutable</strong> sets, whose names are not important for programmers. They also implement the <code class="language-java">Set&lt;E&gt;</code> interface.</p> 
   <p>As an addition, there is a high-performance implementation <code class="language-java">EnumSet</code><em> </em>for <code class="language-java">enum</code> types. We will not consider it in this topic.</p> 
-  <h5 style="text-align: center;">Immutable sets</h5> 
+  <h5 style="text-align: center;" id="immutable-sets">Immutable sets</h5> 
   <p>The simplest way to create a<strong> set</strong> is to invoke the <code class="language-java">of</code> method of the <code class="language-java">Set</code> interface.</p> 
   <pre><code class="language-java">Set&lt;String&gt; emptySet = Set.of();
 Set&lt;String&gt; persons = Set.of("Larry", "Kenny", "Sabrina");
@@ -52,7 +52,7 @@ System.out.println(numbers.contains(300)); // true</code></pre>
   </div>
   <p></p> 
   <p>Next, we will consider three primary <strong>mutable</strong> implementations of the <code class="language-java">Set</code> interface.</p> 
-  <h5 style="text-align: center;">HashSet</h5> 
+  <h5 style="text-align: center;" id="hashset">HashSet</h5> 
   <p>The <code class="language-java">HashSet</code> class represents a set backed by a <strong>hash table</strong>. It uses hash codes of elements to effectively store them. It makes no guarantees as to the iteration order of the set; in particular, it does not guarantee that the order will remain constant over time.</p> 
   <p>The following example demonstrates creating a <code class="language-java">HashSet</code> and adding countries to it (with a duplicate). The output result does not contain duplicates.</p> 
   <pre><code class="language-java">Set&lt;String&gt; countries = new HashSet&lt;&gt;();
@@ -82,7 +82,7 @@ System.out.println(countries.contains("Switzerland")); // true</code></pre>
    <code class="language-java">contains</code> operation is highly optimized.
   </div>
   <p></p> 
-  <h5 style="text-align: center;">TreeSet</h5> 
+  <h5 style="text-align: center;" id="treeset">TreeSet</h5> 
   <p>The <code class="language-java">TreeSet</code> class represents a set that gives us guarantees on the order of the elements. It corresponds to the sorting order of the elements determined either by their natural order (if they implement the <code class="language-java">Comparable</code> interface) or by specific <code class="language-java">Comparator</code> implementation.</p> 
   <p></p>
   <div class="alert alert-primary">
@@ -126,7 +126,7 @@ System.out.println(sortedSet.last());  // maximum is 21</code></pre>
    <code class="language-java">HashSet</code> would be a better choice.
   </div>
   <p></p> 
-  <h5 style="text-align: center;">LinkedHashSet</h5> 
+  <h5 style="text-align: center;" id="linkedhashset">LinkedHashSet</h5> 
   <p>The <code class="language-java">LinkedHashSet</code> class represents a set with linked elements. It differs from <code class="language-java">HashSet</code> by guaranteeing that the order of the elements is the same as the order they were inserted to the set. Reinserting an element that is already in the <code class="language-java">LinkedHashSet</code> does not change this order.</p> 
   <p>In some sense, <code class="language-java">LinkedHashSet</code> is something intermediate between <code class="language-java">HashSet</code> and <code class="language-java">TreeSet</code>. Implemented as a hash table with a linked list running through it, this set provides <em>insertion-ordered</em> iteration and runs nearly as fast as <code class="language-java">HashSet</code>.</p> 
   <p>The following example demonstrates this.</p> 
@@ -147,20 +147,20 @@ System.out.println(characters); // [a, b, c, d, e, f, g, h, i, j, k]</code></pre
    <code class="language-java">LinkedHashSet</code> requires more memory for storing elements.
   </div>
   <p></p> 
-  <h5 style="text-align: center;">Set operations</h5> 
+  <h5 style="text-align: center;" id="set-operations">Set operations</h5> 
   <p>You have already seen some operations on sets. Now let's look at operations that are usually called as <strong>set theoretic operations</strong> that come from math. It's funny that in Java they are common for all collections, not only for sets.</p> 
   <p>Here is an example of such operations. First of all, we create a mutable set. Then, we apply operations to it, changing the elements.</p> 
   <pre><code class="language-java">// getting a mutable set from an immutable one
 Set&lt;String&gt; countries = new HashSet&lt;&gt;(List.of("India", "Japan", "Switzerland"));
 
 countries.addAll(List.of("India", "Germany", "Algeria"));
-System.out.println(countries ); // [Japan, Algeria, Switzerland, Germany, India]
+System.out.println(countries); // [Japan, Algeria, Switzerland, Germany, India]
 
 countries.retainAll(List.of("Italy", "Japan", "India", "Germany"));
-System.out.println(countries ); // [Japan, Germany, India]
+System.out.println(countries); // [Japan, Germany, India]
 
 countries.removeAll(List.of("Japan", "Germany", "USA"));
-System.out.println(countries ); // [India]</code></pre> 
+System.out.println(countries); // [India]</code></pre> 
   <p>After performing <code class="language-java">addAll</code>, the set <code class="language-java">countries</code> does not contain duplicate countries. The <code class="language-java">retainAll</code> and <code class="language-java">removeAll</code> operations affect only those elements which are specified in the passed sets. It is also possible to use any class that implements the <code class="language-java">Collection</code> interface for these methods (e.g. <code class="language-java">ArrayList</code>).</p> 
   <p></p>
   <div class="alert alert-primary">
@@ -181,7 +181,7 @@ System.out.println(countries.containsAll(Set.of("India", "Japan")));   // true
 System.out.println(countries.containsAll(Set.of("India", "Germany"))); // false
 System.out.println(countries.containsAll(Set.of("Algeria", "India", "Japan"))); // true</code></pre> 
   <p>As you can see, this method returns <code class="language-java">true</code> even for an empty set and a set that is fully equal to the initial set.</p> 
-  <h5 style="text-align: center;">Set equality</h5> 
+  <h5 style="text-align: center;" id="set-equality">Set equality</h5> 
   <p>Last but not least is how sets are compared. Two sets are equal when they contain the same elements. Equality does not depend on the types of sets themselves.</p> 
   <pre><code class="language-java">Objects.equals(Set.of(1, 2, 3), Set.of(1, 3));    // false
 Objects.equals(Set.of(1, 2, 3), Set.of(1, 2, 3)); // true
@@ -195,7 +195,7 @@ numbers.add(3);
 
 Objects.equals(numbers, Set.of(1, 2, 3)); // true</code></pre> 
   <p>We assume that the given examples do not need any comments.</p> 
-  <h5 style="text-align: center;">Summary</h5> 
+  <h5 style="text-align: center;" id="summary">Summary</h5> 
   <p>We finished the consideration of the <code class="language-java">Set</code> interface and common features for all sets. Remember, there are immutable and mutable sets. They can be both unordered and ordered and never contain duplicates. The <code class="language-java">HashSet</code> is highly optimized for some operations by effectively storing elements, but it does not guarantee their order. <code class="language-java">TreeSet</code> guarantees the order of elements based on their value, but the time cost of operations is higher. <code class="language-java">LinkedHashSet</code> keeps the order of the elements as they were inserted and requires more memory for storing. Each type of set is best suitable for a specific purpose. We hope you get the basic understanding of how to use them effectively.</p>
  </body>
 </html>

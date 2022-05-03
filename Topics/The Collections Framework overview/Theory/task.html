@@ -12,7 +12,7 @@
    <li>algorithms represented by static methods that perform useful operations on collections.</li> 
   </ul> 
   <p>In this topic, we will only consider the basic interfaces from<em> </em>the collections framework placed in the <code class="language-java">java.util</code> package.</p> 
-  <h5 style="text-align: center;">Commonly used interfaces</h5> 
+  <h5 style="text-align: center;" id="commonly-used-interfaces">Commonly used interfaces</h5> 
   <p>There are two root generic interfaces <code class="language-java">Collection&lt;E&gt;</code> and <code class="language-java">Map&lt;K,V&gt;</code>, and some more specific interfaces to represent different types of collections.</p> 
   <p style="text-align: center;"><strong><img alt="" height="414px" src="https://ucarecdn.com/7592c5a5-1adb-4f91-8a83-15e0c6dfbe4b/" width="746px"></strong></p> 
   <p>The interface <code class="language-java">Collection&lt;E&gt;</code> represents an abstract collection, which is a container for objects of the same type. It provides some common methods for all other types of collections.</p> 
@@ -25,7 +25,7 @@
    <code class="language-java">Map</code> interfaces do not extend each other.
   </div>
   <p></p> 
-  <h5 style="text-align: center;">The Collection interface</h5> 
+  <h5 style="text-align: center;" id="the-collection-interface">The Collection interface</h5> 
   <p>Here are common methods provided by the <code class="language-java">Collection</code> interface.</p> 
   <ul> 
    <li><code class="language-java">int size()</code> returns the number of elements in this collection;</li> 
@@ -56,10 +56,10 @@ System.out.println(languages.size()); // 3</code></pre>
   </div>
   <p></p> 
   <p>Every collection can be cast to a string by using <code class="language-java">toString</code> and compared with another collection using the <code class="language-java">equals</code> method. These methods come from <code class="language-java">Object</code> and their behavior depends on elements stored in the collection and the type of the collection itself.</p> 
-  <h5 style="text-align: center;">Mutable and Immutable collections</h5> 
+  <h5 style="text-align: center;" id="mutable-and-immutable-collections">Mutable and Immutable collections</h5> 
   <p>All collections can be divided into two large groups: mutable and immutable. They both implement the <code class="language-java">Collection&lt;E&gt;</code> interface, but immutable collections will throw <code class="language-java">UnsupportedOperationException</code> when trying to invoke some methods which change them: for example, <code class="language-java">add</code>, <code class="language-java">remove</code>, <code class="language-java">clear</code>.</p> 
   <p>In the next topics, we will consider how to create and when to use immutable collections. Now just remember that they are present here.</p> 
-  <h5 style="text-align: center;">Iterating over collections</h5> 
+  <h5 style="text-align: center;" id="iterating-over-collections">Iterating over collections</h5> 
   <p>If you would like to iterate over all elements of <em>any </em>collection, you can use the <em>for-each</em> style loop. Let's return to our <code class="language-java">languages</code> collection:</p> 
   <pre><code class="language-java">for (String lang : languages) {
     System.out.println(lang);
@@ -75,7 +75,7 @@ languages.forEach(elem -&gt; System.out.println(elem)); // with lambda expressio
   <ul> 
   </ul> 
   <p>This looks very readable but is optional for use.</p> 
-  <h5 style="text-align: center;">Removing elements</h5> 
+  <h5 style="text-align: center;" id="removing-elements">Removing elements</h5> 
   <p>It is also possible to remove elements from a mutable collection (like <code class="language-java">ArrayList</code>).</p> 
   <pre><code class="language-java">languages.remove("Deutsch");
 
@@ -95,7 +95,7 @@ System.out.println(languages.size()); // 2</code></pre>
 
 System.out.println(languages.size()); // 1</code></pre> 
   <p>Use any way you like.</p> 
-  <h5 style="text-align: center;">Conclusion</h5> 
+  <h5 style="text-align: center;" id="conclusion">Conclusion</h5> 
   <p>Java collections framework<strong> </strong>provides a set of interfaces with common methods for different types of collections. We've considered the <code class="language-java">Collection&lt;E&gt;</code> interface which is an abstract container for storing values of the same type. Any particular collection (excluding maps) can be used through it in a program and can be iterated through by using the <em>for-each</em> loop or the <code class="language-java">forEach</code> method.</p> 
   <p>For now, we confine ourselves to this much. All other interfaces including <code class="language-java">Map&lt;K,V&gt;</code> will be considered in the following topics.</p>
  </body>

@@ -4,7 +4,7 @@
  <body>
   <p>It is often the case that a program needs to process and store data located outside the codebase: configuration settings, some dataset for processing, logs of execution and so on. The simplest way to store data is to use files that are supported by all modern operating systems. You can consider a file as a collection of data that is stored on a disk or another device, and that can be manipulated as a single unit when addressed by its name. Files can be organized into directories that act as folders for other files and directories.</p> 
   <p>In this topic, we will learn how to work with files directly from a Java program.</p> 
-  <h5 style="text-align: center;">The File class</h5> 
+  <h5 style="text-align: center;" id="the-file-class">The File class</h5> 
   <p>There is a class called <code class="language-java">File</code> in the <code class="language-java">java.io</code> package. An object of this class represents an existing or non-existing file or a directory. The class can be used to manipulate files and directories: creating, removing, accessing properties and more.</p> 
   <p>The simplest way to create a file object is to pass a string path to its constructor. The valid format of the string depends on the operating system:</p> 
   <ul> 
@@ -20,7 +20,7 @@ File fileOnWin = new File("D:\\Materials\\java-materials.pdf"); // a file on Win
   <p>To display the character for separating the path to a file in your case, you can print the following:</p> 
   <pre><code class="language-java">System.out.println(File.separator); // '/' - for Linux</code></pre> 
   <p>Objects of the <code class="language-java">File</code> class are immutable; that is, once created, the abstract pathname represented by an object will never change.</p> 
-  <h5 style="text-align: center;">Absolute and relative path</h5> 
+  <h5 style="text-align: center;" id="absolute-and-relative-path">Absolute and relative path</h5> 
   <p>You've already seen examples of files described by an <strong>absolute path</strong>. Simply, a path is <strong>absolute</strong> if it starts with the root element of the file system. It has the complete information about the file location including the type of the operating system.</p> 
   <p></p>
   <div class="alert alert-primary">
@@ -39,7 +39,7 @@ File fileOnWin = new File("./images/picture.jpg");</code></pre>
   </div>
   <p></p> 
   <p>To access the parent directory, just write <code class="language-java">..</code> (double dot). So, <code class="language-java">../picture.jpg</code> is a file placed in the parent directory of the working directory. The relative path <code class="language-java">images/../images/picture.jpg</code> means the parent directory of <code class="language-java">images</code>, then the <code class="language-java">images</code> folder again. And <code class="language-java">picture.jpg</code> is the file inside <code class="language-java">images</code> folder. In general <code class="language-java">images/../images/picture.jpg</code> and <code class="language-java">images/picture.jpg</code> are the same paths. </p> 
-  <h5 style="text-align: center;">Basic methods</h5> 
+  <h5 style="text-align: center;" id="basic-methods">Basic methods</h5> 
   <p>An instance of <code class="language-java">File</code> has a list of methods. Take a look at some of them:</p> 
   <ul> 
    <li><code class="language-java">String getPath()</code> returns the string path to this file or directory;</li> 

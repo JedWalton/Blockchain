@@ -3,7 +3,7 @@
  <head></head>
  <body>
   <p>The <strong>main</strong> thread is a starting place from which you may spawn new threads to perform your tasks. To do that you have to write code to be executed in a separated thread and then start it.</p> 
-  <h5 style="text-align: center;">Create custom threads</h5> 
+  <h5 style="text-align: center;" id="create-custom-threads">Create custom threads</h5> 
   <p>Java has two primary ways to create a new thread that performs a task you need.</p> 
   <ul> 
    <li>by extending the <code class="language-java">Thread</code> class and overriding its <code class="language-java">run</code> method;</li> 
@@ -40,7 +40,7 @@ Thread t2 = new Thread(new HelloRunnable()); // passing runnable</code></pre>
     System.out.println(String.format("Hello, i'm %s", Thread.currentThread().getName()));
 });</code></pre> 
   <p>Now you've created objects for threads, but you're not done yet. To perform the tasks you need, you'll have to start them.</p> 
-  <h5 style="text-align: center;">Starting threads</h5> 
+  <h5 style="text-align: center;" id="starting-threads">Starting threads</h5> 
   <p>The class <code class="language-java">Thread</code> has a method called <code class="language-java">start()</code> that is used to start a thread. At some point after you invoke this method, the method <code class="language-java">run</code> will be invoked automatically, but it'll not happen immediately.</p> 
   <p>Let's suppose that inside the <strong>main</strong> method you create an object of <code class="language-java">HelloThread</code> named <code class="language-java">t</code> and start it.</p> 
   <pre><code class="language-java">Thread t = new HelloThread(); // an object representing a thread
@@ -98,7 +98,7 @@ Hello, i'm Thread-1</code></pre>
     Do not rely on the order of execution of statements between different threads, unless you've taken special measures.
   </div>
   <p></p> 
-  <h5 style="text-align: center;">A simple multithreaded program</h5> 
+  <h5 style="text-align: center;" id="a-simple-multithreaded-program">A simple multithreaded program</h5> 
   <p>Let's consider a simple multithreaded program with two threads. The first thread reads numbers from the standard input and prints out their squares. At the same time, the <strong>main</strong> thread occasionally prints messages to the standard output. Both threads work simultaneously.</p> 
   <p>Here is a thread that reads numbers in a loop and squares them. It has a break statement to stop the loop if the given number is 0.</p> 
   <pre><code class="language-java">class SquareWorkerThread extends Thread {

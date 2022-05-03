@@ -1,12 +1,10 @@
 type: choice
 is_multiple_choice: true
 options:
-- text: The Java Class Library has generic and primitive specialized streams.
-- text: A stream can be used more than once.
 - text: A stream should be always closed using the close() method.
+- text: The Java Class Library has generic and primitive specialized streams.
 - text: A stream can be created from a list or a set.
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: A stream can be used more than once.
 files:
 - name: src/Task.java
   visible: true

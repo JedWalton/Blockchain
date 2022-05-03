@@ -1,14 +1,12 @@
 type: choice
 is_multiple_choice: false
 options:
-- text: public byte[] serialize()  throws IOException
 - text: java.io.ObjectOutputStream serialize() throws IOException
+- text: "void\twrite(byte[] b) throws IOException"
+- text: public byte[] serialize()  throws IOException
+- text: private void writeObject(java.io.ObjectOutputStream out) throws IOException
 - text: private void readObject(java.io.ObjectInputStream in) throws IOException,
     ClassNotFoundException
-- text: "void\twrite(byte[] b) throws IOException"
-- text: private void writeObject(java.io.ObjectOutputStream out) throws IOException
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
 files:
 - name: src/Task.java
   visible: true

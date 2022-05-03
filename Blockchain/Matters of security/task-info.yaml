@@ -231,8 +231,24 @@ files:
   learner_created: false
 - name: test/blockchain/BlockchainTest.java
   visible: true
-  text: "package blockchain;\n\nimport junit.framework.TestCase;\n\npublic class BlockchainTest\
-    \ extends TestCase {\n\n    \n\n}"
+  text: |-
+    package blockchain;
+
+    import junit.framework.TestCase;
+    import org.junit.Test;
+
+    public class BlockchainTest extends TestCase {
+
+        @Test
+        public void test() {
+            BlockchainTest blockchainTest = new BlockchainTest();
+
+            int result = blockchainTest.countTestCases();
+
+            assertEquals(1, result);
+        }
+
+    }
   learner_created: false
 - name: test/blockchain/MainTest.java
   visible: true
@@ -240,24 +256,33 @@ files:
     package blockchain;
 
     import junit.framework.TestCase;
+    import org.junit.Test;
 
     public class MainTest extends TestCase {
 
+        @Test
+        public void test() {
+            BlockchainTest mainTest = new BlockchainTest();
+
+            int result = mainTest.countTestCases();
+
+            assertEquals(1, result);
+        }
     }
   learner_created: false
 - name: src/blockchain/Main.java
   visible: true
   learner_created: true
-- name: src/blockchain/Blockchain.java
+- name: blockchain.data
   visible: true
   learner_created: true
 - name: src/blockchain/Block.java
   visible: true
   learner_created: true
-- name: src/blockchain/Miner.java
+- name: src/blockchain/BotUser.java
   visible: true
   learner_created: true
-- name: src/blockchain/BotUser.java
+- name: src/blockchain/Miner.java
   visible: true
   learner_created: true
 - name: src/blockchain/KeyPairCreator.java
@@ -281,18 +306,24 @@ files:
 - name: src/blockchain/StringUtil.java
   visible: true
   learner_created: true
+- name: src/blockchain/Blockchain.java
+  visible: true
+  learner_created: true
 - name: src/blockchain/BlockchainManager.java
   visible: true
   learner_created: true
 - name: src/blockchain/Message.java
   visible: true
   learner_created: true
-- name: blockchain.data
-  visible: true
-  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/5417#comment
-status: Solved
+status: Failed
 feedback:
-  message: Congratulations!
-  time: Sun, 27 Feb 2022 17:48:50 UTC
+  message: "Error in test #2\n\nIn this test, the program is running for a long time,\
+    \ more than 15 seconds. Most likely, the program has gone into an infinite loop.\n\
+    \nPlease find below the output of your program during this failed test.\n\n---\n\
+    \nstdout:\nRetrieving existing Blockchain\nAdding 5 blocks...\nAdded new block...\
+    \ (#3)\nAdded new block... (#5)\nAdded new block... (#6)\n\nstderr:\n.base/java.util.concurrent.TimeUnit.sleep(TimeUnit.java:446)\n\
+    \tat blockchain.MessageSender.lambda$run$0(MessageSender.java:30)\n\tat java.base/java.lang.Iterable.forEach(Iterable.java:75)\n\
+    \tat blockchain.MessageSender.run(MessageSender.java:27)\n\tat java.base/java.lang.Thread.run(Thread.java:833)"
+  time: Sun, 27 Feb 2022 18:04:39 UTC
 record: 5

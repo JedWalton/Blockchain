@@ -1,15 +1,13 @@
 type: choice
 is_multiple_choice: true
 options:
-- text: An instance of the class <b>Thread</b> has methods <b>start</b> and <b>run</b>.
-    If we invoke the first one, it calls the second one in a new thread
+- text: A thread can be started multiple times
 - text: When extending the class <b>Thread</b>, it's necessary to override the method
     <b>start</b> to write some logic here
-- text: A thread can be started multiple times
+- text: An instance of the class <b>Thread</b> has methods <b>start</b> and <b>run</b>.
+    If we invoke the first one, it calls the second one in a new thread
 - text: If we invoke the method <b>run</b> of an instance of the class <b>Thread</b>,
     no new threads will be spawned
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
 files:
 - name: src/Task.java
   visible: true

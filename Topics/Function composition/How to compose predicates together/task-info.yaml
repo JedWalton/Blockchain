@@ -1,13 +1,11 @@
 type: choice
 is_multiple_choice: false
 options:
-- text: predicate = isLetter.or(isUpperCase)
-- text: predicate = isLetter.negate().or(isUpperCase)
-- text: predicate = isLetter.negate().and(isUpperCase);
-- text: predicate = (isLetter.or(isUpperCase)).negate()
 - text: predicate = isLetter.and(isUpperCase.negate())
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: predicate = isLetter.negate().and(isUpperCase);
+- text: predicate = isLetter.or(isUpperCase)
+- text: predicate = (isLetter.or(isUpperCase)).negate()
+- text: predicate = isLetter.negate().or(isUpperCase)
 files:
 - name: src/Task.java
   visible: true

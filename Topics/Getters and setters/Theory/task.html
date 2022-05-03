@@ -2,8 +2,8 @@
 <html>
  <head></head>
  <body>
-  <h5 style="text-align: center;">Data encapsulation</h5> 
-  <p>According to the <strong>data encapsulation</strong> principle, the fields of a class are hidden from being directly accessed from other classes. The fields can be accessed only through the methods of that particular class.</p> 
+  <h5 style="text-align: center;" id="data-encapsulation">Data encapsulation</h5> 
+  <p>According to the <strong>data encapsulation</strong> principle, the fields of a class cannot be directly accessed from other classes. The fields can be accessed only through the methods of that particular class.</p> 
   <p>To access hidden fields, programmers write special types of methods: <strong>getters</strong> and <strong>setters</strong>. Getters can only read fields, and setters can only write (modify) the fields. Both types of methods should be <code class="language-java">public</code>.</p> 
   <p>Using these methods gives us some advantages:</p> 
   <ul> 
@@ -11,7 +11,7 @@
    <li>a class can have total control over what values are stored in the fields;</li> 
    <li>users of a class don't know how the class stores its data and don't depend on the fields.</li> 
   </ul> 
-  <h5 style="text-align: center;">Getters and setters</h5> 
+  <h5 style="text-align: center;" id="getters-and-setters">Getters and setters</h5> 
   <p>Java doesn't provide any special keywords for getter and setter methods. Their main difference from other methods is their names.</p> 
   <p>According to the <a target="_blank" href="https://docstore.mik.ua/orelly/java-ent/jnut/ch06_02.htm" rel="nofollow noopener noreferrer">JavaBeans Convention</a>:</p> 
   <ul> 
@@ -92,7 +92,7 @@ System.out.println(account.isEnabled());  // true</code></pre>
         }
     }
 }</code></pre> 
-  <h5 style="text-align: center;">Conclusion</h5> 
+  <h5 style="text-align: center;" id="conclusion">Conclusion</h5> 
   <p>To restrict access to fields from external code make them <code class="language-java">private</code> and write suitable <strong>getters/setters</strong> to <strong>read/change </strong>only the fields you need. Do not forget to make use of the naming convention when writing them.</p> 
   <p></p>
   <div class="alert alert-primary">

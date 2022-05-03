@@ -1,13 +1,11 @@
 type: choice
 is_multiple_choice: false
 options:
-- text: throws java.lang.NullPointerException
-- text: 10 20
-- text: null null
 - text: 0 0
+- text: 10 20
+- text: throws java.lang.NullPointerException
 - text: throws java.io.NotSerializableException
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: null null
 files:
 - name: src/Task.java
   visible: true

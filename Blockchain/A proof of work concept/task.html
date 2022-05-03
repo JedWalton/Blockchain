@@ -1,4 +1,4 @@
-<h5>Description</h5>
+<h5 id="description">Description</h5>
 
 <p>The security of our blockchain is pretty low. You can't just change some information in the middle of a blockchain, because the hash of this block will also be changed. And the next block still keeps the old hash value of the previous block. But can't we replace the old hash value with the new hash value so everything will be ok? No, because when you change the value of the previous hash in the block, the hash of this block will also be changed! To fix this, you need to change the value of the previous hash in the block after it. To solve this problem, you need to fix hash values in all the blocks until the last block of the blockchain!<br>
 <br>
@@ -16,7 +16,7 @@ The main goal is that the hash of the block shouldn't be random. It should start
 <br>
 In this stage, you need to improve the blockchain. It should generate new blocks only with hashes that start with N zeros. The number N should be input from the keyboard. Also, the blockchain should be saved to the file after each block. At the start of the program, you should check if a blockchain exists on the hard drive, load it, check if it is valid, and then continue to create blocks. You may want to use serialization to do that.</p>
 
-<h5>Examples</h5>
+<h5 id="examples">Examples</h5>
 
 <p>The example below shows how your output might look. Output information about a few first blocks of the blockchain. Also, output the time that was needed to create a block. Your results and time measurements can be totally different than in the example! To be tested successfully, the program should output information about the first five blocks of the blockchain. Blocks should be separated by an empty line.</p>
 

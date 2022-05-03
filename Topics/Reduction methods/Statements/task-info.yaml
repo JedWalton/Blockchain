@@ -1,12 +1,10 @@
 type: choice
 is_multiple_choice: true
 options:
-- text: It takes a three-argument function for combining result.
+- text: It's a terminal operation.
 - text: The reduce operation can be used to implement the sum operation.
 - text: It returns another stream.
-- text: It's a terminal operation.
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: It takes a three-argument function for combining result.
 files:
 - name: src/Task.java
   visible: true

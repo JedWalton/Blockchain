@@ -1,12 +1,10 @@
 type: choice
 is_multiple_choice: true
 options:
-- text: Undo/redo (graphic editor)
 - text: Inflate/deflate (file compression util)
 - text: Save/load (computer game)
+- text: Undo/redo (graphic editor)
 - text: Change history (text editor)
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
 files:
 - name: src/Task.java
   visible: true

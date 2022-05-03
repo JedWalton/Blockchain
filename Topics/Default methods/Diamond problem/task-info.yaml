@@ -1,15 +1,13 @@
 type: choice
 is_multiple_choice: false
 options:
+- text: A class implements two or more interfaces with a default method having the
+    same signature
+- text: Class has no implementation of its interface default method
 - text: A class implements two or more interfaces with default methods, but none of
     them have the same signature
 - text: A class implements two or more interfaces with an abstract method having the
     same signature
-- text: A class implements two or more interfaces with a default method having the
-    same signature
-- text: Class has no implementation of its interface default method
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
 files:
 - name: src/Task.java
   visible: true

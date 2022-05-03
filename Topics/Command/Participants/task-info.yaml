@@ -1,12 +1,10 @@
 type: choice
 is_multiple_choice: false
 options:
-- text: container
-- text: receiver
 - text: invoker
+- text: receiver
+- text: container
 - text: command
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
 files:
 - name: src/Task.java
   visible: true

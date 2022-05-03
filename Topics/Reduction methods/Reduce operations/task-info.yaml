@@ -1,14 +1,12 @@
 type: choice
 is_multiple_choice: true
 options:
-- text: The order of arguments of the accumulator function is not important.
-- text: The reduce operation combines elements of a stream into a single value.
-- text: 'The accumulator function takes three parameters: the accumulated value, the
-    next element and the previous element of a stream.'
 - text: The first argument (identity) is both the initial value of the reduction and
     the default result if there are no elements in the stream.
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: 'The accumulator function takes three parameters: the accumulated value, the
+    next element and the previous element of a stream.'
+- text: The reduce operation combines elements of a stream into a single value.
+- text: The order of arguments of the accumulator function is not important.
 files:
 - name: src/Task.java
   visible: true

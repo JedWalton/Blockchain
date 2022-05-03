@@ -1,12 +1,10 @@
 type: choice
 is_multiple_choice: false
 options:
-- text: Collections
 - text: Collector
 - text: Collectors
 - text: Collection
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: Collections
 files:
 - name: src/Task.java
   visible: true

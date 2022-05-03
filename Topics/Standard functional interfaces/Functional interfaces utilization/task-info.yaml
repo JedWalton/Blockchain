@@ -1,13 +1,11 @@
 type: choice
 is_multiple_choice: true
 options:
-- text: ToLongFunction&lt;Long&gt;
 - text: BiFunction&lt;Long, Long, Long&gt;
+- text: ToLongFunction&lt;Long&gt;
+- text: Function&lt;Long, Long&gt;
 - text: LongUnaryOperator
 - text: LongFunction&lt;Long&gt;
-- text: Function&lt;Long, Long&gt;
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
 files:
 - name: src/Task.java
   visible: true

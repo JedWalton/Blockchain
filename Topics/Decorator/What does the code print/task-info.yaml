@@ -1,12 +1,10 @@
 type: choice
 is_multiple_choice: false
 options:
-- text: Make code review. Write Java code. Send week report to customers.
+- text: Make code review. Send week report to customers. Write Java code.
 - text: Write Java code. Send week report to customers. Make code review.
 - text: Write Java code. Make code review. Send week report to customers.
-- text: Make code review. Send week report to customers. Write Java code.
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: Make code review. Write Java code. Send week report to customers.
 files:
 - name: src/Task.java
   visible: true

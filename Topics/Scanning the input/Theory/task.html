@@ -10,7 +10,7 @@
    <li>Output the result to the standard output (System.out).</li> 
   </ol> 
   <p>This type of code challenge can be easily tested by different formats of input data, and for this reason, we will use them a lot.</p> 
-  <h5 style="text-align: center;">Reading data with a scanner</h5> 
+  <h5 style="text-align: center;" id="reading-data-with-a-scanner">Reading data with a scanner</h5> 
   <p>The simplest way to obtain data from the standard input is to use the standard class <strong><code class="language-java">Scanner</code></strong>. It allows a program to read values of different types (string, numbers, etc) from the standard input. In this topic, we will consider reading data from the input.</p> 
   <p>To use this class you should add the following import statement to the top of your file with the source code.</p> 
   <pre><code class="language-java">import java.util.Scanner;</code></pre> 
@@ -43,7 +43,7 @@ System.out.println("Hello, " + name + "!");</code></pre>
   <p></p> 
   <p>In this article, we are dealing with space and newline characters: technically, we produce a corresponding character when pressing <em>Enter</em> and starting a new line. The term "whitespace" is used to refer to either of them. The more correct term to refer to what we’ve called “word” is <strong>token</strong>: it is a piece of text surrounded by whitespace. We can say now that the <code class="language-java">next()</code> method finds and returns the next token, while the <code class="language-java">nextLine()</code> reads all data till the end of the current line.</p> 
   <p>Now you can read a whole word and even a whole line invoking these two methods. To invoke both of them correctly, it is important to know the difference between them.</p> 
-  <h5 style="text-align: center;">Reading a multiline input</h5> 
+  <h5 style="text-align: center;" id="reading-a-multiline-input">Reading a multiline input</h5> 
   <p>Reading multiline input may still be a bit tricky: you should take into account the position of the cursor and the reading methods behavior.</p> 
   <p>Let’s investigate this process with an example:</p> 
   <pre><samp><span style="color: #ff0000;"><strong>|</strong></span>This is a simple
@@ -105,7 +105,7 @@ public class Main {
     }
 }</code></pre> 
   <p>This example may seem artificial, but it should help you to catch the difference between these two methods. Remember that usually the variables are named in a more expressive way.</p> 
-  <h5 style="text-align: center;">Conclusion</h5> 
+  <h5 style="text-align: center;" id="conclusion">Conclusion</h5> 
   <p>We can read data from the standard input with a special <code class="language-java">Scanner</code> class. The <code class="language-java">next()</code> and the <code class="language-java">nextLine()</code> methods will help you to read strings. Both of them are used for getting input, but they act differently. The <code class="language-java">next()</code> method can read the input only till the whitespace while the <code class="language-java">nextLine()</code> method reads the input till the end of the whole line. </p> 
   <p>We recommend you to use the class <code class="language-java">Scanner</code> when solving programming problems. It is one of the simplest ways to get values from the standard input. More complex ways to read data will be discussed in further topics.</p>
  </body>

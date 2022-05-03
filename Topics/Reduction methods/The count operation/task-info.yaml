@@ -1,14 +1,12 @@
 type: choice
 is_multiple_choice: false
 options:
+- text: stream.reduce(0, (acc, next) -&gt; acc + 1)
 - text: stream.reduce(0, (next, acc) -&gt; acc + 1)
 - text: stream.reduce(1, (acc, next) -&gt; acc + 1)
-- text: stream.reduce(0, (acc, next) -&gt; acc + 1)
 - text: stream.reduce(0, (acc, next) -&gt; acc + next - 1)
-- text: stream.reduce(1, (acc, next) -&gt; acc + next)
 - text: stream.reduce(1, (next, acc) -&gt; acc + 1)
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: stream.reduce(1, (acc, next) -&gt; acc + next)
 files:
 - name: src/Task.java
   visible: true

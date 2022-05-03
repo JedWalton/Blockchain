@@ -1,12 +1,10 @@
 type: choice
 is_multiple_choice: false
 options:
+- text: the behavior of this operation is nondeterministic
 - text: it takes all elements which match the predicate
 - text: it throws an exception
 - text: it sorts the stream and then works as usual
-- text: the behavior of this operation is nondeterministic
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
 files:
 - name: src/Task.java
   visible: true

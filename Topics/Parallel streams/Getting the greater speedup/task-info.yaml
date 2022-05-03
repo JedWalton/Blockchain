@@ -2,12 +2,10 @@ type: choice
 is_multiple_choice: true
 options:
 - text: Order-based operations
+- text: More cores available
 - text: Very long operations (e.g. network connections)
 - text: Easy splittable data source
 - text: Stateless operations
-- text: More cores available
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
 files:
 - name: src/Task.java
   visible: true

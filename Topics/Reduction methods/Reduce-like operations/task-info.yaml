@@ -1,14 +1,12 @@
 type: choice
 is_multiple_choice: true
 options:
-- text: filter
-- text: max
-- text: min
-- text: average
 - text: distinct
+- text: average
+- text: min
+- text: filter
 - text: sum
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: max
 files:
 - name: src/Task.java
   visible: true

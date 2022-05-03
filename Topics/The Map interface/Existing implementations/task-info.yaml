@@ -1,14 +1,12 @@
 type: choice
 is_multiple_choice: true
 options:
-- text: StackMap
-- text: ListMap
 - text: HashMap
 - text: SetMap
-- text: TreeMap
+- text: StackMap
+- text: ListMap
 - text: LinkedHashMap
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: TreeMap
 files:
 - name: src/Task.java
   visible: true

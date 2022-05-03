@@ -1,13 +1,11 @@
 type: choice
 is_multiple_choice: true
 options:
-- text: compare
-- text: naturalOrder
-- text: reverseOrder
 - text: comparingString
+- text: reverseOrder
+- text: compare
 - text: comparingInt
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: naturalOrder
 files:
 - name: src/Task.java
   visible: true

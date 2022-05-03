@@ -11,8 +11,6 @@ options:
     from Thread-1
 - text: <b>Order 5</b><br>Hello Main<br>Hello from Thread-1<br>Hello from Thread-2<br>Hello
     from Thread-2
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
 files:
 - name: src/Task.java
   visible: true

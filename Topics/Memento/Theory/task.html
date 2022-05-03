@@ -4,14 +4,14 @@
  <body>
   <p>Sometimes you may need to take a snapshot of the state of an object to implement an undo or rollback mechanism. It can be useful if you are working on a text, a graphical editor, or a turn-based game.</p> 
   <p>Generally, objects encapsulate their internal state to make it inaccessible from the outside, which means you cannot just copy the values of private fields of an object and save them externally. To solve the task and avoid this and some other potential problems, there is a design pattern called <strong>Memento</strong>.</p> 
-  <h5>Memento</h5> 
+  <h5 id="memento">Memento</h5> 
   <p>Memento is one of the classic behavioral patterns and it is intended to facilitate saving and restoring the state of an object without breaking the encapsulation principle. This pattern introduces three objects, the <strong>Originator</strong>, the <strong>Caretaker, </strong>and the <strong>Memento</strong>,<strong> </strong>as shown in the diagram below, each of which is responsible for performing a specific task.</p> 
   <p><img alt="" height="434" name="Memento.svg" src="https://ucarecdn.com/2e63f5a9-c81d-49b4-bda5-778aeac7966d/" width="1474"></p> 
   <p>According to this diagram, the Originator is the object whose state, represented by a number of private fields, is to be saved. The Originator can take snapshots of its state and save them to special objects named Mementos. It can also restore its previous state from a provided Memento.</p> 
   <p>The Memento is a data object that contains a snapshot of the Originator's state. It does not expose the saved state so that no other object except for the Originator can access it. In addition, the fields of the Memento may be immutable which prevents the saved state from being accidentally modified.</p> 
   <p>The Caretaker is an object responsible for calling the respective methods of the Originator to create Mementos and to restore the Originator's state from a saved snapshot. The Caretaker may also keep a history of the Originator's state changes as a collection of Memento objects.</p> 
   <p>As you can see, the state of the Originator remains encapsulated and the internal logic of the Originator is simplified since it does not have to decide how and when to save and restore its state. A drawback of such an approach is high memory consumption in cases when the Originator has to create big Mementos to save its state and the Caretaker has to keep a long history of the Caretaker's state changes.</p> 
-  <h5>Implementation</h5> 
+  <h5 id="implementation">Implementation</h5> 
   <p>Let's see how to implement the Memento pattern in practice. Let's create a simple text editor:</p> 
   <pre><code class="language-java">class Editor {
     private String text = "";
@@ -100,7 +100,7 @@ class EditorHistory {
     }
 }</code></pre> 
   <p>It has a reference to our <code class="language-java">Editor</code> class, a collection of <code class="language-java">EditorState</code> objects and two methods: <code class="language-java">save</code> and <code class="language-java">undo</code>, to manipulate the state of <code class="language-java">Editor</code>.</p> 
-  <h5>Running the code</h5> 
+  <h5 id="running-the-code">Running the code</h5> 
   <p>Now it's time to test our code:</p> 
   <pre><code class="language-java">class Main {
     public static void main(String[] args) {
@@ -135,7 +135,7 @@ System.out.println(editor);</code></pre>
 Editor{text='Hello, world!', textSize=12, textColor=0x000000}
 Editor{text='', textSize=12, textColor=0x000000}</code></pre> 
   <p>All the changes are undone one by one!</p> 
-  <h5>Conclusion</h5> 
+  <h5 id="conclusion">Conclusion</h5> 
   <p>Memento is a behavioral pattern used to save the state of an object, preserving its encapsulation. Since direct access to the state would expose its implementation detail, you can use it when you need to take a snapshot of the state of an object or a part of an object to restore that state later. The classic implementation of this pattern comprises three objects: the Originator whose state is saved, the Memento that stores the state, and the Caretaker that is responsible for saving the Memento but has no access to its internal state.<br> Keeping many snapshots may require a significant amount of memory, but this problem can be avoided by limiting the number of simultaneously kept snapshots.</p>
  </body>
 </html>

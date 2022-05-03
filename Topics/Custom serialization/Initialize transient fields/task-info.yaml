@@ -1,12 +1,10 @@
 type: choice
 is_multiple_choice: false
 options:
-- text: readObject()
 - text: defaultReadObject()
+- text: readObject()
 - text: defaultWriteObject()
 - text: writeObject()
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
 files:
 - name: src/Task.java
   visible: true

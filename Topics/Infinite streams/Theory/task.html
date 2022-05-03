@@ -4,7 +4,7 @@
  <body>
   <p>Collections in Java always have a finite number of elements because the memory of a computer is limited. However, Stream API allows us to operate on infinite streams of elements. It is possible due to the lazy nature of streams: creating an infinite stream is an intermediate operation, so it actually does not create elements until a terminal operation is executed. It is supposed that a stream has already become finite at this moment.</p> 
   <p>In this topic, we will learn how to create infinite streams by using <code class="language-java">generate</code> and <code class="language-java">iterate</code> methods, and how they can be used.</p> 
-  <h5 style="text-align: center;">Generating a stream of objects</h5> 
+  <h5 style="text-align: center;" id="generating-a-stream-of-objects">Generating a stream of objects</h5> 
   <p>The first method we consider is <code class="language-java">generate</code>. It takes a <strong>supplier function</strong> that produces an object that'll be a part of the stream.</p> 
   <pre><code class="language-java">Stream&lt;T&gt; generate(Supplier&lt;T&gt; supplier)</code></pre> 
   <p>In the example below, we create an infinite stream of random numbers by using the reference to the <code class="language-java">random</code> method of the <code class="language-java">Math</code> class.</p> 
@@ -36,7 +36,7 @@
   <p>Let's look at another example that applies the <code class="language-java">findAny</code> method. This method just returns a single element from a stream.</p> 
   <pre><code class="language-java">double randomNumber = Stream.generate(Math::random).findAny().get();</code></pre> 
   <p>This code works perfectly because the <code class="language-java">findAny</code> method causes only one element to be generated. It doesn't try to create the whole infinite stream.</p> 
-  <h5 style="text-align: center;">Iterations</h5> 
+  <h5 style="text-align: center;" id="iterations">Iterations</h5> 
   <p>The second method we consider is <code class="language-java">iterate</code>. It is a complete alternative to standard loops.</p> 
   <p>It takes a starting value (a <strong>seed</strong>) and an <strong>operator function</strong> to generate the next value based on the previous one.</p> 
   <pre><code class="language-java">Stream&lt;T&gt; iterate(T seed, UnaryOperator&lt;T&gt; next)</code></pre> 
@@ -62,7 +62,7 @@
     System.out.println(i);
 }</code></pre> 
   <p>By this, we are completing our consideration of infinite streams and methods to produce them.</p> 
-  <h5 style="text-align: center;">Conclusion</h5> 
+  <h5 style="text-align: center;" id="conclusion">Conclusion</h5> 
   <p>We have considered two methods to produce infinite streams: <code class="language-java">generate</code> and <code class="language-java">iterate</code>. The first one generates a stream of objects, while the second one creates iterations by using a counter and can be used as an alternative to loops. When working with infinite streams, do not forget to limit them or use only suitable terminal operations that do not process all elements of the stream.</p>
  </body>
 </html>

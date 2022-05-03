@@ -2,12 +2,10 @@ type: choice
 is_multiple_choice: false
 options:
 - text: '"aaabb"'
-- text: '" aaabbcccdaa"'
-- text: '" abcda"'
-- text: '"aaabbcccdaa"'
 - text: '"abcda "'
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: '" aaabbcccdaa"'
+- text: '"aaabbcccdaa"'
+- text: '" abcda"'
 files:
 - name: src/Task.java
   visible: true

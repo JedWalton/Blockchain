@@ -1,13 +1,11 @@
 type: choice
 is_multiple_choice: false
 options:
-- text: DEFAULT
 - text: Julia
 - text: John
+- text: DEFAULT
 - text: Mary
 - text: Andrew
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
 files:
 - name: src/Task.java
   visible: true

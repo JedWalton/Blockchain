@@ -3,7 +3,7 @@
  <head></head>
  <body>
   <p>Filtering is an important operation that allows us to obtain only those elements of the collection that meet a specified condition. For example, to get songs over seven minutes long among all your music library, we can filter songs by their duration. In this topic, we'll figure out how to use Java Stream API intermediate filter operation to cope with such challenges.</p> 
-  <h5>The filter method</h5> 
+  <h5 id="the-filter-method">The filter method</h5> 
   <p style="text-align: left;">To filter elements, streams provide the <code class="language-java">filter</code> method. It returns a new stream consisting only of those elements that match the given predicate.</p> 
   <p style="text-align: center;"><img alt="" height="291" src="https://ucarecdn.com/680bfcba-ce0e-4633-af01-9e267214c296/" width="393"></p> 
   <p style="text-align: left;">As an example, here is a list of prime numbers (a prime number is a whole number greater than 1 whose only factors are 1 and itself):</p> 
@@ -21,7 +21,7 @@ List&lt;Integer&gt; filteredPrimeNumbers = primeNumbers.stream() // create a str
         .filter(between11and23)        // pass the predicate to the filter method
         .collect(Collectors.toList()); // collect elements in a new list</code></pre> 
   <p style="text-align: left;">Of course, the result is the same as before.</p> 
-  <h5 style="text-align: center;">Using multiple filters</h5> 
+  <h5 style="text-align: center;" id="using-multiple-filters">Using multiple filters</h5> 
   <p style="text-align: left;">Sometimes, two or more filters are used together. For example:</p> 
   <ul> 
    <li style="text-align: left;">to separate a complex logic from a single filter;</li> 

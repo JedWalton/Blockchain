@@ -1,12 +1,10 @@
 type: choice
 is_multiple_choice: true
 options:
-- text: It is intended for reading files
-- text: It can read an input byte by byte
 - text: It is a character input stream
+- text: It is intended for reading files
 - text: You can directly read characters using <b>FileInputStream</b> class
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: It can read an input byte by byte
 files:
 - name: src/Task.java
   visible: true

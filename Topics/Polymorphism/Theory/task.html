@@ -2,7 +2,7 @@
 <html>
  <head></head>
  <body>
-  <h5 style="text-align: center;">Kinds of polymorphism</h5> 
+  <h5 style="text-align: center;" id="kinds-of-polymorphism">Kinds of polymorphism</h5> 
   <p>In general, <strong>polymorphism</strong> means that something (an object or another entity) has many forms.</p> 
   <p>Java provides two types of polymorphism: <strong>static (compile-time)</strong> and <strong>dynamic</strong> <strong>(run-time) </strong>polymorphism. The first one is achieved by <strong>method overloading</strong>, the second one is based on inheritance and <strong>method overriding</strong>.</p> 
   <p>The more theoretical approach subdivides polymorphism into several fundamentally different types:</p> 
@@ -12,7 +12,7 @@
    <li><strong>Parametric polymorphism </strong>is when the code is written without mention of any specific type and thus can be used transparently with any number of new types. Java supports it as <strong>generics</strong> or <strong>generic programming</strong>.</li> 
   </ul> 
   <p>In this topic, we consider only <strong>subtype (runtime) polymorphism</strong> that is widely used in object-oriented programming.</p> 
-  <h5 style="text-align: center;">Runtime polymorphic behavior</h5> 
+  <h5 style="text-align: center;" id="runtime-polymorphic-behavior">Runtime polymorphic behavior</h5> 
   <p>A reminder: <em>method overriding</em> is when a subclass redefines a method of the superclass with the same signature.</p> 
   <p>Run-time polymorphism relies on two principles:</p> 
   <ul> 
@@ -51,7 +51,7 @@ dragon.hello(); // Rrrr...
 animal.hello(); // Hello, I'm an unknown animal</code></pre> 
   <p>So, the result of a method call depends on the actual type of instance, not the reference type. It's a polymorphic feature in Java. The JVM calls the appropriate method for the object that is referred to in each variable.</p> 
   <p>Subtype polymorphism allows a class to specify methods that will be common to all of its subclasses. Subtype polymorphism also makes it possible for subclasses to override the implementations of those methods. Together with abstract methods and interfaces, which you'll learn about later, subtype polymorphism is a fundamental object-oriented design concept.</p> 
-  <h5 style="text-align: center;">Polymorphism within a class hierarchy</h5> 
+  <h5 style="text-align: center;" id="polymorphism-within-a-class-hierarchy">Polymorphism within a class hierarchy</h5> 
   <p>The same thing works with methods that are used only within a hierarchy and are not accessible from the outside.</p> 
   <p>In the following example, we have a hierarchy<strong> </strong>of files. The parent class <code class="language-java">File</code> represents a description of a single file in the file system. It has a subclass named <code class="language-java">ImageFile</code>. It overrides the method <code class="language-java">getFileInfo</code> of the parent class.</p> 
   <pre><code class="language-java">class File {

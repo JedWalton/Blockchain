@@ -1,12 +1,10 @@
 type: choice
 is_multiple_choice: false
 options:
-- text: allows to add new functionality dynamically
-- text: encapsulates a request as an object
-- text: separates complex object construction from its representation
 - text: ensures a class only has a limited number of instances
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: allows to add new functionality dynamically
+- text: separates complex object construction from its representation
+- text: encapsulates a request as an object
 files:
 - name: src/Task.java
   visible: true

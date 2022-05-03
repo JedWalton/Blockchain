@@ -1,12 +1,10 @@
 type: choice
 is_multiple_choice: false
 options:
-- text: when you add commands to a queue to execute them later
 - text: ' when a history of commands is stored'
-- text: when you need to support undo/redo operations
+- text: when you add commands to a queue to execute them later
 - text: when an object needs to utilize an existing class with an incompatible interface
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: when you need to support undo/redo operations
 files:
 - name: src/Task.java
   visible: true

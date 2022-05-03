@@ -3,10 +3,8 @@ is_multiple_choice: false
 options:
 - text: All methods are always executed sequentially when the previous method has
     completely processed all the elements of a stream.
-- text: The <b>map</b> method is always executed before the <b>filter</b> method.
 - text: The real order of execution depends on the internal stream optimization.
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: The <b>map</b> method is always executed before the <b>filter</b> method.
 files:
 - name: src/Task.java
   visible: true

@@ -1,13 +1,11 @@
 type: choice
 is_multiple_choice: false
 options:
+- text: '"Y"'
 - text: '"SKILL"'
 - text: '"HYPER"'
 - text: '"-"'
-- text: '"Y"'
 - text: '"H"'
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
 files:
 - name: src/Task.java
   visible: true

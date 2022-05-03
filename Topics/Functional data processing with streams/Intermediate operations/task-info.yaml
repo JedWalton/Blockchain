@@ -2,13 +2,11 @@ type: choice
 is_multiple_choice: true
 options:
 - text: map
-- text: toArray
-- text: distinct
+- text: forEach
 - text: count
 - text: filter
-- text: forEach
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: toArray
+- text: distinct
 files:
 - name: src/Task.java
   visible: true

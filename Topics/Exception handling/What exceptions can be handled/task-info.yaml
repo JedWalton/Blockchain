@@ -3,11 +3,9 @@ is_multiple_choice: false
 options:
 - text: NullPointerException
 - text: IOException
-- text: Exception
 - text: RuntimeException
+- text: Exception
 - text: Throwable
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
 files:
 - name: src/Task.java
   visible: true

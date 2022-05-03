@@ -1,14 +1,12 @@
 type: choice
 is_multiple_choice: true
 options:
-- text: An anonymous class can capture all members of its enclosing class (an outer
-    class).
-- text: An anonymous class can capture local variables that are declared as final
-    or effectively final.
 - text: An anonymous class can capture only static members of its enclosing class
     (an outer class).
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: An anonymous class can capture local variables that are declared as final
+    or effectively final.
+- text: An anonymous class can capture all members of its enclosing class (an outer
+    class).
 files:
 - name: src/Task.java
   visible: true

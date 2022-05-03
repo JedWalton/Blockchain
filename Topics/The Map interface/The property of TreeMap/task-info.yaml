@@ -1,12 +1,10 @@
 type: choice
 is_multiple_choice: false
 options:
-- text: order of elements that is same as the order they were inserted
-- text: sorted order of elements according to the keys
-- text: 'no order of the elements '
 - text: sorted order of elements according to the values
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: sorted order of elements according to the keys
+- text: order of elements that is same as the order they were inserted
+- text: 'no order of the elements '
 files:
 - name: src/Task.java
   visible: true

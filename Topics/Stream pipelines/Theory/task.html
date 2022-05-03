@@ -3,7 +3,7 @@
  <head></head>
  <body>
   <p>By this topic, you have already learned different types of stream operations such as <code class="language-java">filter</code>, <code class="language-java">map</code> and <code class="language-java">reduce</code>. Now is the time to start using these operations together and get into more details on the real stream pipelines. In a sense, the idea of this topic is to consolidate your knowledge about streams and to guide you through more complex practice exercises.</p> 
-  <h5 style="text-align: center;">More about operations in stream pipelines</h5> 
+  <h5 style="text-align: center;" id="more-about-operations-in-stream-pipelines">More about operations in stream pipelines</h5> 
   <p>As a rule, production-ready streams contain multiple operations at once. It is possible to distinguish the following kinds of operations:</p> 
   <ul> 
    <li>filtering: using <code class="language-java">filter</code> or other methods to skip some of the elements like <code class="language-java">skip</code>, <code class="language-java">limit</code>, <code class="language-java">takeWhile</code> and so on;</li> 
@@ -32,7 +32,7 @@ System.out.println(numberOfWords); // 3</code></pre>
   </div>
   <p></p> 
   <p>It is obvious, that the result is 3 because the list contains only three suitable words (<code class="language-java">"JAR"</code>, <code class="language-java">"Java"</code>, <code class="language-java">"jakarta"</code>).</p> 
-  <h5 style="text-align: center;">The order of execution</h5> 
+  <h5 style="text-align: center;" id="the-order-of-execution">The order of execution</h5> 
   <p>But there is also one less obvious thing in the case of the previous example: the order of operations in this stream. It seems that the <code class="language-java">filter</code> operation is only called after the <code class="language-java">map</code> operation has converted all the elements to the upper case. But that is not always true. We can see it by ourselves by adding the <code class="language-java">peek</code> operation to print the intermediate elements of the stream.</p> 
   <p></p>
   <div class="alert alert-primary">
@@ -62,7 +62,7 @@ JAKARTA</code></pre>
    Do not try to predict the order of operations in a complex stream. Depending on the operations, the actual execution order may slightly differ from the expected one because of the internal stream optimization. The main point is that a stream will produce the result regardless of the execution order.
   </div>
   <p></p> 
-  <h5 style="text-align: center;">Streams with custom classes</h5> 
+  <h5 style="text-align: center;" id="streams-with-custom-classes">Streams with custom classes</h5> 
   <p>In real situations, streams often process custom classes designed specifically for the program.</p> 
   <p>Let's assume that we have the <code class="language-java">Event</code> class that represents a public event, such as a conference, a film premiere, or a concert. It has two fields:</p> 
   <ul> 
@@ -80,7 +80,7 @@ List&lt;String&gt; suitableEvents = events.stream()
         .map(Event::getName)
         .collect(Collectors.toList());</code></pre> 
   <p>The code above finds names of all suitable events and collects them to a new list of strings. The map methods allow us to make the transition from <code class="language-java">Event</code> objects to the <code class="language-java">String</code> objects.</p> 
-  <h5 style="text-align: center;">Mapping and reducing functions</h5> 
+  <h5 style="text-align: center;" id="mapping-and-reducing-functions">Mapping and reducing functions</h5> 
   <p>Since functions are presented as objects of certain classes, we can <code class="language-java">map</code> and <code class="language-java">reduce</code> them similar to regular stream elements.</p> 
   <p>For example, we have a collection of integer predicates. Let's negate each predicate by using a map operator and then conjunct all predicates into one by using a reduce operator.</p> 
   <pre><code class="language-java">public static IntPredicate negateEachAndConjunctAll(Collection&lt;IntPredicate&gt; predicates) {
@@ -90,7 +90,7 @@ List&lt;String&gt; suitableEvents = events.stream()
 }</code></pre> 
   <p>In this example, <code class="language-java">map</code> negates each predicate in a stream and then <code class="language-java">reduce</code> conjuncts all predicates into one. The <strong>initial value</strong> (seed) of reducing is a predicate that is always <code class="language-java">true</code>, because it's the neutral value for conjunction.</p> 
   <p>So, the input predicates <code class="language-java">P1(x), P2(x), ..., Pn(x)</code> will be reduced into one predicate <code class="language-java">Q(x) = not P1(x) and not P2(x) and ... and not Pn(x)</code>. Of course, this is not the most frequent way to apply streams, but it's worth knowing that such use is also possible.</p> 
-  <h5 style="text-align: center;">Conclusion</h5> 
+  <h5 style="text-align: center;" id="conclusion">Conclusion</h5> 
   <p>As you have seen, stream pipelines allow writing short and readable code to perform various evaluations. It is possible to combine many different operations in a single powerful stream. Keep in mind, that the order of performing the operation is determined by the stream itself. Do not try to influence it in any way.</p>
  </body>
 </html>

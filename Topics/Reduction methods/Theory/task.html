@@ -3,7 +3,7 @@
  <head></head>
  <body>
   <p>While dealing with collections in Java, you can often face the challenge of reducing all collection elements to a single result. The example of such a problem is finding a bank account with the maximum amount of money among the collection of accounts or reducing account transaction values to the total amount of transferred money. Java Stream API provides several <em>terminal</em> operations that allow us to solve this problem in a functional way. These operations combine stream elements and return a single value.</p> 
-  <h5>The reduce operation</h5> 
+  <h5 id="the-reduce-operation">The reduce operation</h5> 
   <p><code class="language-java">reduce</code> is a method of a <code class="language-java">Stream</code> class that combines elements of a stream into a <em>single value</em>. The result can be a value of a primitive type or a complex object.</p> 
   <p style="text-align: center;"><img alt="" height="225px" src="https://ucarecdn.com/4edd4d8a-3586-49d1-95bb-80ba7b1d039f/" width="423px"></p> 
   <p></p>
@@ -40,7 +40,7 @@
    <code class="language-java">reduce</code> operation will return identity value.
   </div>
   <p></p> 
-  <h5>Other reduction operations</h5> 
+  <h5 id="other-reduction-operations">Other reduction operations</h5> 
   <p>While the <code class="language-java">reduce</code> is a generally purposed operation, Stream API provides many specific reduction operations such as <code class="language-java">sum</code>, <code class="language-java">min</code>, <code class="language-java">max</code>, etc. Similar to the <code class="language-java">reduce</code> operation they are terminal operations that produce a single value. Let's consider an example with a generic stream, assuming that we need to find the maximum value from the list of given balances. We can do it by using reduce operation:</p> 
   <pre><code class="language-java">transactions.stream().reduce((t1, t2) -&gt; t2 &gt; t1 ? t2 : t1)</code></pre> 
   <p>The code above compares a partial result <code class="language-java">t1</code> with the next element of the stream <code class="language-java">t2</code> and assigns the value of <code class="language-java">t2</code> to <code class="language-java">t1</code> if <code class="language-java">t2</code> is numerically greater than <code class="language-java">t1</code>. We can get the same result in a more elegant way using the <code class="language-java">max</code> method:</p> 
@@ -54,7 +54,7 @@
    <code class="language-java">sum</code>, which cannot be provided by generic streams.
   </div>
   <p></p> 
-  <h5>Conclusion</h5> 
+  <h5 id="conclusion">Conclusion</h5> 
   <p>The <code class="language-java">reduce</code> is a terminal operation that produces a single value result by combining stream elements. It can accept the accumulator function only or in combination with identity value. The accumulator function takes two arguments: partial result and the next element of a stream. If the identity value is provided, the initial value of the partial result will be equal to that value. Otherwise, the partial result's initial value will be equal to the first element of a stream. Besides the <code class="language-java">reduce</code>, primitive-specialized streams provide more reduction operations that depend on the numeric type.</p>
  </body>
 </html>

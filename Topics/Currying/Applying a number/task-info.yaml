@@ -1,13 +1,11 @@
 type: choice
 is_multiple_choice: false
 options:
-- text: LongFunction&lt;Long&gt;
-- text: Long
-- text: CurriedLongFunction
 - text: Function&lt;Long&gt;
 - text: LongFunction&lt;LongFunction&lt;Long&gt;&gt;
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: Long
+- text: CurriedLongFunction
+- text: LongFunction&lt;Long&gt;
 files:
 - name: src/Task.java
   visible: true

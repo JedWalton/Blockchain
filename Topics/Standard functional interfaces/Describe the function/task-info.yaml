@@ -1,20 +1,18 @@
 type: choice
 is_multiple_choice: false
 options:
-- text: It takes two arguments (String and Double) and returns a value of the primitive
-    long type.
-- text: It takes two arguments (String and Double) and returns a value of the reference
-    Long type.
-- text: It takes two arguments (Long and String) and returns a value of the reference
-    Double type.
-- text: It takes two arguments (String and primitive double) and returns a value of
-    the primitive long type.
 - text: It takes two arguments (String and primitive double) and returns a value of
     the reference Long type.
+- text: It takes two arguments (String and Double) and returns a value of the reference
+    Long type.
 - text: It takes two arguments (Long and String) and returns a value of the primitive
     double type.
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: It takes two arguments (String and primitive double) and returns a value of
+    the primitive long type.
+- text: It takes two arguments (String and Double) and returns a value of the primitive
+    long type.
+- text: It takes two arguments (Long and String) and returns a value of the reference
+    Double type.
 files:
 - name: src/Task.java
   visible: true

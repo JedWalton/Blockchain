@@ -3,10 +3,8 @@ is_multiple_choice: false
 options:
 - text: it increases response time from service
 - text: it is difficult to configure multiple wrapped objects
-- text: it takes a lot of memory
 - text: it is difficult to clone complex object
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: it takes a lot of memory
 files:
 - name: src/Task.java
   visible: true

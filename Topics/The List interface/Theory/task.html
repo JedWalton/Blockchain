@@ -9,7 +9,7 @@
    <em>ordered </em>collection of elements. It means that each element has a position in the list specified by an integer index like in regular arrays.
   </div>
   <p></p> 
-  <h5 style="text-align: center;">The List interface</h5> 
+  <h5 style="text-align: center;" id="the-list-interface">The List interface</h5> 
   <p>The <code class="language-java">List&lt;E&gt;</code> interface represents a list as an abstract data type. It extends the <code class="language-java">Collection&lt;E&gt;</code> interface acquiring its methods and adds some new methods:</p> 
   <ul> 
    <li><code class="language-java">E set(int index, E element)</code> replaces the element at the specified position in this list with the specified element and returns the element that was replaced;</li> 
@@ -26,7 +26,7 @@
    <code class="language-java">List</code> interface is considered good practice in programming since your code will not depend on the internal mechanisms of a specific implementation.
   </div>
   <p></p> 
-  <h5 style="text-align: center;">Immutable lists</h5> 
+  <h5 style="text-align: center;" id="immutable-lists">Immutable lists</h5> 
   <p>The simplest way to create a list is to invoke the <code class="language-java">of</code> method of the <code class="language-java">List</code> interface.</p> 
   <pre><code class="language-java">List&lt;String&gt; emptyList = List.of(); // 0 elements
 List&lt;String&gt; names = List.of("Larry", "Kenny", "Sabrina"); // 3 elements
@@ -62,7 +62,7 @@ daysOfWeek.add("Holiday");   // throws UnsupportedOperationException</code></pre
   <p>Prior to Java 9, another way to create unmodifiable lists was the following:</p> 
   <pre><code class="language-java">List&lt;Integer&gt; numbers = Arrays.asList(1, 2, 3, 4, 5);</code></pre> 
   <p>To use it, the class <code class="language-java">java.util.Arrays</code> must be imported.</p> 
-  <h5 style="text-align: center;">Mutable lists</h5> 
+  <h5 style="text-align: center;" id="mutable-lists">Mutable lists</h5> 
   <p>When you need to use a mutable list, you can take one of two commonly used mutable implementations of the <code class="language-java">List</code> interface.</p> 
   <p>One of them is familiar to you: the <code class="language-java">ArrayList&lt;E&gt;</code> class. It represents a resizable array. In addition to implementing the <code class="language-java">List</code> interface, it provides methods to manipulate the size of the array that is used internally. These methods are not needed in programs often, so it is better to use an object of this class through the <code class="language-java">List</code> interface.</p> 
   <pre><code class="language-java">List&lt;Integer&gt; numbers = new ArrayList&lt;&gt;();
@@ -95,7 +95,7 @@ System.out.println(numbers); // [10, 20, 30]</code></pre>
    <code class="language-java">ArrayList</code> in memory consumption and speed of operations. But it depends on the problem you are trying to solve.
   </div>
   <p></p> 
-  <h5 style="text-align: center;">Iterating over a list</h5> 
+  <h5 style="text-align: center;" id="iterating-over-a-list">Iterating over a list</h5> 
   <p>There are no problems to iterate over elements of a list.</p> 
   <pre><code class="language-java">List&lt;String&gt; names = List.of("Larry", "Kenny", "Sabrina");</code></pre> 
   <p>1) Using the "for-each" loop:</p> 
@@ -109,7 +109,7 @@ for (int i = 0; i &lt; names.size(); i += 2) {
     System.out.println(names.get(i));
 }</code></pre> 
   <p>When you need to go through all elements of a list, we recommend choosing the first way to iterate. The second way is good when you need to skip some elements based on their positions in the list.</p> 
-  <h5 style="text-align: center;">List equality</h5> 
+  <h5 style="text-align: center;" id="list-equality">List equality</h5> 
   <p>The final question is how lists are compared. Two lists are equal when they contain the same elements in the same order. The equality does not depend on the types of the lists themselves (<code class="language-java">ArrayList</code>, <code class="language-java">LinkedList</code> or something else).</p> 
   <pre><code class="language-java">Objects.equals(List.of(1, 2, 3), List.of(1, 2, 3));    // true
 Objects.equals(List.of(1, 2, 3), List.of(1, 3, 2));    // false

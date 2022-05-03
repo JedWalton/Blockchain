@@ -9,7 +9,7 @@
    <li>it has no return type (not even <code class="language-java">void</code>).</li> 
   </ul> 
   <p>Constructors initialize <strong>instances</strong> (objects) of the class. They set values to the fields when the object is created. Also, constructors can take parameters for initializing fields by the given values.</p> 
-  <h5 style="text-align: center;">Using constructors</h5> 
+  <h5 style="text-align: center;" id="using-constructors">Using constructors</h5> 
   <p>Here is a class named <code class="language-java">Patient</code>. An object of the class has a name, an age, and a height. The class has a three-argument constructor to initialize objects with specific values.</p> 
   <pre><code class="language-java">class Patient {
 
@@ -27,14 +27,14 @@
   <pre><code class="language-java">Patient patient1 = new Patient("Heinrich", 40, 182.0f);
 Patient patient2 = new Patient("Mary", 33, 171.5f);</code></pre> 
   <p>Now we have two patients, Heinrich and Mary, with the same fields, but the values of those fields are different.</p> 
-  <h5 style="text-align: center;">Keyword this</h5> 
+  <h5 style="text-align: center;" id="keyword-this">Keyword this</h5> 
   <p>In the example above, <code class="language-java">Patient</code> constructor takes three parameters:</p> 
   <pre><code class="language-java">this.name = name;
 this.age = age;
 this.height = height;</code></pre> 
   <p>To initialize the fields, the keyword <code class="language-java">this</code> is used, which is a reference to the current object. Usually, the keyword <code class="language-java">this</code> is used when an instance variable and a constructor or a method variable share the same name. This keyword helps to disambiguate these situations.</p> 
   <p>If you write something like <code class="language-java">name = name</code>, it means that you're assigning the <code class="language-java">name</code> variable to itself, which, of course, doesn't make any sense. Frankly speaking, you may distinguish two objects simply by assigning another name to the variable, like <code class="language-java">name = newName</code>. It is not prohibited, but it is considered bad practice since these variables point to the same thing. These are the reasons why the keyword <code class="language-java">this</code>is extremely useful with constructors, fields, and methods. The absence of extra variables makes the code look clearer and less overloaded.</p> 
-  <h5 style="text-align: center;">Default and no-argument constructor</h5> 
+  <h5 style="text-align: center;" id="default-and-no-argument-constructor">Default and no-argument constructor</h5> 
   <p>The compiler automatically provides <strong>a default no-argument constructor</strong> for any class without constructors.</p> 
   <pre><code class="language-java">class Patient {
 
@@ -58,7 +58,7 @@ this.height = height;</code></pre>
     }
 }</code></pre> 
   <p>Such no-argument constructors are useful in cases when any default value is better than <code class="language-java">null</code>.</p> 
-  <h5 style="text-align: center;">To sum up</h5> 
+  <h5 style="text-align: center;" id="to-sum-up">To sum up</h5> 
   <ul> 
    <li>Any Java class has a constructor to initialize objects;</li> 
    <li>A constructor has the same name as the class containing it;</li> 

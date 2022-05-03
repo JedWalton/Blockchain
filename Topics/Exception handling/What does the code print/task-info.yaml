@@ -7,8 +7,6 @@ options:
 - text: B
 - text: A
 - text: BC
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
 files:
 - name: src/Task.java
   visible: true

@@ -8,7 +8,7 @@
         <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleJvm" value="#JAVA_INTERNAL" />
+        <option name="gradleJvm" value="16" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
@@ -488,6 +488,8 @@
             <option value="$PROJECT_DIR$/Topics/The keyword super/Theory" />
             <option value="$PROJECT_DIR$/Topics/The main method/Print  We are robots_" />
             <option value="$PROJECT_DIR$/Topics/The main method/Theory" />
+            <option value="$PROJECT_DIR$/Topics/The while and do-while loops/The smallest value" />
+            <option value="$PROJECT_DIR$/Topics/The while and do-while loops/Theory" />
             <option value="$PROJECT_DIR$/Topics/Thread management/Calculate the number of distinct characters" />
             <option value="$PROJECT_DIR$/Topics/Thread management/Join" />
             <option value="$PROJECT_DIR$/Topics/Thread management/Ordering the execution of threads" />

@@ -2,13 +2,11 @@ type: choice
 is_multiple_choice: false
 options:
 - text: selectWhile
-- text: filter
-- text: takeWhile
+- text: takeUntil
 - text: selectUntil
 - text: limit
-- text: takeUntil
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: filter
+- text: takeWhile
 files:
 - name: src/Task.java
   visible: true

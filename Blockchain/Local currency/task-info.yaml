@@ -266,52 +266,28 @@ files:
 
     }
   learner_created: false
-- name: src/user/Miner.java
-  visible: true
-  learner_created: true
-- name: src/user/User.java
-  visible: true
-  learner_created: true
 - name: src/blockchain/Main.java
-  visible: true
-  learner_created: true
-- name: src/blockchain/user/User.java
-  visible: true
-  learner_created: true
-- name: src/blockchain/user/Miner.java
-  visible: true
-  learner_created: true
-- name: src/blockchain/user/UserFactory.java
-  visible: true
-  learner_created: true
-- name: src/blockchain/utils/StringUtils.java
-  visible: true
-  learner_created: true
-- name: src/blockchain/utils/SignatureUtils.java
-  visible: true
-  learner_created: true
-- name: src/blockchain/utils/SerializationUtils.java
-  visible: true
-  learner_created: true
-- name: src/blockchain/ParallelExecutor.java
-  visible: true
-  learner_created: true
-- name: src/blockchain/SignatureHelper.java
   visible: true
   learner_created: true
 - name: src/blockchain/Block.java
   visible: true
   learner_created: true
-- name: src/blockchain/Util.java
+- name: src/blockchain/ParallelExecutor.java
   visible: true
   learner_created: true
 - name: src/blockchain/HonestTransaction.java
   visible: true
   learner_created: true
-- name: src/blockchain/Transaction.java
+- name: src/blockchain/TransactionMaster.java
   visible: true
   learner_created: true
-- name: src/blockchain/TransactionMaster.java
+- name: src/blockchain/SignatureHelper.java
+  visible: true
+  learner_created: true
+- name: src/blockchain/Util.java
+  visible: true
+  learner_created: true
+- name: src/blockchain/Transaction.java
   visible: true
   learner_created: true
 - name: public.pub
@@ -324,5 +300,5 @@ feedback_link: https://hyperskill.org/learn/step/5418#comment
 status: Solved
 feedback:
   message: Congratulations!
-  time: Sun, 27 Feb 2022 19:10:51 UTC
+  time: Tue, 03 May 2022 19:39:48 UTC
 record: 6

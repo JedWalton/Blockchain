@@ -3,7 +3,7 @@
  <head></head>
  <body>
   <p>As you probably remember, interface methods are abstract by default. It means that they can't have a body, instead, they just declare a signature. Some kind of methods can have a body nevertheless. Such methods are called <code class="language-java">default</code> and are available since Java 8.</p> 
-  <h5 style="text-align: center;">Methods with a body</h5> 
+  <h5 style="text-align: center;" id="methods-with-a-body">Methods with a body</h5> 
   <p>Default methods are opposite to abstract ones. They have an implementation:</p> 
   <pre><code class="language-java">interface Feature {
     default void action() {
@@ -39,7 +39,7 @@ feature.action(); // FeatureImpl-specific action</code></pre>
         return "Default action";
     }
 }</code></pre> 
-  <h5 style="text-align: center;">Why are they needed</h5> 
+  <h5 style="text-align: center;" id="why-are-they-needed">Why are they needed</h5> 
   <p>As it was mentioned in the Interface topic, the main idea of an interface is declaring functionality. Default methods extend that idea. They don't just declare functionality but also implement it. The main reason is supporting backward compatibility. Let's consider an example.</p> 
   <p>Suppose you program a game that has several types of characters. These characters are able to move within a map. That is represented by <code class="language-java">Movable</code> interface:</p> 
   <pre><code class="language-java">interface Movable {
@@ -76,7 +76,7 @@ feature.action(); // FeatureImpl-specific action</code></pre>
         turnRight();
     }
 }</code></pre> 
-  <h5 style="text-align: center;">The diamond problem</h5> 
+  <h5 style="text-align: center;" id="the-diamond-problem">The diamond problem</h5> 
   <p>Suppose we have another interface <code class="language-java">Jumpable</code> that represents the ability to jump. The interface contains abstract methods for jumping in place, jumping with turning left and right. It also has a <code class="language-java">default</code> method for a turnaround jumping with the same signature as <code class="language-java">Movable</code>.</p> 
   <pre><code class="language-java">interface Jumpable {
     void jump();
@@ -110,7 +110,7 @@ feature.action(); // FeatureImpl-specific action</code></pre>
     }
 }</code></pre> 
   <p>The problem is known as <strong>the diamond problem</strong>.</p> 
-  <h5 style="text-align: center;">Conclusion</h5> 
+  <h5 style="text-align: center;" id="conclusion">Conclusion</h5> 
   <p>Some interface methods have a body. Such methods are called default and have <code class="language-java">default</code> keyword before a signature. The main idea of supporting default methods is providing backward compatibility. That allows you to add new methods to the existing interface without changing all classes that implement the interface. Remember that if a class implements several interfaces and some of them have a default method with the same signature, you have to define implementation for the method in the class. This happens because the compiler cannot decide what implementation should be used.</p>
  </body>
 </html>

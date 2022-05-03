@@ -1,13 +1,11 @@
 type: choice
 is_multiple_choice: true
 options:
+- text: stream
+- text: iterate
 - text: infiniteStream
 - text: for
-- text: stream
 - text: generate
-- text: iterate
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
 files:
 - name: src/Task.java
   visible: true

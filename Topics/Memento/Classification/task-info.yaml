@@ -1,12 +1,10 @@
 type: choice
 is_multiple_choice: false
 options:
-- text: Destructural
-- text: Behavioral
 - text: Creational
 - text: Structural
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: Behavioral
+- text: Destructural
 files:
 - name: src/Task.java
   visible: true

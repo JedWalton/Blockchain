@@ -1,12 +1,10 @@
 type: choice
 is_multiple_choice: false
 options:
-- text: they have an empty body
 - text: they do not have a body
-- text: they have a void return type
 - text: they have a body
-message_correct: Congratulations!
-message_incorrect: Incorrect solution
+- text: they have an empty body
+- text: they have a void return type
 files:
 - name: src/Task.java
   visible: true
